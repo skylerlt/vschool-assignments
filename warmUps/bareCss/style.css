@@ -1,0 +1,24 @@
+h1 {
+    font-family: chalkboard;
+    color: blue;
+    text-align: center;
+    text-decoration: underline;
+}
+
+p {
+    text-align: center;
+    font-size: 30px;
+    font-family: fantasy;
+    color: darkgoldenrod;
+}
+
+div {
+    text-align: center
+}
+
+body {
+    background-image: url(http://d.gr-assets.com/books/1388328927l/6443349.jpg);
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: cover;
+}

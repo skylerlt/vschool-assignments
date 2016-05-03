@@ -1,0 +1,34 @@
+h1 {
+    text-align: center;
+    font-family: apple chancery;
+    font-size: 50px;
+    text-decoration: underline;
+}
+
+img {
+    text-align: center;
+    display: inline-block;
+}
+
+.p1 {
+    display: inline-block;
+    width: 30%;
+    float: left;
+}
+
+.p2 {
+    display: inline-block;
+    width: 30%;
+    align-content: center;
+    margin-left: 50px;
+}
+
+.p3 {
+    display: inline-block;
+    width: 30%;
+    float: right;
+}
+
+div {
+    text-align: center;
+}

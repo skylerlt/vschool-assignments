@@ -1,0 +1,16 @@
+body {
+    background-image: url(http://all4desktop.com/data_images/original/4238657-nature-background.jpg);
+    background-position: center;
+    opacity: .9;
+}
+
+h1 {
+    font-family: cursive;
+    text-align: center;
+}
+
+.car {
+    text-align: center;
+    margin: auto;
+    padding: inherit;
+}
