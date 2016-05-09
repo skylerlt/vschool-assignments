@@ -1,0 +1,162 @@
+<!doctype html>
+<html lang="en">
+
+<head>
+    <meta charset="utf-8">
+    <title>Mario Mashers</title>
+    <link rel="shortcut icon" href="http://static.giantbomb.com/uploads/original/0/26/9780-itsahim.JPG">
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.6/css/bootstrap.min.css">
+    <link rel="stylesheet" href="style.css">
+</head>
+
+<body>
+
+    <div class="container">
+
+        <nav class="navbar navbar-default-">
+            <div class="container-fluid">
+                <!-- Brand and toggle get grouped for better mobile display -->
+                <div class="navbar-header">
+                    <button type="button" class="navbar-toggle collapsed" data-toggle="collapse" data-target="#bs-example-navbar-collapse-1" aria-expanded="false">
+                        <span class="sr-only">Toggle navigation</span>
+                        <span class="icon-bar"></span>
+                        <span class="icon-bar"></span>
+                        <span class="icon-bar"></span>
+                    </button>
+
+                </div>
+
+                <!-- Collect the nav links, forms, and other content for toggling -->
+                <div class="collapse navbar-collapse" id="bs-example-navbar-collapse-1">
+                    <ul class="nav navbar-nav">
+                        <li class="active"><a href="#baddies">Baddies <span class="active"></span></a></li>
+                        <li class="active"><a href="#totals">Totals <span class="sr-only">(current)</span></a></li>
+                        <li><a href="#prices">Prices</a></li>
+                        <li><a href="#contact">Contact Info</a></li>
+                    </ul>
+                </div>
+                <!-- /.navbar-collapse -->
+            </div>
+            <!-- /.container-fluid -->
+        </nav>
+
+        <header class="title">
+            <span class="blue">M</span><span class="green">a</span><span class="yellow">r</span><span class="red">i</span><span class="green">o</span> <span class="green">M</span><span class="red">a</span><span class="blue">s</span><span class="yellow">h</span><span class="red">e</span><span class="blue">r</span><span class="green">s</span> <span class="red">P</span><span class="green">e</span><span class="blue">s</span><span class="yellow">t</span> <span class="yellow">C</span><span class="red">o</span><span class="green">n</span><span class="blue">t</span><span class="green">r</span><span class="red">o</span><span class="blue">l</span></header>
+
+        <br>
+        <br>
+        <br>
+        <br>
+
+        <section class="baddies">
+            <a name="baddies"></a>
+            <h2> Baddies </h2>
+            <ul>
+                <li class="li1"> Goombas
+                    <img class="goombas" src="http://vignette4.wikia.nocookie.net/villains/images/4/43/Grand_Goomba_%26_Goombas.png/revision/latest?cb=20121108190741">
+                </li>
+
+                <li class="li2"> Bob-ombs
+                    <img class="bobomb" src="http://vignette2.wikia.nocookie.net/fantendo/images/6/65/Triple_Bob-omb.png/revision/latest?cb=20120102141802">
+                </li>
+
+                <li class="li3"> Cheep-cheeps
+                    <img class="cheep" src="http://pre03.deviantart.net/f1cb/th/pre/i/2012/028/7/a/cheep_cheeps_by_yoshigo99-d4nv77g.png">
+                </li>
+
+            </ul>
+        </section>
+
+        <br>
+        <br>
+
+        <section class="caught">
+            <a name="totals"></a>
+            <h3 class="total"> Total baddies caught: </h3>
+            <ul>
+                <li class="li1"> Goombas </li>
+                <button class="btn-danger" id="addGoombas"> Push to add </button>
+                <span id="totalGoombas"></span>
+                <h3 class="number" id="goombasDisplay">0</h3>
+                <li class="li2"> Bob-ombs </li>
+                <button class="btn-danger" id="addBobombs"> Push to add </button>
+                <span id="totalBobombs"></span>
+                <h3 class="number" id="bobombsDisplay">0</h3>
+                <li class="li3"> Cheep-cheeps </li>
+                <button class="btn-danger" id="addCheeps"> Push to add </button>
+                <span id="totalCheeps"></span>
+                <h3 class="number" id="cheepsDisplay">0</h3>
+            </ul>
+        </section>
+
+        <br>
+        <br>
+
+
+        <section class="cost">
+            <a name="prices"></a>
+            <h3 class="totalCost"> Total cost for baddies caught: </h3>
+            <ul>
+                <li class="li1"> Goombas: 5 coins a piece </li>
+                <h3 class="number" id="goombaPriceDisplay">0</h3>
+                <li class="li2"> Bob-ombs: 7 coins a piece </li>
+                <h3 class="number" id="bobombPriceDisplay">0</h3>
+                <li class="li3"> Cheep-cheeps: 11 coins a piece </li>
+                <h3 class="number" id="cheepPriceDisplay">0</h3>
+            </ul>
+            <h3 class="totalCost">Grand total for Baddies caught:</h3>
+            <ul>
+                <li>
+                    <h3 class="grandTotal" id="grandTotalDisplay">0</h3>
+                </li>
+            </ul>
+        </section>
+
+        <br>
+        <br>
+        <br>
+        <br>
+        <br>
+        <br>
+        <br>
+        <br>
+        <br>
+        <br>
+        <br>
+        <br>
+        <br>
+        <br>
+        <br>
+        <br>
+        <br>
+        <br>
+        <br>
+        <br>
+
+        <footer>
+            <a name="contact"></a>
+            <h4>Contact Information</h4>
+            <div class="footer">
+                <p>MarioisBetter@Mario.greentube.com</p>
+                <p>Mariomasherspestcontrol.com</p>
+                <p>1981 Shigeru St, Miyamoto UT 12345</p>
+            </div>
+        </footer>
+
+        <br>
+        <br>
+        <br>
+        <br>
+        <br>
+        <br>
+        <br>
+        <br>
+        <br>
+
+    </div>
+
+    <script src="script.js"></script>
+
+</body>
+
+</html>

@@ -1,0 +1,55 @@
+@font-face {
+    font-family: 'Mario';
+    src: url('SuperMario256.ttf');
+}
+
+.yellow {
+    height: 90px;
+    background-color: yellow;
+    color: red;
+    font-family: Mario;
+    font-size: 40px;
+    padding-top: 20px;
+    padding-left: 20px;
+}
+
+.red {
+    height: 310px;
+    background-color: red;
+    text-align: center;
+}
+
+.lilWhite {
+    height: 80px;
+    background-color: white;
+    text-align: center;
+    font-family: Mario;
+    color: red;
+    font-size: 40px;
+}
+
+.white {
+    height: 120px;
+    background-color: white;
+    text-align: center;
+    color: red;
+    font-size: 22px;
+}
+
+.lilYellow {
+    height: 69px;
+    background-color: yellow;
+    text-align: right;
+}
+
+.mushroom {
+    height: 65px;
+    padding-right: 15px;
+    padding-top: 5px;
+    margin: 0;
+}
+
+.luigi {
+    height: 280px;
+    padding-top: 20px;
+}

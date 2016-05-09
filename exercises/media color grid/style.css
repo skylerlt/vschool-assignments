@@ -1,0 +1,97 @@
+div {
+    padding: 80px;
+}
+
+@media (max-width: 900px) {
+    .pink {
+        width: 60%;
+    }
+}
+
+@media (max-width: 900px) {
+    .lilPink {
+        width: 60%;
+    }
+}
+
+@media (max-width: 900px) {
+    .blue {
+        width: 60%;
+    }
+}
+
+@media (max-width: 900px) {
+    .green {
+        width: 60%;
+    }
+}
+
+@media (max-width: 900px) {
+    .orange {
+        width: 60%;
+    }
+}
+
+@media (max-width: 500px) {
+    .pink {
+        width: 50%;
+    }
+}
+
+@media (max-width: 500px) {
+    .lilPink {
+        width: 50%;
+    }
+}
+
+@media (max-width: 500px) {
+    .blue {
+        width: 50%;
+    }
+}
+
+@media (max-width: 500px) {
+    .green {
+        width: 50%;
+    }
+}
+
+@media (max-width: 500px) {
+    .orange {
+        width: 50%;
+    }
+}
+
+.pink {
+    background-color: #F5C6D6;
+    max-width: 70%;
+    margin: 10px;
+}
+
+.lilPink {
+    background-color: #EE2E84;
+    min-width: 10.2%;
+    display: inline-block;
+    margin: 10px;
+}
+
+.blue {
+    background-color: #85CFD8;
+    min-width: 30.2%;
+    display: inline-block;
+    margin: 10px;
+}
+
+.green {
+    background-color: #8DC63F;
+    min-width: 50%;
+    display: inline-block;
+    margin: 10px;
+}
+
+.orange {
+    background-color: #E76E34;
+    min-width: 10.4%;
+    display: inline-block;
+    margin: 10px;
+}

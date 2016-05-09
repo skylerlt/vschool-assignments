@@ -1,0 +1,85 @@
+li {
+    display: inline-block;
+    margin: 20px;
+}
+
+nav {
+    text-align: center;
+    border-bottom: solid;
+    font-family: fantasy;
+    font-size: 25px;
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    background-color: bisque;
+    height: 150px;
+    z-index: 1;
+}
+
+.home {
+    position: absolute;
+    left: 200px;
+}
+
+.today {
+    position: static;
+    text-align: center;
+    align-self: center;
+}
+
+.contact {
+    position: absolute;
+    right: 200px;
+}
+
+ul {
+    position: relative;
+    list-style-type: none;
+    margin: 0;
+    padding: 0;
+}
+
+p {
+    font-size: 15px;
+    margin: 30px;
+}
+
+h2 {
+    text-align: center;
+}
+
+.article1 {
+    width: 60%;
+    /*    display: inline-block;*/
+    padding-top: 15%;
+    /*    text-align: center;*/
+    background-color: cadetblue
+}
+
+.article2 {
+    width: 60%;
+    /*    display: inline-block;*/
+    padding-top: 12%;
+    /*    text-align: center;*/
+    background-image: url(http://static.srcdn.com/slir/w680-h1020-q90-c680:1020/wp-content/uploads/Captain-America-Civil-War-Alexander-Lozano-Unused-Concept-Art.jpg);
+    /*    background-position: center;*/
+    background-repeat: no-repeat;
+}
+
+.container {
+    text-align: center;
+    align-content: center;
+    position: absolute;
+    margin-left: 27%;
+}
+
+
+/*
+html { 
+  background: url(images/bg.jpg) no-repeat center center fixed; 
+  -webkit-background-size: cover;
+  -moz-background-size: cover;
+  -o-background-size: cover;
+  background-size: cover;
+}*/

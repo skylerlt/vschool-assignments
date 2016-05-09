@@ -1,0 +1,81 @@
+img{
+    height: 400px;
+    align-content: center;
+    display: inline-block;
+    margin: 10px;
+}
+
+ul {
+    text-decoration: none;
+}
+
+li{
+    font-size: 30px;
+    margin: 15px;
+    text-align: left;
+}
+
+body{
+    background-color: beige;
+    margin: 50px;
+    border: 10px solid black;
+}
+
+header{
+    text-align: center;
+    font-size: 100px;
+    text-decoration: underline;
+    font-family: fantasy;
+    margin: 15px;
+}
+
+main{
+   display: inline-block;
+    text-align: center;
+    margin-top: px;
+}
+
+p{
+    border-bottom-color: aqua;
+    border: 10px groove aqua;
+    margin: 75px;
+    font-size: 45px;
+    padding: 15px;
+    text-align: center;
+}
+
+footer{
+    text-align: center;
+    margin: 25px;
+    font-size: 25px;
+}
+
+a:link {
+    text-decoration: none;
+    color: firebrick;
+}
+
+a:hover {
+    color: blueviolet;
+    text-decoration: underline;
+    font-size: 40px;
+    transition: 1s;
+}
+
+::selection {
+    color: darkgreen;
+    background: yellow;
+}
+
+a{
+    display: block;
+    text-align: center;
+}
+
+body{
+    font-family: 'Shadows Into Light', cursive;
+}
+
+ul li a{
+    text-align: left;
+}

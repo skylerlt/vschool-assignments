@@ -1,0 +1,34 @@
+div {
+    text-align: center;
+}
+
+body {
+    background-image: url(http://images.laws.com/finance/standard-deviation-calculator.jpg);
+    background-repeat: no-repeat;
+    background-position: center;
+    background-size: cover;
+    margin: 20px;
+}
+
+h1 {
+    text-align: center;
+    font-family: monospace;
+    font-size: 40px;
+    text-decoration: underline;
+}
+
+div {
+    border: solid;
+    width: 40%;
+    background-color: white;
+    opacity: .89;
+    margin-left: 29%;
+    padding: 20px;
+}
+
+h3 {
+    border: solid;
+    width: 40px;
+    margin-left: 80%;
+    background-color: darkgrey;
+}

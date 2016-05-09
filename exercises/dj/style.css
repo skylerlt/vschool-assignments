@@ -1,0 +1,10 @@
+.square {
+    height: 300px;
+    width: 300px;
+    background-color: darkgoldenrod;
+    position: absolute;
+    top: 300px;
+    left: 500px;
+    text-align: center;
+    padding: 100px;
+}

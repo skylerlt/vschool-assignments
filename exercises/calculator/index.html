@@ -1,0 +1,54 @@
+<!doctype html>
+<html lang="en">
+
+<head>
+
+    <meta charset="utf-8">
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.6/css/bootstrap.min.css">
+    <link rel="stylesheet" href="style.css">
+
+</head>
+
+<body>
+
+    <h1>  My Calculator </h1>
+
+    <div id="add">
+        <h2> Add two numbers together:</h2>
+        <input id="addThis" type="number" placeholder="Num 1">
+        <input id="addThat" type="number" placeholder="Num 2">
+        <button onclick="myAddingFunction()" class="btn-success" id="runAdd">Add</button>
+        <br>
+        <br>
+
+        <h3 id="result1">0</h3>
+    </div>
+    <div id="subtract">
+        <h2> Subtract one number from another:</h2>
+        <input id="subtractThis" type="number" placeholder="Num 1">
+        <input id="subtractThat" type="number" placeholder="Num 2">
+        <button onclick="mySubtractFunction()" class="btn-warning" id="runSubtract">Subtract</button>
+        <br>
+        <br>
+        <h3 id="result2">0</h3>
+    </div>
+    <div id="multiply">
+        <h2> Multiply two numbers together:</h2>
+        <input id="multiplyThis" type="number" placeholder="Num 1">
+        <input id="multiplyThat" type="number" placeholder="Num 2">
+        <button onclick="myMultiplyFunction()" class="btn-danger" id="multiply">Multiply</button>
+        <br>
+        <br>
+        <h3 id="result3">0</h3>
+    </div>
+
+
+
+
+
+
+    <script src="script.js"></script>
+
+</body>
+
+</html>
