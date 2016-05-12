@@ -1,3 +1,2 @@
-# daily-planet-editor
-
-This is the file associated with the Daily Planet Editor project, which can be found at [coursework.codingcamp.us/daily-planet-editor/](http://coursework.codingcamp.us/daily-planet-editor/)
+Daily Planet Editor
+    A project that was written with contextual and functional errors that needed to be corrected.  Demonstrates a knowledge of proper syntax inside a JS file.

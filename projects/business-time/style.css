@@ -1,0 +1,237 @@
+img {
+    height: 300px;
+}
+
+.top {
+    text-align: center;
+    font-family: 'Sigmar One', cursive;
+    color: #B2170F;
+    font-size: 80px;
+}
+
+.img {
+    text-align: center;
+    background-color: #458CCC;
+    border: solid 5px #F7FF89;
+}
+
+.eyes {
+    margin: 10px;
+}
+
+header {
+    text-align: center;
+    color: #B2170F;
+}
+
+.forward {
+    text-align: center;
+    height: 250px;
+    padding-top: 40px;
+    padding-bottom: 40px;
+}
+
+.body {
+    background-image: url(http://www.highlandslittletheatre.org/wp-content/uploads/2012/10/background1.jpg);
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: cover;
+    padding-top: 70px;
+}
+
+p {
+    font-family: 'Indie Flower', cursive;
+    color: #B2170F;
+    text-align: center;
+}
+
+li {
+    font-family: 'Indie Flower', cursive;
+    color: #B2170F;
+}
+
+.navbar-brand {
+    font-family: 'Indie Flower', cursive;
+}
+
+nav {
+    position: fixed;
+}
+
+.navbar {
+    color: #B2170F;
+}
+
+.active {
+    color: #B2170F;
+}
+
+.jurassic {
+    border-bottom: solid black 60px;
+    border-top: solid black 60px;
+    margin: 10px;
+    padding: 0;
+    box-sizing: border-box;
+    height: 300px;
+}
+
+.work {
+    border-bottom: solid black 60px;
+    border-top: solid black 60px;
+    height: 300px;
+}
+
+.listHead {
+    font-family: 'Sigmar One', cursive;
+    color: #B2170F;
+    text-align: center;
+    font-size: 50px;
+    text-decoration: underline;
+    background-color: #458CCC;
+    /*    border: solid 5px #F7FF89;*/
+    padding: 20px;
+}
+
+.listHead1 {
+    font-family: 'Sigmar One', cursive;
+    color: #B2170F;
+    text-align: center;
+    font-size: 50px;
+    background-color: #458CCC;
+    border: solid 5px #F7FF89;
+}
+
+section {
+    text-align: center;
+    border: solid 5px #F7FF89;
+    background-color: #458CCC;
+}
+
+.movies {
+    border: solid 5px #F7FF89;
+    background-color: #458CCC;
+}
+
+.tv {
+    border: solid 5px #F7FF89;
+    background-color: #458CCC;
+}
+
+.intro {
+    list-style-type: none;
+}
+
+.rightFoot {
+    border: solid 5px #F7FF89;
+    background-color: #458CCC;
+}
+
+.newHead {
+    font-family: 'Indie Flower', cursive;
+    color: #B2170F;
+    text-align: center;
+}
+
+.row {
+    text-align: center;
+}
+
+footer ul li a {
+    color: #F7FF89;
+}
+
+.list1 {
+    font-size: 40px;
+}
+
+.list2 {
+    font-size: 40px;
+}
+
+.list3 {
+    font-size: 40px;
+}
+
+.list4 {
+    font-size: 40px;
+}
+
+.collageDiv {
+    text-align: left;
+    margin-bottom: 50px;
+}
+
+.deliverDiv {
+    text-align: right;
+    margin-bottom: 50px;
+}
+
+.watch1 {
+    text-align: center;
+    list-style-type: none;
+}
+
+.reportDiv {
+    text-align-last: right;
+    margin-bottom: 50px;
+}
+
+.avengers {
+    height: 200px;
+    border-top: solid black 30px;
+    border-bottom: solid black 30px;
+}
+
+.walter {
+    height: 200px;
+}
+
+.hero {
+    height: 200px;
+    border-top: solid black 30px;
+    border-bottom: solid black 30px;
+}
+
+.devil {
+    height: 200px;
+    /*    padding-left: 700px;*/
+}
+
+.lastMan {
+    height: 200px;
+    /*    padding-left: 700px;*/
+}
+
+.thrones {
+    height: 200px;
+    /*    padding-left: 700px;*/
+}
+
+.watch {
+    text-align: center;
+    list-style-type: none;
+    padding: 10px;
+}
+
+.watchDiv {
+    text-align: left;
+}
+
+.priceHead {
+    font-family: 'Indie Flower', cursive;
+    color: #B2170F;
+    text-align: center;
+    font-size: 40px;
+}
+
+.bottom {
+    list-style-type: none;
+    text-align: center;
+    background-color: #458CCC;
+    padding: 10px;
+}
+
+footer {
+    background-color: #458CCC;
+    border: solid 5px #F7FF89;
+}

@@ -1,0 +1,77 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <title>Airline</title>
+    <!--    <link rel="stylesheet" href="style.css">-->
+    <!--    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.6/css/bootstrap.min.css">-->
+</head>
+
+<body>
+
+    <h1>Anywhere Air</h1>
+    <h2>Taking your from here to anywhere!</h2>
+
+    <p>To begin please fill out the following information:</p>
+
+    <fieldset>
+
+        <form name="myTravelForm">
+
+            <legend>Personal Information:</legend>
+            <label for="firstName"> First Name</label>
+            <br>
+            <input type="text" name="firstName" placeholder="John">
+            <br>
+            <br>
+            <label for="lastname"> Last Name </label>
+            <br>
+            <input type="text" name="lastName" placeholder="Smith">
+            <br>
+            <br>
+            <label for="age"> Age </label>
+            <br>
+            <input type="number" value="Age" name="age" placeholder="1-99">
+            <br>
+            <br>
+            <input type="radio" name="gender" value="Male">Male
+            <br>
+            <input type="radio" name="gender" value="Female">Female
+            <br>
+            <input type="radio" name="gender" value="Other">Other
+            <br>
+            <br>
+            <label for="destination"> Select Your Destination</label>
+            <br>
+            <select name="destination" id="destination">
+
+                <option value="Las Vegas" name="first">Las Vegas</option>
+                <option value="New York" name="second">New York</option>
+                <option value="Seattle" name="third">Seattle</option>
+
+            </select>
+            <br>
+            <br>
+
+            <label for="dietary"> Please indicate any dietary restrictions: </label>
+            <br>
+            <input type="checkbox" name="diet" j value="Vegan">Vegan
+            <br>
+            <input type="checkbox" name="diet" value="Kosher"> Kosher
+            <br>
+            <input type="checkbox" name="diet" value="Lactose free"> Lactose free
+            <br>
+            <br>
+
+        </form>
+
+        <button name="submit" class="button btn-success" onclick="processForm()"> Submit </button>
+
+    </fieldset>
+
+    <script src="script.js"></script>
+
+</body>
+
+</html>

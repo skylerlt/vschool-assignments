@@ -1,4 +1,4 @@
-var lyrics = ["This","hit","that","ice","cold","Michelle","Pfeiffer","that","white","gold","This","one","for","them","hood","girls","Them","good","girls","straight","masterpieces","Stylin","whilen","livin","it","up","in","the","city","Got","Chucks","on","with","Saint","Laurent","Got","kiss","myself","Im","so","pretty"];  
+var lyrics = ["This", "hit", "that", "ice", "cold", "Michelle", "Pfeiffer", "that", "white", "gold", "This", "one", "for", "them", "hood", "girls", "Them", "good", "girls", "straight", "masterpieces", "Stylin", "whilen", "livin", "it", "up", "in", "the", "city", "Got", "Chucks", "on", "with", "Saint", "Laurent", "Got", "kiss", "myself", "Im", "so", "pretty"];
 
 //function print(){
 //    var forward = " ";
@@ -28,13 +28,12 @@ var lyrics = ["This","hit","that","ice","cold","Michelle","Pfeiffer","that","whi
 //
 //printReverse();
 
-function everyOther(){
+function everyOther() {
     var everyOtherLyric = " ";
-    for(i = 0; i < lyrics.length; i += 2){
+    for (i = 0; i < lyrics.length; i += 2) {
         everyOtherLyric += lyrics[i];
     }
     return everyOtherLyric;
 };
 
 console.log(everyOther());
-
