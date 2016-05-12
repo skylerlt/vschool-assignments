@@ -1,0 +1,126 @@
+{
+    "appetizers": [
+        {
+            "name": "onion rings"
+            , "ingredients": [
+                "onions", "bread"
+            ]
+            "It's called food."
+        }
+
+        
+        , {
+            "name": "mozarella sticks"
+            , "ingredients": [
+                "cheese", "bread"
+            ]
+        }
+
+        
+        , {
+            "name": "nachos"
+            , "ingredients": [
+                "chips", "cheese"
+            ]
+        }
+    ],
+
+    "cold sandwiches": [
+        {
+            "name": "chicken club"
+            , "ingredients": [
+                "bread,"
+                "meat", "cheese"
+            ]
+        }
+
+        
+        , {
+            "name": "blt"
+            , "ingredients": [
+                "bread,"
+                "meat", "cheese"
+            ]
+        }
+
+        
+        , {
+            "name": "tuna"
+            , "ingredients": [
+                "bread,"
+                "meat", "cheese"
+            ]
+        }
+    ],
+
+    "hot sandwiches": [
+        {
+            "name": "beef dip"
+            , "ingredients": [
+                "bread,"
+                "meat", "cheese"
+            ]
+        }, {
+            "name": "meatball"
+            , "ingredients": [
+                "bread,"
+                "meat", "cheese"
+            ]
+        }, {
+            "name": "spicy chicken"
+            , "ingredients": [
+                "bread,"
+                "meat", "cheese"
+            ]
+        }
+    ],
+
+    "desserts": [
+        {
+            "name": "ice cream cone"
+            , "ingredients": [
+                "ice cream", "cone"
+            ]
+        }, {
+            "name": "sundae"
+            , "ingredients": [
+                "brownie", "ice cream"
+            ]
+        }, {
+            "name": "churro"
+            , "ingredients": [
+                "bread", "cinnamon sugar"
+            ]
+        }
+    ],
+
+    "drink": [
+        {
+            "name": "soda"
+        }
+
+
+
+
+
+
+
+
+        
+        , {
+            "name": "lemonade"
+        }
+
+
+
+
+
+
+
+
+        
+        , {
+            "name": "shakes"
+        }
+    ]
+}
