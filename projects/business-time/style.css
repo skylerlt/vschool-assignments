@@ -9,6 +9,12 @@ img {
     font-size: 80px;
 }
 
+@media (max-width: 600px) {
+    .top {
+        font-size: 50px;
+    }
+}
+
 .img {
     text-align: center;
     background-color: #458CCC;
@@ -17,6 +23,12 @@ img {
 
 .eyes {
     margin: 10px;
+}
+
+@media (max-width: 600px) {
+    .eyes {
+        height: 50px;
+    }
 }
 
 header {
@@ -36,6 +48,7 @@ header {
     background-position: center;
     background-repeat: no-repeat;
     background-size: cover;
+    background-attachment: fixed;
     padding-top: 70px;
 }
 
@@ -157,13 +170,16 @@ footer ul li a {
 }
 
 .collageDiv {
-    text-align: left;
+    /*    text-align: left;*/
     margin-bottom: 50px;
+    float: left;
 }
 
 .deliverDiv {
-    text-align: right;
+    /*    text-align: right;*/
     margin-bottom: 50px;
+    float: right;
+    padding-right: 20px;
 }
 
 .watch1 {
@@ -172,8 +188,20 @@ footer ul li a {
 }
 
 .reportDiv {
-    text-align-last: right;
+    /*    text-align: right;*/
     margin-bottom: 50px;
+    float: right;
+    padding-right: 20px;
+    padding-left: 20px;
+}
+
+@media (max-width: 600px) {
+    .report,
+    .collage,
+    .deliver,
+    .watch {
+        height: 160px;
+    }
 }
 
 .avengers {
@@ -214,7 +242,8 @@ footer ul li a {
 }
 
 .watchDiv {
-    text-align: left;
+    /*    text-align: left;*/
+    float: left;
 }
 
 .priceHead {
@@ -234,4 +263,60 @@ footer ul li a {
 footer {
     background-color: #458CCC;
     border: solid 5px #F7FF89;
+}
+
+.avengersDiv {
+    margin-bottom: 20px;
+}
+
+.mittyDiv {
+    margin-bottom: 20px;
+}
+
+.heroDiv {
+    margin-bottom: 20px;
+}
+
+@media (max-width: 600px) {
+    .listHead,
+    .list3,
+    .list4,
+    .list1,
+    .list2 {
+        font-size: 20px;
+    }
+}
+
+@media (max-width: 600px) {
+    .avengers,
+    .hero,
+    .walter {
+        height: 160px;
+    }
+}
+
+@media (max-width: 600px) {
+    .devil,
+    .thrones,
+    .man {
+        height: 160px;
+    }
+}
+
+@media (max-width: 600px) {
+    .jurassic,
+    .forward,
+    .work {
+        display: none;
+    }
+}
+
+@media (max-width: 600px) {
+    .newHead {
+        font-size: 20px;
+    }
+}
+
+.topHead {
+    width: 100%;
 }
