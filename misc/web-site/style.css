@@ -1,0 +1,116 @@
+.head {
+    text-align: center;
+    padding-top: 200px;
+}
+
+.backGround {
+    position: relative;
+}
+
+.backGround::after {
+    content: "";
+    display: block;
+    position: absolute;
+    top: 0;
+    left: 0;
+    background-image: url(http://bestwallpaperhd.com/wp-content/uploads/2012/12/ocean-sunset-wallpaper.jpg);
+    width: 100%;
+    height: 100%;
+    opacity: .9;
+    z-index: -1;
+    background-repeat: no-repeat;
+    background-position: center;
+    background-size: cover;
+    background-attachment: fixed;
+}
+
+.nextBackground {
+    position: relative;
+}
+
+.nextBackground::after {
+    content: "";
+    display: block;
+    position: absolute;
+    top: 0;
+    left: 0;
+}
+
+h1 {
+    text-align: center;
+    padding-bottom: 40px;
+    color: white;
+    font-size: 60px;
+    display: inline-block;
+}
+
+button {
+    background-color: #649FFF;
+    display: inline-block;
+    height: 100px;
+    width: 100px;
+    opacity: .5;
+    color: #23333A;
+    border-radius: 50%;
+}
+
+.left {
+    float: left;
+    margin-left: 200px;
+}
+
+.right {
+    float: right;
+    margin-right: 200px;
+}
+
+nav {
+    height: 60px;
+    /*    background-color: #23333A;*/
+    position: fixed;
+    width: 100%;
+    padding-right: 20px;
+}
+
+.top {
+    padding-top: 60px;
+}
+
+ul {
+    list-style-type: none;
+    margin: 0;
+    padding: 0;
+    float: right;
+}
+
+li {
+    float: right;
+}
+
+li a {
+    display: block;
+    padding: 10px;
+    margin: 10px;
+    color: white;
+    text-decoration: none;
+}
+
+li a:hover {
+    background-color: white;
+    opacity: .3;
+}
+
+.start {
+    background-color: #649FFF;
+    opacity: .9;
+    width: 300px;
+    height: 100px;
+    border-radius: 25px;
+    text-align: center;
+    color: #23333A;
+}
+
+.startBtn {
+    text-align: center;
+    padding-top: 200px;
+}

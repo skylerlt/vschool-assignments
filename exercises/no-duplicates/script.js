@@ -1,18 +1,16 @@
 //input
 var input = 'bookkeeper larry';
-var noDupes = [];
-var extras = [];
 
-// output
-// No duplicates: 'bokepr lay'
-// The Misfits: 'okeerr'
+var singles = [];
+var doubles = [];
 
-for (var i = 0; i < input.length; i++)
-    if (noDupes.indexOf(input[i]) > -1) {
-        extras.push(input[i]);
+for (i = 0; i < input.length; i++) {
+    if (singles.indexOf(input[i]) > -1) {
+        doubles.push(input[i])
     } else {
-        noDupes.push(input[i]);
-    };
+        singles.push(input[i])
+    }
+};
 
-console.log(noDupes.join(''));
-console.log(extras.join(''));
+console.log(singles.join(" "));
+console.log(doubles.join(" "));

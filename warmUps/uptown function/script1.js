@@ -1,35 +1,36 @@
 var lyrics = ["This", "hit", "that", "ice", "cold", "Michelle", "Pfeiffer", "that", "white", "gold", "This", "one", "for", "them", "hood", "girls", "Them", "good", "girls", "straight", "masterpieces", "Stylin", "whilen", "livin", "it", "up", "in", "the", "city", "Got", "Chucks", "on", "with", "Saint", "Laurent", "Got", "kiss", "myself", "Im", "so", "pretty"];
 
-//function one() {
-//    console.log(lyrics.join(' '));
-//};
+//function print() {
+//    console.log(lyrics.join(" "));
+//}
 //
-//function two() {
-//    var backwards = lyrics.reverse(' ');
-//    console.log(backwards.join(' '));
-//};
-//
-//function three() {
-//    var everyOther = ' ';
-//    for (var i = 0; i < lyrics.length; i += 2) {
-//        everyOther += lyrics[i];
-//    }
-//    return everyOther;
-//};
+//print();
 
-function four() {
-    var everyTwo = ' '
-    for (var i = 0; i < lyrics.length; i++)
-        if (lyrics[i] % 3) {
-            everyTwo += lyrics[i]
+//function reverse() {
+//    console.log(lyrics.reverse().join(" "));
+//};
+//
+//reverse();
+
+//function everyOther() {
+//    var other = []
+//    for (var i = 0; i < lyrics.length; i += 2)
+//        other.push(lyrics[i]);
+//    console.log(other.join(" "))
+//};
+//
+//everyOther();
+
+function everyTwo() {
+    var even = [];
+    var odd = [];
+    for (var i = 0; i < lyrics.length; i++) {
+        if (lyrics.indexOf(i + 2) > -1) {
+            even.push(lyrics[i])
+        } else {
+            odd.push(lyrics[i])
         }
-    return everyTwo;
-}
+    };
+};
 
-//console.log(one());
-//
-//console.log(two());
-//
-//console.log(three());
-
-console.log(four());
+console.log(everyTwo());
