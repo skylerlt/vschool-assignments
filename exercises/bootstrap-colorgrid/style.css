@@ -2,28 +2,66 @@
     background-color: #F5C6D6;
     padding: 100px;
     border: solid white 10px;
+    transition: background-color 2s ease-out, border-radius 2s ease-out, width 2s ease-out;
+}
+
+.pink:hover {
+    background-color: black;
+    border-radius: 25px;
+    width: 50px;
 }
 
 .lilPink {
     background-color: #EE2E84;
     padding: 100px;
     border: solid white 10px;
+    transition: background-color 2s ease-out, border-radius 2s ease-out, width 2s ease-out;
+}
+
+.lilPink:hover {
+    background-color: black;
+    border-radius: 25px;
+    width: 50px;
 }
 
 .blue {
     background-color: #85CFD8;
     padding: 100px;
     border: solid white 10px;
+    transition: background-color 2s ease-out, border-radius 2s ease-out, width 2s ease-out;
+}
+
+.blue:hover {
+    background-color: black;
+    border-radius: 25px;
+    width: 50px;
 }
 
 .green {
     background-color: #8DC63F;
     padding: 100px;
     border: solid white 10px;
+    transition-property: top, left, border-radius, background-color;
+    transition-duration: 2s, 1s, 0.5s, 0.5s;
+    transition-delay: 0s, 0.5s, 1s, 1.5s;
+}
+
+.green:hover {
+    border-radius: 25px;
+    background-color: black;
+    top: -300px;
+    left: 300px;
 }
 
 .orange {
     background-color: #E76E34;
     padding: 100px;
     border: solid white 10px;
+    transition: background-color 2s ease-out, border-radius 2s ease-out, width 2s ease-out;
+}
+
+.orange:hover {
+    background-color: black;
+    border-radius: 25px;
+    width: 50px;
 }

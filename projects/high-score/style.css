@@ -1,0 +1,219 @@
+* {
+    font-family: 'Contrail One', cursive;
+}
+
+.head {
+    position: relative;
+}
+
+.head::after {
+    content: "";
+    display: block;
+    position: absolute;
+    top: 0;
+    left: 0;
+    background-image: url(https://i.ytimg.com/vi/hngPAdTl-As/maxresdefault.jpg);
+    width: 100%;
+    height: 100%;
+    opacity: .9;
+    z-index: -1;
+    background-repeat: no-repeat;
+    background-position: center;
+    background-size: cover;
+    background-attachment: fixed;
+}
+
+.secBackground {
+    position: relative;
+}
+
+.secBackground::after {
+    content: "";
+    display: block;
+    position: absolute;
+    top: 0;
+    left: 0;
+    background-image: url(http://image.shutterstock.com/z/stock-vector-flat-joystick-icon-gaming-background-210317515.jpg);
+    width: 100%;
+    height: 100%;
+    opacity: .9;
+    z-index: -1;
+    background-repeat: no-repeat;
+    background-position: center;
+    background-size: cover;
+    background-attachment: fixed;
+}
+
+.footer {
+    position: relative;
+}
+
+.footer::after {
+    content: "";
+    display: block;
+    position: absolute;
+    top: 0;
+    left: 0;
+    background-image: url(http://www.howtogeek.com/wp-content/uploads/2012/07/650x300x2012-07-10_131454.jpg.pagespeed.gp+jp+jw+pj+js+rj+rp+rw+ri+cp+md.ic.GIYizoApH_.jpg);
+    width: 100%;
+    height: 100%;
+    opacity: .9;
+    z-index: -1;
+    background-repeat: no-repeat;
+    background-position: center;
+    background-size: cover;
+    background-attachment: fixed;
+}
+
+.top {
+    text-align: center;
+    padding-top: 150px;
+}
+
+nav {
+    height: 60px;
+    position: fixed;
+    width: 100%;
+    padding-right: 20px;
+    z-index: 5;
+}
+
+ul {
+    list-style-type: none;
+    margin: 0;
+    padding: 0;
+    float: right;
+    padding-right: 20px;
+}
+
+li {
+    float: right;
+    font-size: 20px;
+}
+
+li a {
+    display: block;
+    padding: 10px;
+    margin: 10px;
+    color: #3157FF;
+    text-decoration: none;
+}
+
+li a:hover {
+    background-color: white;
+    opacity: .9;
+}
+
+tbody {
+    border: solid black 10px;
+}
+
+th {
+    color: #BF409E;
+    font-size: 25px;
+}
+
+th,
+td {
+    border: solid black;
+    padding: 10px;
+}
+
+table {
+    padding: 10px;
+    padding-top: 20px;
+    width: 100%;
+    border: solid black 5px;
+}
+
+table,
+h3 {
+    border: solid black;
+    padding: 10px;
+    text-align: center;
+}
+
+h1 {
+    color: white;
+    font-family: 'Contrail One', cursive;
+    font-size: 100px;
+}
+
+h2 {
+    color: #BF409E;
+    font-size: 50px;
+}
+
+h3 {
+    color: #BF409E;
+    font-size: 40px;
+}
+
+.info {
+    text-align: center;
+}
+
+img {
+    height: 40px;
+    padding: 10px;
+    margin: 20px;
+}
+
+input {
+    height: 30px;
+    width: 250px;
+    padding: 5px;
+    margin: 5px;
+    font-size: 40px;
+    display: inline-block;
+}
+
+.footerH3 {
+    color: white;
+    padding-top: 60px;
+}
+
+.footerUL {
+    text-align: center;
+    float: none;
+    display: block;
+}
+
+.footerLI {
+    display: block;
+    float: none;
+    padding: 10px;
+    color: white;
+    font-size: 30px;
+}
+
+button {
+    height: 50px;
+    width: 50px;
+    border-radius: 50px;
+    background-color: #FF2B14;
+    font-size: 30px;
+    font-family: 'Montserrat Alternates', sans-serif;
+    border-style: outset;
+    z-index: 5;
+}
+
+footer,
+h3 {
+    border: none;
+}
+
+label {
+    font-size: 30px;
+}
+
+select {
+    font-size: 30px;
+    background-color: white;
+}
+
+@media (max-width: 600px) {
+    .highScore {
+        height: 20px;
+    }
+}

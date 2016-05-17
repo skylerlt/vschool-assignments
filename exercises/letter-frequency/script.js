@@ -1,17 +1,39 @@
-var phrase = 'slimy smelly solution';
-var newArray = [];
+//problem: check how many times each character in the phrase repeats
 
-function letterFrequency() {
+function letterFrequency(phrase) {
+    var letterFrequency = {};
+    // Iterate through the phrase
     for (var i = 0; i < phrase.length; i++) {
-        var character = phrase.charAt(i);
-        newArray[i]
-        newArray[character]++;
+        var letter = phrase[i];
+        if (!letterFrequency.hasOwnProperty(letter)) {
+            letterFrequency[letter] = 1
+        } else {
+            letterFrequency[letter] += 1;
+        }
     }
-    return newArray;
+    for (var key in letterFrequency) {
+        console.log('"' + key + '"' + ": " + letterFrequency[key]);
+    }
 };
 
+(letterFrequency('slimy smelly solution'))
 
-console.log(letterFrequency());
+// Create an object with the letters as keys and counts as values
+// For each letter of the phrase, add it to a count of that character (key)
+
+// If that letter has not yet been found, set count to 1
+// return letter count
+
+//    for (var i = 0; i < phrase.length; i++) {
+//        var character = phrase.charAt(i);
+//        newArray[i]
+//        newArray[character]++;
+//    }
+//    return newArray;
+//};
+//
+//
+//letterFrequency('slimy smelly solution');
 
 
 
@@ -36,16 +58,16 @@ console.log(letterFrequency());
 //
 //    return freq;
 //};
-//
-//var frequency = {
-//    "s": 2,
-//    "l": 1,
-//    "i": 1,
-//    "m": 1,
-//    "y": 1,
-//    " ": 1,
-//}
-//
+////
+////var frequency = {
+////    "s": 2,
+////    "l": 1,
+////    "i": 1,
+////    "m": 1,
+////    "y": 1,
+////    " ": 1,
+////}
+////
 //for (var key in frequency) {
 //    console.log('"' + key + '": ' + frequency[key]);
 //}

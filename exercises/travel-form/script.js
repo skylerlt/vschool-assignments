@@ -11,7 +11,7 @@ function checkedDiet(dietArray) {
     }
     return dietString;
 };
-//
+
 //function processForm() {
 //    alert(
 //        "First Name: " + document.travelForm.firstName.value + "\n" +

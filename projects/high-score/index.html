@@ -1,0 +1,175 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <title>Score</title>
+    <link rel="stylesheet" href="style.css">
+    <link href='https://fonts.googleapis.com/css?family=Contrail+One' rel='stylesheet' type='text/css'>
+    <link href='https://fonts.googleapis.com/css?family=Montserrat+Alternates' rel='stylesheet' type='text/css'>
+    <link rel="shortcut icon" href="http://i0.wp.com/cblc.org/wp-content/uploads/2015/04/game-controller-icon-transparent.png?resize=900%2C720">
+</head>
+
+<body id="body">
+
+    <div class="myNav">
+        <nav>
+            <ul>
+                <li><a href="#contact">Contact Info</a></li>
+                <li><a href="#table">Scores</a></li>
+                <li><a href="#home">Home</a></li>
+            </ul>
+        </nav>
+    </div>
+
+    <div class="head">
+        <a name="home"></a>
+        <div class="top">
+            <h1>SCORE!</h1>
+        </div>
+
+        <br>
+        <br>
+        <br>
+        <br>
+        <br>
+
+    </div>
+
+    <div class="info">
+
+        <h2>So you think you got game, huh?  You think you got what it takes to outscore everyone here?</h2>
+
+        <div class="images">
+            <img src="http://wptsradio.org/wp-content/uploads/2014/02/NHS-logo.png" alt="">
+            <img class="highScore" src="http://cdna.1highscore.com/images/high_score_transparent.png" alt="">
+            <img src="http://www.nchilds.com/gallery/large/HiScore.jpg" alt="">
+
+
+        </div>
+
+        <h3>Then prove it!  Post your name and high score in the table below and show you are the best!</h3>
+
+        <br>
+        <br>
+        <br>
+        <br>
+        <br>
+
+
+    </div>
+
+    <div class="secBackground">
+
+        <br>
+        <br>
+        <br>
+        <br>
+        <br>
+        <br>
+        <br>
+        <br>
+        <br>
+        <br>
+        <br>
+        <br>
+        <br>
+        <br>
+        <br>
+        <br>
+        <br>
+        <br>
+        <br>
+        <br>
+        <br>
+        <br>
+        <br>
+        <br>
+
+    </div>
+
+    <div class="myTable">
+
+        <a name="table"></a>
+
+        <table>
+            <h3>Put your scores here</h3>
+
+            <form name="personalInfo">
+                <label for="Name"> Player name</label>
+                <br>
+                <input type="text" name="playerName" id="name" placeholder="John">
+                <br>
+                <br>
+                <label for="game"> Select Your Game</label>
+                <br>
+                <select name="game" id="game">
+
+                    <option value="Pac man" name="first">Pac Man</option>
+                    <option value="Mario" name="second">Mario</option>
+                    <option value="Fix-it Felix" name="third">Fix-it Felix</option>
+
+                </select>
+                <br>
+                <br>
+
+                <label for="score"> Score </label>
+                <br>
+                <input type="number" name="score" placeholder="Score">
+                <br>
+                <br>
+
+                <label id="trashInput" for="trash" name="trashTalk"> Wanna trash talk it up? Check the box to leave a random message </label>
+                <input id="trashCheck" name="trash" class="trash" type="checkbox">
+
+
+
+                <br>
+                <br>
+
+                <button name="submit" class="button" onclick="submitInfo()" type="reset"> A </button>
+            </form>
+
+            <br>
+            <br>
+
+            <th> Player Name </th>
+            <th> Game </th>
+            <th> Score </th>
+            <th> Trash Talk </th>
+
+            <tbody id="tableInfo">
+
+            </tbody>
+        </table>
+
+    </div>
+
+    <div class="footer">
+
+        <footer>
+            <a name="contact"></a>
+            <h3 class="footerH3">To contact me, follow these simple instructions</h3>
+            <ul class="footerUL">
+                <li class="footerLI">Don't Call</li>
+                <li class="footerLI">Don't write</li>
+                <li class="footerLI">Beat my high score, and I'll contact you</li>
+            </ul>
+        </footer>
+
+        <br>
+        <br>
+        <br>
+        <br>
+
+    </div>
+
+
+
+
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.0.0-beta1/jquery.js"></script>
+    <script src="script.js"></script>
+
+</body>
+
+</html>
