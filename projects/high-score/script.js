@@ -16,6 +16,7 @@ document.getElementById('trashCheck').addEventListener('change', function () {
 });
 
 function submitInfo() {
+
     var table = document.getElementById('tableInfo');
     var row = table.insertRow(0);
     var cell1 = row.insertCell(0);
@@ -28,26 +29,31 @@ function submitInfo() {
     cell3.innerHTML = document.personalInfo.score.value;
     cell4.innerHTML = trashTalk;
 
-    var elements = oForm.elements;
-    oForm.reset();
-    for (i = 0; i < frm_elements.length; i++) {
-        field_type = frm_elements[i].type.toLowerCase();
+    if (!cell1.innerHTML) {
+        alert("Make sure you add in a name");
+    };
+
+    var elements = document.personalInfo.elements;
+    //    console.log(elements);
+    //    oForm.reset();
+    for (i = 0; i < elements.length; i++) {
+        field_type = elements[i].type.toLowerCase();
         switch (field_type) {
         case "text":
             //        case "password":
             //        case "textarea":
             //        case "hidden":
-            frm_elements[i].value = "";
+            elements[i].value = "";
             break;
             //        case "radio":
         case "checkbox":
-            if (frm_elements[i].checked) {
-                frm_elements[i].checked = false;
+            if (elements[i].checked) {
+                elements[i].checked = false;
             }
             break;
         case "select-one":
             //        case "select-multi":
-            frm_elements[i].selectedIndex = -1;
+            elements[i].selectedIndex = -1;
             break;
         default:
             break;

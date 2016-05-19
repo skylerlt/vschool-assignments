@@ -1,0 +1,51 @@
+* {
+    font-family: 'Covered By Your Grace', cursive;
+}
+
+h1 {
+    text-align: center;
+    text-decoration: underline;
+}
+
+.container-fluid {
+    text-align: center;
+}
+
+ul {
+    list-style-type: none;
+    text-align: left;
+}
+
+.row {
+    background-image: url(http://www.pptback.com/uploads/borders-frames-notepad-backgrounds-powerpoint.jpg);
+    background-repeat: no-repeat;
+    background-position: center;
+    background-attachment: fixed;
+    width: 200px;
+    text-align: center;
+    margin-left: 40%;
+}
+
+@media (max-width: 600px) {
+    .row {
+        margin-left: 40%;
+    }
+}
+
+.momList {
+    text-align: center;
+}
+
+img {
+    height: 200px;
+    position: fixed;
+    left: 175px;
+    top: 150px;
+}
+
+@media (max-width: 950px) {
+    img {
+        height: 150px;
+        left: 0;
+    }
+}
