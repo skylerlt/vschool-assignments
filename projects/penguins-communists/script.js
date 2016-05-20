@@ -6,7 +6,7 @@ console.log("It looks like the inevitable has finally happened.  The bitter cold
 
 function Party(partyName) {
     this.name = partyName;
-    this.population = 1000000;
+    this.population = 10000;
 }
 
 var communists = new Party("Communist Reds");
@@ -66,8 +66,13 @@ function startAndFightBattle(partyA, partyB) {
         toggleAggressor = false;
     }
 
-    while (partyA.population > 0 && partyB.population > 0) {
-        if (toggleAggressor) {
+    //    while (partyA.population > 0 && partyB.population > 0) {
+
+    var handler = setInterval(function () {
+        if (partyA.population <= 0 || partyB.population <= 0) {
+            declareVictory(partyA, partyB);
+            clearInterval(handler);
+        } else if (toggleAggressor) {
             sendNuke(partyB, partyA);
             toggleAggressor = false;
             console.log('commies', partyA.population);
@@ -76,9 +81,23 @@ function startAndFightBattle(partyA, partyB) {
             toggleAggressor = true;
             console.log('penguins', partyB.population);
         }
-    }
+    }, 1000);
 
-    declareVictory(partyA, partyB);
+    //    }
+
+    //    while (partyA.population > 0 && partyB.population > 0) {
+    //        if (toggleAggressor) {
+    //            sendNuke(partyB, partyA);
+    //            toggleAggressor = false;
+    //            console.log('commies', partyA.population);
+    //        } else {
+    //            sendNuke(partyA, partyB);
+    //            toggleAggressor = true;
+    //            console.log('penguins', partyB.population);
+    //        }
+    //    }
+
+    //    declareVictory(partyA, partyB);
 }
 
 

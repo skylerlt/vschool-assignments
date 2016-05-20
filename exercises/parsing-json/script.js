@@ -14,7 +14,7 @@ xhr.onreadystatechange = function () {
 };
 
 //  Open the request object -  pass in request method and the URL where the data exists
-xhr.open("GET", "http://pokeapi.co/api/v2/pokemon/1/", true);
+xhr.open("GET", "http://mean.codingcamp.us:6543/pokemon.json", true);
 
 //  Send the request object
 xhr.send();

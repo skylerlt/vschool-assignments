@@ -1,125 +1,83 @@
 {
     "appetizers": [
         {
-            "name": "onion rings"
-            , "ingredients": [
-                "onions", "bread"
-            ]
-            "It's called food."
-        }
-
-        
-        , {
-            "name": "mozarella sticks"
-            , "ingredients": [
-                "cheese", "bread"
-            ]
-        }
-
-        
-        , {
-            "name": "nachos"
-            , "ingredients": [
-                "chips", "cheese"
-            ]
+            "name": "onion rings",
+            "ingredients": ["onions", "bread"],
+            "description": "It's called food."
+        },
+        {
+            "name": "mozarella sticks",
+            "ingredients": ["cheese", "bread"],
+            "description": "It's called food."
+        },
+        {
+            "name": "nachos",
+            "ingredients": ["chips", "cheese"],
+            "description": "It's called food."
         }
     ],
 
     "cold sandwiches": [
         {
-            "name": "chicken club"
-            , "ingredients": [
-                "bread,"
-                "meat", "cheese"
-            ]
-        }
-
-        
-        , {
-            "name": "blt"
-            , "ingredients": [
-                "bread,"
-                "meat", "cheese"
-            ]
-        }
-
-        
-        , {
-            "name": "tuna"
-            , "ingredients": [
-                "bread,"
-                "meat", "cheese"
-            ]
+            "name": "chicken club",
+            "ingredients": ["bread", "meat", "cheese"],
+            "description": "It's called food."
+        },
+        {
+            "name": "blt",
+            "ingredients": ["bread", "meat", "cheese"],
+            "description": "It's called food."
+        },
+        {
+            "name": "tuna",
+            "ingredients": ["bread", "meat", "cheese"],
+            "description": "It's called food."
         }
     ],
 
     "hot sandwiches": [
         {
-            "name": "beef dip"
-            , "ingredients": [
-                "bread,"
-                "meat", "cheese"
-            ]
-        }, {
-            "name": "meatball"
-            , "ingredients": [
-                "bread,"
-                "meat", "cheese"
-            ]
-        }, {
-            "name": "spicy chicken"
-            , "ingredients": [
-                "bread,"
-                "meat", "cheese"
-            ]
+            "name": "beef dip",
+            "ingredients": ["bread", "meat", "cheese"],
+            "description": "It's called food."
+        },
+        {
+            "name": "meatball",
+            "ingredients": ["bread", "meat", "cheese"],
+            "description": "It's called food."
+        },
+        {
+            "name": "spicy chicken",
+            "ingredients": ["bread", "meat", "cheese"]
         }
     ],
 
     "desserts": [
         {
-            "name": "ice cream cone"
-            , "ingredients": [
-                "ice cream", "cone"
-            ]
-        }, {
-            "name": "sundae"
-            , "ingredients": [
-                "brownie", "ice cream"
-            ]
-        }, {
-            "name": "churro"
-            , "ingredients": [
-                "bread", "cinnamon sugar"
-            ]
+            "name": "ice cream cone",
+            "ingredients": ["ice cream", "cone"],
+            "description": "It's called food."
+        },
+        {
+            "name": "sundae",
+            "ingredients": ["brownie", "ice cream"],
+            "description": "It's called food."
+        },
+        {
+            "name": "churro",
+            "ingredients": ["bread", "cinnamon sugar"],
+            "description": "It's called food."
         }
     ],
 
     "drink": [
         {
             "name": "soda"
-        }
-
-
-
-
-
-
-
-
-        
-        , {
+        },
+        {
             "name": "lemonade"
-        }
-
-
-
-
-
-
-
-
-        
-        , {
+        },
+        {
             "name": "shakes"
         }
     ]

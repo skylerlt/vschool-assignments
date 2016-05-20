@@ -1,29 +1,21 @@
-function hover() {
-    document.getElementById('change').addEventListener('mouseover', function () {
-        document.getElementById('change').style.backgroundColor = 'blue';
-    });
-};
+var box = document.getElementById('change');
 
-function mouseDown() {
-    document.getElementById('change').addEventListener('onmousedown', function () {
-        document.getElementById('change').style.backgroundColor = 'red';
-    });
-};
+box.addEventListener('mouseover', function () {
+    box.style.backgroundColor = 'blue';
+});
 
-function mouseUp() {
-    document.getElementById('change').addEventListener('onmouseup', function () {
-        document.getElementById('change').style.backgroundColor = 'yellow';
-    });
-};
+box.addEventListener('mousedown', function () {
+    box.style.backgroundColor = 'red';
+});
 
-function doubleClick() {
-    document.getElementById('change').addEventListener('ondbclick', function () {
-        document.getElementById('change').style.backgroundColor = 'green';
-    });
-};
+box.addEventListener('mouseup', function () {
+    box.style.backgroundColor = 'yellow';
+});
 
-function mouseWheel() {
-    document.getElementById('change').addEventListener('onmousewheel', function () {
-        document.getElementById('change').style.backgroundColor = 'orange';
-    });
-};
+box.addEventListener('dbclick', function () {
+    box.style.backgroundColor = 'green';
+});
+
+box.addEventListener('mousewheel', function () {
+    box.style.backgroundColor = 'orange';
+});
