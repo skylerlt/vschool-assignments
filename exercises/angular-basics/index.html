@@ -1,0 +1,78 @@
+<!--
+<!DOCTYPE html>
+<html lang="en" ng-app="learningAngular">
+
+<head>
+    <meta charset="UTF-8">
+    <title>Angular Basics</title>
+    <link rel="stylesheet" href="//maxcdn.bootstrapcdn.com/bootswatch/3.3.4/cerulean/bootstrap.min.css">
+</head>
+
+<body ng-controller="MainController" class="container">
+
+    <h1>{{ person.firstName }} {{person.lastName }} <small> - {{ person.birthday }}</small></h1>
+
+
+    <script src="https://ajax.googleapis.com/ajax/libs/angularjs/1.4.9/angular.js"></script>
+    <script src="app.js"></script>
+
+</body>
+
+</html>
+-->
+
+<!--
+<!DOCTYPE html>
+<html lang="en" ng-app="learningAngular">
+
+<head>
+    <meta charset="UTF-8">
+    <title>Angular Basics</title>
+    <link rel="stylesheet" href="//maxcdn.bootstrapcdn.com/bootswatch/3.3.4/cerulean/bootstrap.min.css">
+</head>
+
+<body ng-controller="MainController" class="container">
+
+    <h1>Today's Hogwarts Birthdays:</h1>
+
+    <div ng-repeat="person in people">
+        <h3>{{ person.name }}</h3>
+        <p>They're only {{person.age}} years old today!</p>
+        <p>Here's a list of their best friends in the whole world:</p>
+        <ul>
+            <li ng-repeat="friends in person.friends">{{ friends }}</li>
+        </ul>
+    </div>
+
+    <script src="https://ajax.googleapis.com/ajax/libs/angularjs/1.4.9/angular.js"></script>
+    <script src="app.js"></script>
+
+</body>
+
+</html>
+-->
+
+
+<!DOCTYPE html>
+<html lang="en" ng-app="learningAngular">
+
+<head>
+    <meta charset="UTF-8">
+    <title>Angular Basics</title>
+    <link rel="stylesheet" href="//maxcdn.bootstrapcdn.com/bootswatch/3.3.4/cerulean/bootstrap.min.css">
+</head>
+
+<body ng-controller="MainController" class="container">
+
+    <label> Type your name: </label>
+    <input id="name" type="text" ng-model="person.name">
+    <br>
+
+    <h1>{{ person.name }}</h1>
+
+    <script src="https://ajax.googleapis.com/ajax/libs/angularjs/1.4.9/angular.js"></script>
+    <script src="app.js"></script>
+
+</body>
+
+</html>

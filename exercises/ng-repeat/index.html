@@ -1,0 +1,26 @@
+<!DOCTYPE html>
+<html lang="en" ng-app="mainApp">
+
+<head>
+    <meta charset="UTF-8">
+    <title>Never. Clan</title>
+</head>
+
+<body ng-controller="MainController">
+
+    <div ng-repeat="gamer in player.kills">
+        <h2>Hi, my name is {{ gamer.handle }}, and now I'm dead...</h2>
+        <p> My rank is {{ gamer.rank }}</p>
+
+        <ul>
+            <li ng-repeat="clanMember in gamer.clan">{{ clanMember }}</li>
+        </ul>
+
+    </div>
+
+    <script src="https://ajax.googleapis.com/ajax/libs/angularjs/1.4.9/angular.js"></script>
+    <script src="app.js"></script>
+
+</body>
+
+</html>

@@ -1,0 +1,33 @@
+.backGround {
+    position: relative;
+}
+
+.backGround::after {
+    content: "";
+    display: block;
+    position: absolute;
+    top: 0;
+    left: 0;
+    background-image: url(http://static.fjcdn.com/large/pictures/95/1b/951bf0_2502371.jpg);
+    width: 100%;
+    height: 100%;
+    opacity: .9;
+    z-index: -1;
+    background-repeat: no-repeat;
+    background-position: center;
+    background-size: cover;
+    background-attachment: fixed;
+}
+
+span {
+    font-size: 20px;
+    color: white;
+    position: absolute;
+    left: 50%;
+}
+
+@media (max-width: 500px) {
+    span {
+        left: 40%;
+    }
+}

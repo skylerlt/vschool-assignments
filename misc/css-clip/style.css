@@ -1,0 +1,67 @@
+body {
+    overflow: hidden;
+}
+
+ul {
+    padding: 0;
+    margin: 10px;
+    list-style: none;
+    width: 300px;
+    height: 300px;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.5);
+}
+
+ul:after {
+    clear: both;
+    content: "";
+    display: table;
+}
+
+li {
+    position: relative;
+    float: left;
+    width: 100px;
+    height: 100px;
+    background: url(' http://subtlepatterns.subtlepatterns.netdna-cdn.com/patterns/pw_maze_white.png');
+    cursor: pointer;
+}
+
+li:nth-of-type(3n+1) {
+    clear: both;
+}
+
+img {
+    position: absolute;
+    display: block;
+    clip: rect(0, 100px, 100px, 0);
+    -webkit-transition: all 0.2s ease-out, z-index 0s;
+    -moz-transition: all 0.2s ease-out, z-index 0s;
+    transition: all 0.2s ease-out, z-index 0s;
+    opacity: 0.9;
+}
+
+li:hover img {
+    clip: rect(0, 300px, 300px, 0);
+    z-index: 2;
+    opacity: 1;
+}
+
+li:nth-of-type(3n+1):hover img {
+    left: 310px;
+}
+
+li:nth-of-type(3n+2):hover img {
+    left: 210px;
+}
+
+li:nth-of-type(3n):hover img {
+    left: 110px;
+}
+
+li:nth-of-type(n+4):nth-of-type(-n+6):hover img {
+    top: -100px;
+}
+
+li:nth-of-type(n+7):nth-of-type(-n+9):hover img {
+    top: -200px;
+}
