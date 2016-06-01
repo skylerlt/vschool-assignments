@@ -1,0 +1,48 @@
+<!DOCTYPE html>
+<html lang="en" ng-app="mainApp">
+
+<head>
+    <meta charset="UTF-8">
+    <title>Services</title>
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.6/css/bootstrap.min.css">
+    <link rel="stylesheet" href="style.css">
+</head>
+
+<body class="container" ng-controller="MainController">
+
+    <div class="col-lg-4 col-lg-offset-4 well">
+        <form>
+            <h1>Add your favorite pokemon!  I know - cool right?...</h1>
+
+            <br>
+
+            <input type="text" ng-model="name" placeholder="Pokemon name">
+
+            <br>
+            <br>
+
+            <button class="btn btn-success" ng-click="addPokemon(name)">Add</button>
+            <button class="btn btn-warning" ng-click="deletePokemon(name)">Remove</button>
+        </form>
+    </div>
+
+    <br>
+    <br>
+
+    <div class="col-lg-4 col-lg-offset-4 well" ng-repeat="pokemon in pokemonList track by $index">
+        <iframe src="//giphy.com/embed/l55HcRDH2SP7O" width="480" height="480" frameBorder="0" class="giphy-embed" allowFullScreen></iframe>
+        <p>
+            <a href="http://giphy.com/gifs/pokemon-tumblr-featured-pokeball-l55HcRDH2SP7O"></a>
+        </p>
+        <h3> {{ pokemon }} </h3>
+
+
+    </div>
+
+    <script src="https://ajax.googleapis.com/ajax/libs/angularjs/1.4.9/angular.js"></script>
+    <script src="app.js"></script>
+    <script src="services/services.js"></script>
+
+</body>
+
+</html>

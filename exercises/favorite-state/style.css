@@ -1,0 +1,187 @@
+* {
+    font-family: 'Rock Salt', cursive;
+}
+
+body {
+    padding-bottom: 50px;
+}
+
+nav {
+    background-image: url(http://static.panoramio.com/photos/large/34431320.jpg);
+    background-attachment: fixed;
+    background-position: bottom;
+    background-repeat: no-repeat;
+    background-size: cover;
+    height: 500px;
+    text-align: center;
+    /*
+    position: fixed;
+    width: 100%;
+    left: 0;
+*/
+}
+
+h1 {
+    color: white;
+    text-align: center;
+    padding-top: 60px;
+    font-size: 80px;
+    text-decoration: underline;
+}
+
+ul {
+    list-style: none;
+    text-align: right;
+    color: white;
+    border: solid black;
+    border-radius: 25px;
+    background-color: rgba(0, 0, 0, 0.5);
+    position: fixed;
+    z-index: 5;
+}
+
+li {
+    text-align: right;
+    margin: 30px;
+    text-decoration: none;
+    padding-left: 0;
+}
+
+a {
+    color: white;
+    font-size: 20px;
+    text-align: center;
+}
+
+.links {
+    position: relative;
+    border-radius: 25px;
+}
+
+.links:hover {
+    opacity: .8;
+}
+
+h2 {
+    text-align: center;
+    margin: 20px;
+    text-decoration: underline;
+}
+
+.image {
+    text-align: center;
+}
+
+p {
+    font-size: 30px;
+    border: solid black;
+    border-radius: 25px;
+    background-color: rgba(0, 0, 0, 0.5);
+    margin: 10px;
+    padding: 10px;
+}
+
+.potatoes {
+    position: relative;
+}
+
+.potatoes::after {
+    content: "";
+    display: block;
+    position: absolute;
+    top: 0;
+    left: 0;
+    background-image: url(http://bigidahopotato.com/wp-content/uploads/2014/08/photo-16.jpg);
+    width: 100%;
+    height: 100%;
+    opacity: .9;
+    z-index: -1;
+    background-repeat: no-repeat;
+    background-position: center;
+    background-size: cover;
+    background-attachment: fixed;
+}
+
+.hiking {
+    position: relative;
+}
+
+.hiking::after {
+    content: "";
+    display: block;
+    position: absolute;
+    top: 0;
+    left: 0;
+    background-image: url(https://photos.smugmug.com/Portfolio/Idaho-Mountains/i-NKw9wpR/0/L/saddleback%20lake%20final-L.jpg);
+    width: 100%;
+    height: 100%;
+    opacity: .9;
+    z-index: -1;
+    background-repeat: no-repeat;
+    background-position: center;
+    background-size: cover;
+    background-attachment: fixed;
+}
+
+.hunting {
+    position: relative;
+}
+
+.hunting::after {
+    content: "";
+    display: block;
+    position: absolute;
+    top: 0;
+    left: 0;
+    background-image: url(http://www.rmef.org/Portals/0/603x255/Elk_Bull_Generic.jpg);
+    width: 100%;
+    height: 100%;
+    opacity: .9;
+    z-index: -1;
+    background-repeat: no-repeat;
+    background-position: center;
+    background-size: cover;
+    background-attachment: fixed;
+}
+
+.fishing {
+    position: relative;
+}
+
+.fishing::after {
+    content: "";
+    display: block;
+    position: absolute;
+    top: 0;
+    left: 0;
+    background-image: url(https://buyidahorealestate-realestatewebmas.netdna-ssl.com/r/4.3.6235/images/fly_fishing1_500.jpg);
+    width: 100%;
+    height: 100%;
+    opacity: .9;
+    z-index: -1;
+    background-repeat: no-repeat;
+    background-position: center;
+    background-size: cover;
+    background-attachment: fixed;
+}
+
+.religion {
+    position: relative;
+}
+
+.religion::after {
+    content: "";
+    display: block;
+    position: absolute;
+    top: 0;
+    left: 0;
+    background-image: url(http://www.wasatchreflections.com/page28/page10/files/idaho-falls-temple.jpg);
+    width: 100%;
+    height: 100%;
+    opacity: .9;
+    z-index: -1;
+    background-repeat: no-repeat;
+    background-position: center;
+    background-size: cover;
+    background-attachment: fixed;
+}

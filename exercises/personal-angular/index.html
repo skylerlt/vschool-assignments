@@ -1,0 +1,99 @@
+<!DOCTYPE html>
+<html lang="en" ng-app="mainApp">
+
+<head>
+    <meta charset="UTF-8">
+    <title>Movies</title>
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.6/css/bootstrap.min.css">
+    <link href='https://fonts.googleapis.com/css?family=Limelight' rel='stylesheet' type='text/css'>
+    <link rel="stylesheet" href="style.css">
+</head>
+
+<body ng-controller="MainController" class="container">
+
+    <nav>
+        <h1>Movie Finder</h1>
+        <ul class="topUl">
+            <li><a href="/#main">Find Movies</a></li>
+            <li><a href="/#about">About</a></li>
+            <li><a href="/#contact">Contact Us</a></li>
+        </ul>
+    </nav>
+
+    <br>
+    <br>
+
+    <div id="myCarousel" class="carousel slide headImg" data-ride="carousel">
+
+        <!-- Wrapper for slides -->
+        <div class="carousel-inner" role="listbox">
+            <div class="item active">
+                <img class="carImg center-block" src="photos/100-best-movie-posters-of-the-80-s-00fe7225-9e17-460f-9638-ba9e8ce75881-jpeg-229456.jpg">
+            </div>
+
+            <div class="item">
+                <img class="carImg center-block" src="photos/Captain-America-Civil-War-2016-New-font-b-Movie-b-font-font-b-POSTER-b-font.jpg">
+            </div>
+
+            <div class="item">
+                <img class="carImg center-block" src="photos/deadpoolver6xxlgjpg-c73b48_765w.jpg">
+            </div>
+
+            <div class="item">
+                <img class="carImg center-block" src="photos/Dramatic-The-Emperors-New-Groove-Poster.jpg">
+            </div>
+
+            <div class="item">
+                <img class="carImg center-block" src="photos/ee96442adc07890bca36f8303f933f19.jpg">
+            </div>
+            <div class="item">
+                <img class="carImg center-block" src="photos/finding-nemo-poster.jpg">
+            </div>
+            <div class="item">
+                <img class="carImg center-block" src="photos/harry-potter.jpg">
+            </div>
+            <div class="item">
+                <img class="carImg center-block" src="photos/jurassicpark.jpg">
+            </div>
+            <div class="item">
+                <img class="carImg center-block" src="photos/Movie-Posters-movies-8405245-1224-1773.jpg">
+            </div>
+            <div class="item">
+                <img class="carImg center-block" src="photos/MPW-113357.jpeg">
+            </div>
+            <div class="item">
+                <img class="carImg center-block" src="photos/original-jaws-poster-image-1A.png">
+            </div>
+            <div class="item">
+                <img class="carImg center-block" src="photos/Real-Steel-movie-posters-26233237-1079-1600.jpg">
+            </div>
+            <div class="item">
+                <img class="carImg center-block" src="photos/warcraft-movie-poster-durotan.jpg">
+            </div>
+            <div class="item">
+                <img class="carImg center-block" src="photos/x-men-apocalypse-poster.jpg">
+            </div>
+
+        </div>
+    </div>
+
+    <div ng-view="">
+
+    </div>
+
+    <br>
+    <br>
+    <br>
+    <br>
+
+
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/2.2.3/jquery.js"></script>
+    <script src="https://ajax.googleapis.com/ajax/libs/angularjs/1.4.9/angular.js"></script>
+    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.6/js/bootstrap.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/angular.js/1.5.0-rc.0/angular-route.js"></script>
+    <script src="app.js"></script>
+    <script src="services.js"></script>
+
+</body>
+
+</html>

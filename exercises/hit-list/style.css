@@ -1,0 +1,28 @@
+/*
+.donCor {
+    width: 200px;
+}
+*/
+
+header {
+    background-color: black;
+    position: fixed;
+    left: 0;
+    z-index: 5;
+}
+
+h1 {
+    color: red;
+}
+
+h3 {
+    color: white;
+    background-color: blue;
+    height: 50px;
+    margin: 0;
+}
+
+.listImg {
+    height: 300px;
+    width: auto;
+}

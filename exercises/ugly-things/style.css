@@ -1,0 +1,26 @@
+body {
+    background-image: url(http://img05.deviantart.net/001e/i/2014/111/7/5/very_shocked_rainbow_dash_by_dasprid-d7fgoib.png);
+    background-position: left;
+    background-attachment: fixed;
+    background-repeat: no-repeat;
+    background-size: contain;
+}
+
+h2 {
+    text-align: center;
+    color: white;
+}
+
+img {
+    text-align: center;
+}
+
+.paragraph {
+    text-align: center;
+    color: white;
+}
+
+.displayDiv {
+    background-color: black;
+    text-align: center;
+}

@@ -1,0 +1,47 @@
+body {
+    background-image: url(https://i.ytimg.com/vi/lG0BnMMRfYw/maxresdefault.jpg);
+    background-attachment: fixed;
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: cover;
+    font-family: 'Bangers', cursive;
+}
+
+.border {
+    border: solid black 2px;
+    background-color: rgba(0, 0, 0, 0.5);
+    border-radius: 50px;
+}
+
+.cap,
+.iron {
+    background-color: white;
+}
+
+.teams {
+    text-align: center;
+}
+
+button {
+    border: solid black 10px;
+    opacity: 1;
+}
+
+h1,
+h3 {
+    text-align: center;
+    color: white;
+    opacity: 1;
+}
+
+.ironNum {
+    text-align: center;
+    color: #c9302c;
+    font-size: 60px;
+}
+
+.capNum {
+    text-align: center;
+    color: #286090;
+    font-size: 60px;
+}

@@ -1,0 +1,56 @@
+<!DOCTYPE html>
+<html lang="en" ng-app="ValidationPractice">
+
+<head>
+    <meta charset="UTF-8">
+    <title>Signup Form</title>
+
+    <!--  Bring in Bootstrap from the CDN  -->
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.6/css/bootstrap.min.css">
+
+    <!--  Add our own styles  -->
+    <link rel="stylesheet" href="styles.css">
+</head>
+
+<body ng-controller="FormController" class="container">
+    <section class="row">
+        <div class="col-md-4 col-md-offset-4 well">
+            <form name="validateForm" novalidate>
+                <!-- We add "novalidate" so HTML won't validate for us automatically. -->
+                <div class="form-group col-md-12">
+                    <input type="text" name="firstName" class="form-control" placeholder="First Name" ng-model="person.firstName">
+                </div>
+
+                <div class="form-group col-md-12">
+                    <input type="text" name="lastName" class="form-control" placeholder="Last Name" ng-model="person.lastName">
+                </div>
+
+                <div class="form-group col-md-12">
+                    <input type="email" name="email" class="form-control" placeholder="Email" ng-model="person.email" required>
+                </div>
+
+                <div class="form-group col-md-12">
+                    <input type="tel" name="phone" class="form-control" placeholder="Phone Number" ng-model="person.phone">
+                </div>
+
+                <div class="form-group col-md-12">
+                    <input type="password" name="password" class="form-control" placeholder="Password" ng-model="person.password" required>
+                </div>
+
+                <div class="form-group col-md-12">
+                    <input type="password" name="passwordRepeat" class="form-control" placeholder="Password Repeat" ng-model="person.passwordRepeat" required>
+                </div>
+
+                <button class="btn btn-primary btn-lg center-block" ng-click="addBadge(person)">Submit</button>
+            </form>
+        </div>
+    </section>
+
+    <!--  AngularJS from the CDN  -->
+    <script src="https://ajax.googleapis.com/ajax/libs/angularjs/1.4.5/angular.js"></script>
+
+    <!--  Our own JS  -->
+    <script src="app.js"></script>
+</body>
+
+</html>

@@ -1,0 +1,64 @@
+<!DOCTYPE html>
+<html lang="en" ng-app="mainApp">
+
+<head>
+    <meta charset="UTF-8">
+    <title>Ugly Things</title>
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.6/css/bootstrap.min.css">
+    <link rel="stylesheet" href="style.css">
+</head>
+
+<body ng-controller="MainController" class="container">
+
+    <div class="row well">
+        <form name="userForm">
+            <br>
+            <div class="col-lg-3 col-lg-offset-2">
+                <input type="text" placeholder="Place your image here" ng-model="post.image" ng-minlength="3" required>
+            </div>
+            <div class="col-lg-3">
+                <input type="text" placeholder="Give it a title" ng-model="post.title" ng-minlength="3" required>
+            </div>
+            <div class="col-lg-3">
+                <input type="text" placeholder="And a short description" ng-model="post.description" ng-minlength="3" required>
+            </div>
+            <br>
+            <br>
+            <br>
+            <div class="col-lg-2 col-lg-offset-5">
+                <button ng-click="newPost(post)" ng-disabled="userForm.$invalid" class="btn btn-info">Submit</button>
+            </div>
+            <br>
+        </form>
+    </div>
+
+    <div ng-repeat="post in page">
+        <br>
+        <br>
+        <div class="col-lg-6 col-lg-offset-3 displayDiv">
+            <h2> {{ post.title }}</h2>
+        </div>
+        <br>
+        <div class="col-lg-6 col-lg-offset-3 displayDiv">
+            <img ng-src="{{post.image}}" alt="">
+        </div>
+        <br>
+        <br>
+        <br>
+        <br>
+        <div class="paragraph col-lg-6 col-lg-offset-3 displayDiv">
+            <p> {{ post.description }}</p>
+        </div>
+        <div class="col-lg-6 col-lg-offset-3 displayDiv">
+            <button ng-click="delete($index)" class="btn btn-danger">Remove item</button>
+            <br>
+            <br>
+        </div>
+    </div>
+
+    <script src="https://ajax.googleapis.com/ajax/libs/angularjs/1.4.9/angular.js"></script>
+    <script src="app.js"></script>
+
+</body>
+
+</html>

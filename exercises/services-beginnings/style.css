@@ -1,0 +1,15 @@
+div {
+    text-align: center;
+}
+
+iframe {
+    width: 100px;
+    height: auto;
+    float: left;
+    padding-left: 20px;
+}
+
+h3 {
+    float: right;
+    padding-right: 20px;
+}

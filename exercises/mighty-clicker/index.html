@@ -1,0 +1,68 @@
+<!DOCTYPE html>
+<html lang="en" ng-app="mainApp">
+
+<head>
+    <meta charset="UTF-8">
+    <title>Mighty Clicker</title>
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.6/css/bootstrap.min.css">
+    <link href='https://fonts.googleapis.com/css?family=Bangers' rel='stylesheet' type='text/css'>
+    <link rel="stylesheet" href="style.css">
+</head>
+
+<body class="container-fluid" ng-controller="MainController as total">
+
+    <br>
+    <br>
+    <br>
+
+    <div class="border">
+        <br>
+        <br>
+        <h1>Who's side are you on?</h1>
+        <br>
+        <br>
+        <br>
+
+        <div class="row">
+            <div class="col-lg-2 col-lg-offset-2 teams">
+                <br>
+                <br>
+                <h2 class="ironNum">{{total.ironman}}</h2>
+                <br>
+                <br>
+                <br>
+                <br>
+                <h3>Team Iron Man</h3>
+                <br>
+                <button class="glyphicon glyphicon-cd btn btn-danger btn-lg" ng-click="addIronman()"></button>
+            </div>
+
+            <div class="col-lg-2 col-lg-offset-4 teams">
+                <br>
+                <br>
+                <h2 class="capNum">{{total.cap}}</h2>
+                <br>
+                <br>
+                <br>
+                <br>
+                <h3>Team Captain America</h3>
+                <br>
+                <button class="glyphicon glyphicon-star-empty btn btn-primary btn-lg" ng-click="addCap()"></button>
+                <br>
+                <br>
+            </div>
+        </div>
+    </div>
+
+
+
+
+
+
+    <script src="https://ajax.googleapis.com/ajax/libs/angularjs/1.4.9/angular.js"></script>
+    <script src="app.js"></script>
+    <script src="services/services.js"></script>
+
+</body>
+
+</html>

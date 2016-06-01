@@ -1,0 +1,76 @@
+<!DOCTYPE html>
+<html lang="en" ng-app="mainApp">
+
+<head>
+    <meta charset="UTF-8">
+    <title>To Do List</title>
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.6/css/bootstrap.min.css">
+    <link rel="stylesheet" href="style.css">
+</head>
+
+<body ng-controller="MainController" class="container">
+
+    <form class="row" name="todoForm">
+        <fieldset>
+            <legend>To Do List</legend>
+            <h3>Add an item here that needs to be completed:</h3>
+            <input type="text" placeholder="To Do Item" ng-model="item.title" ng-minlength="3" required>
+            <br>
+            <br>
+            <input type="text" placeholder="Image URL" ng-model="item.imgUrl"> If you would also like to add an image, place the URL here
+            <br>
+            <br>
+            <input type="text" placeholder="Price" ng-model="item.price" ng-minlength="3" required>
+            <br>
+            <br>
+            <input type="text" placeholder="Description" ng-model="item.description" ng-minlength="3" required>
+            <br>
+            <br>
+            <button class="glyphicon glyphicon-plus btn-sm btn btn-info" ng-click="addItem(item)" ng-disabled="todoForm.$invalid"></button>
+            <br>
+            <br>
+        </fieldset>
+    </form>
+    <h4>Press to see what is on your To Do list: </h4>
+    <button class="btn btn-success glyphicon glyphicon-eye-open btn-sm" ng-click="seeItems()"></button>
+
+    <br>
+    <br>
+
+    <section class="row myForm" ng-repeat="item in todoList track by $index">
+        <div class="col-lg-8 col-lg-offset-2 myDiv">
+            <h3 ng-class="{complete: todo.completed}" ng-hide="item.editing"> {{ item.title }} </h3>
+            <input type="text" ng-show="item.editing">
+            <br>
+            <br>
+            <img ng-src="{{ item.imgUrl }}" alt="{{ item.title }}" class="img-responsive" ng-show="item.imgUrl">
+            <input type="text" ng-show="item.editing">
+            <br>
+            <h4 ng-hide="item.editing">{{ item.price }}</h4>
+            <br>
+            <input type="text" ng-show="item.editing">
+            <br>
+            <h4 ng-hide="item.editing">{{ item.description }}</h4>
+            <br>
+            <input type="text" ng-show="item.editing">
+            <br>
+            <br>
+            <button class="glyphicon glyphicon-trash btn btn-danger btn-sm" ng-click="delete(item)"></button>
+            <button class="glyphicon glyphicon-check btn btn-sm btn-primary" ng-click="item.completed = !item.completed"></button>
+            <button class="glyphicon glyphicon-pencil btn btn-info btn-sm" ng-click="item.editing = true" ng-hide="item.editing"></button>
+            <button class="glyphicon glyphicon-floppy-open btn btn-success" ng-show="item.editing" ng-click="editItems(item, $index)"></button>
+            <br>
+            <br>
+        </div>
+        <br>
+        <br>
+    </section>
+    <br>
+    <br>
+
+    <script src="https://ajax.googleapis.com/ajax/libs/angularjs/1.4.9/angular.js"></script>
+    <script src="app.js"></script>
+
+</body>
+
+</html>

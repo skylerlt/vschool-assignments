@@ -1,0 +1,14 @@
+.myForm {
+    background-image: url(http://straightenyourpaths.com/wp-content/uploads/2013/01/bigstock-Blank-To-Do-List-27249434.jpg);
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: cover;
+}
+
+.myDiv {
+    border: solid black 1px;
+}
+
+.completed {
+    text-decoration: line-through;
+}

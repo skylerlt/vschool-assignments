@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html lang="en" ng-app="mainApp">
+
+<head>
+    <meta charset="UTF-8">
+    <title>Setup Refresher</title>
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.6/css/bootstrap.min.css">
+</head>
+
+<body class="container">
+
+    <div ng-controller="MainController" class="well">
+
+        <input ng-model="input1" type="number">
+        <input ng-model="input2" type="number">
+        <button class="glyphicon glyphicon-plus btn btn-success btn-sm" ng-click="findSum(input1,input2)" value="ADD"></button>
+        <br>
+        <label> {{addresult}} </label>
+
+    </div>
+
+    <div ng-controller="SecondController" class="well">
+
+        <input type="number" ng-model="input3">
+        <input type="number" ng-model="input4">
+        <button ng-click="findDifference(input3, input4)" class="glyphicon glyphicon-remove btn btn-primary btn-sm"></button>
+        <br>
+        <label> {{differenceresult}} </label>
+
+    </div>
+
+
+
+
+
+    <script src="https://ajax.googleapis.com/ajax/libs/angularjs/1.4.9/angular.js"></script>
+    <script src="app.js"></script>
+
+</body>
+
+</html>
