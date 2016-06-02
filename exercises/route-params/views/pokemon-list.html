@@ -1,0 +1,5 @@
+<ul>
+    <a ng-repeat="pokemon in pokemonList track by $index" href="#/pokemon/{{ $index + 1 }}">
+        <li>{{ pokemon.name }}</li>
+    </a>
+</ul>

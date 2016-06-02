@@ -5,25 +5,28 @@
     <meta charset="UTF-8">
     <title>PokeProfile</title>
     <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.6/css/bootstrap.min.css">
+    <link href='https://fonts.googleapis.com/css?family=Lobster' rel='stylesheet' type='text/css'>
     <link rel="stylesheet" href="style.css">
 </head>
 
 <body ng-controller="MainController" class="container">
 
-    <h2>Enter Pokemon Number:</h2>
-    <br>
-    <div class="input">
-        <input type="text" ng-model="input">
+    <form>
+        <h2>Enter Pokemon Number:</h2>
         <br>
-        <br>
-        <button ng-click="getNumber(input)">Get Pokemon</button>
-    </div>
+        <div class="input">
+            <input type="text" ng-model="input">
+            <br>
+            <br>
+            <button ng-click="getNumber(input)">Get Pokemon</button>
+        </div>
+    </form>
 
-    <h1>{{pokemon.name}}</h1>
-    <h2>{{pokemon.attack}}</h2>
-    <h2>{{pokemon.ability}}</h2>
+    <h1 class="ng-hide" ng-show="pokemon.name">{{pokemon.name | capitalize}}</h1>
+    <h2 class="ng-hide" ng-show="pokemon-attack">Attack: {{pokemon.attack}}</h2>
+    <h2 class="ng-hide" ng-show="pokemon.ability">Ability: {{pokemon.ability | capitalize}}</h2>
     <div class="image">
-        <img ng-src="{{pokemon.sprite}}" alt="">
+        <img class="sprite ng-hide" ng-src="{{pokemon.sprite}}" ng-show="pokemon.sprite" alt="">
     </div>
 
 

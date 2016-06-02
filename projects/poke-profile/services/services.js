@@ -7,8 +7,8 @@ app.service("ServiceController", ["$http", function ($http) {
         var myPokemon = {};
         return $http.get(baseUrl + "api/v1/pokedex/1/")
             .then(function (response) {
-                myPokemon.name = response.data.pokemon[input - 1].name;
-                return $http.get(baseUrl + response.data.pokemon[input - 1].resource_uri);
+                myPokemon.name = response.data.pokemon[input].name;
+                return $http.get(baseUrl + response.data.pokemon[input].resource_uri);
             })
             .then(function (response) {
                 myPokemon.ability = response.data.abilities[0].name;

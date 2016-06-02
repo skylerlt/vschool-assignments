@@ -2,24 +2,31 @@
 <br>
 <br>
 
-<h2>Want to search for a movie?  Just enter the title:</h2>
+<h2>Want to search for a movie or TV show?  Just enter the title:</h2>
 
 
 <div class="input">
-    <input type="text" ng-model="input">
-    <button ng-click="findMovie(input)" class="btn btn-primary btn-sm">Find My Movie!</button>
+    <form name="movieForm">
+        <input type="text" ng-model="input" ng-minlength="1" required>
+        <button ng-click="findMovie(input)" class="btn btn-primary btn-sm" ng-disabled="movieForm.$invalid">Find My Show!</button>
+    </form>
 </div>
 
+<br>
+<br>
+
 <div class="row">
-    <div class="col-lg-8">
+    <div class="col-lg-8 col-lg-offset-2 movieInfo">
         <h3>Title: {{movieInfo.title}}</h3>
         <h4>Released: {{movieInfo.released}}</h4>
         <h4>Rated: {{movieInfo.rated}}</h4>
         <h4>Director: {{movieInfo.director}}</h4>
         <h4>Actors: {{movieInfo.actors}}</h4>
         <h4>Plot: {{movieInfo.plot}}</h4>
+
+        <br>
+
+        <h4>Follow this <a class="googleLink" href="https://www.google.com/#q={{movieInfo.title}} movie or show" target="_blank">link</a> for even more on your movie/show</h4>
     </div>
-    <div class="poster">
-        <img ng-src="{{movieInfo.poster}}">
-    </div>
+
 </div>

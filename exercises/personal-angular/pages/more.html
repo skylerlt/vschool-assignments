@@ -1,0 +1,28 @@
+<br>
+<br>
+<br>
+
+<h2>Want to know even more about your favorite movies or shows?  Then enter the title again and find out more!</h2>
+
+<div class="input">
+    <form name="moreForm">
+        <input type="text" ng-model="moreInput" ng-minlength="1" required>
+        <button ng-click="getMore(moreInput)" class="btn btn-primary btn-sm" ng-disabled="moreForm.$invalid">Find Show</button>
+    </form>
+</div>
+
+<br>
+<br>
+
+<div class="col-lg-8 col-lg-offset-2 moreInfo">
+    <h3>Title: {{moreInfo.title}}</h3>
+    <h4>Runtime: {{moreInfo.runtime}}</h4>
+    <h4>Genre: {{moreInfo.genre}}</h4>
+    <h4>Writer: {{moreInfo.writer}}</h4>
+    <h4>Language: {{moreInfo.language}}</h4>
+    <h4>Awards: {{moreInfo.awards}}</h4>
+
+    <br>
+
+    <h4>Follow this <a class="googleLink" href="https://www.google.com/#q={{moreInfo.title}} movie or show" target="_blank">link</a> for even more on your movie/show</h4>
+</div>

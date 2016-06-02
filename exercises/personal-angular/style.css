@@ -67,3 +67,21 @@ input {
 .poster {
     text-align: center;
 }
+
+.googleLink {
+    color: black;
+}
+
+.googleLink:hover {
+    color: white;
+}
+
+.movieInfo {
+    border: solid white;
+    text-align: left;
+}
+
+.moreInfo {
+    border: solid white;
+    text-align: left;
+}

@@ -1,0 +1,51 @@
+* {
+    font-family: 'Permanent Marker', cursive;
+    color: white;
+}
+
+body {
+    background-image: url(http://miftyisbored.com/wp-content/uploads/2014/09/the-armors-of-ironman-long.jpg);
+    background-repeat: no-repeat;
+    background-position: center;
+    background-attachment: fixed;
+    background-size: cover;
+}
+
+h1 {
+    text-align: center;
+}
+
+ul {
+    list-style: none;
+    text-align: center;
+}
+
+.myList {
+    text-align: center;
+    background-color: rgba(0, 0, 0, .7);
+    border-radius: 50px;
+    border: solid;
+    margin-top: 100px;
+}
+
+.myCompList {
+    text-align: center;
+    border: solid;
+    border-radius: 25px;
+    margin: 10px;
+}
+
+.navList {
+    display: inline-block;
+    padding: 20px;
+}
+
+img {
+    width: 300px;
+    height: auto;
+    background-color: white;
+}
+
+.tech {
+    font-size: 25px;
+}
