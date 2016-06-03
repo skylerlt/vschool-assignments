@@ -40,6 +40,14 @@ app.controller("MainController", function ($scope) {
 
     ];
 
+    $scope.getTotal = function () {
+        var total = 0;
+        for (var i = 0; i < $scope.computerList.length; i++) {
+            total += $scope.computerList[i].price;
+        }
+        return total;
+    }
+
 });
 
 app.controller("OtherController", function ($scope) {
@@ -81,6 +89,14 @@ app.controller("OtherController", function ($scope) {
             image: "http://4.bp.blogspot.com/-r0puvOgULNE/VkoWQJgsK1I/AAAAAAAAZsA/VCiv8ZhKcxA/s1600/Guardians%2Bof%2Bthe%2BGalaxy%2BMilano%2Ba.jpg"
         }
     ];
+
+    $scope.getTotal = function () {
+        var total = 0;
+        for (var i = 0; i < $scope.otherList.length; i++) {
+            total += $scope.otherList[i].price;
+        }
+        return total;
+    }
 
 })
 

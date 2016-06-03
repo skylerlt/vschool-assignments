@@ -1,0 +1,132 @@
+* {
+    font-family: 'Spicy Rice', cursive;
+    color: white;
+}
+
+body {
+    background-image: url(http://images6.fanpop.com/image/photos/33600000/My-Little-Pony-Wallpaper-80s-toybox-33629715-1191-670.png);
+    background-attachment: fixed;
+    background-position: center;
+    background-size: cover;
+    background-repeat: no-repeat;
+}
+
+.container {
+    border: solid white 5px;
+    border-radius: 25px;
+    background-color: rgba(0, 0, 0, .5);
+    padding: 10px;
+}
+
+.navBar {
+    /*    background-color: rgba(0, 0, 0, .5);*/
+    text-align: center;
+    color: white;
+    border-radius: 25px;
+    border: solid white 5px;
+}
+
+h1 {
+    font-size: 50px;
+}
+
+h2 {
+    border: solid white 5px;
+    border-radius: 25px;
+    /*    background-color: rgba(0, 0, 0, .5);*/
+    text-align: center;
+}
+
+ul {
+    list-style: none;
+}
+
+li {
+    display: inline-block;
+    padding: 20px;
+}
+
+a {
+    color: white;
+}
+
+.scrollBar {
+    height: 230px;
+    border-radius: 25px;
+    border: solid white 5px;
+    /*    background-color: rgba(0, 0, 0, .5);*/
+    overflow-x: scroll;
+    overflow-y: hidden;
+    white-space: nowrap;
+    margin: 10px;
+    text-align: center;
+}
+
+.scrollBar a {
+    display: inline-block;
+}
+
+.scrollImage {
+    height: 200px;
+    width: auto;
+    background-color: rgba(0, 0, 0, .5);
+    border-radius: 25px;
+    border: solid white 5px;
+    padding: 10px;
+    margin: 10px;
+}
+
+.scrollImage:hover {
+    background-image: url(https://upload.wikimedia.org/wikipedia/en/thumb/b/b9/My_Little_Pony_G4_logo.svg/1024px-My_Little_Pony_G4_logo.svg.png);
+    background-size: cover;
+    background-position: center;
+    background-color: white;
+    border: solid rgba(0, 0, 0, .5) 5px;
+    transition: 1s;
+}
+
+input {
+    height: 45px;
+    width: 300px;
+    font-size: 35px;
+    border-radius: 25px;
+    color: rgba(0, 0, 0, .5);
+    border: solid white 5px;
+    text-align: center;
+}
+
+form {
+    border: solid white 5px;
+    border-radius: 25px;
+    padding: 20px;
+}
+
+.ponyName {
+    text-align: center
+}
+
+.ponyImage {
+    height: 200px;
+    width: auto;
+    padding: 10px;
+    margin: 10px;
+    text-align: center;
+}
+
+.listImage {
+    text-align: center;
+}
+
+.userName {
+    text-align: center;
+}
+
+.addWrap .addPony {
+    border: solid white 5px;
+    border-radius: 25px;
+    text-align: center;
+}
+
+.btn-danger {
+    margin: 10px;
+}

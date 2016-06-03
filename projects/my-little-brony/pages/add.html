@@ -1,0 +1,30 @@
+<h2>Want to add more ponies to your list?  Enter the name and an image URL below:</h2>
+
+<div class="row">
+    <div class="col-lg-4 col-lg-offset-4">
+        <form name="ponyForm">
+            <input class="center-block" type="text" ng-model="pony.name" placeholder="Name" ng-minlength="3" required>
+            <br>
+            <br>
+            <input class="center-block" type="text" ng-model="pony.imgUrl" placeholder="Image" required>
+            <br>
+            <br>
+            <input class="center-block" type="text" ng-model="pony.username" placeholder="User Name" required>
+            <br>
+            <br>
+            <button ng-click="postMyPonies(pony)" class="btn btn-lg btn-info center-block">Add</button>
+        </form>
+    </div>
+</div>
+
+<div class="row">
+   <div class="center-block addWrap">
+    <div class="col-lg-3 addPony" ng-repeat="pony in ponyService.ponyList">
+        <h3 class="ponyName">{{pony.name}}</h3>
+        <div>
+            <img class="ponyImage img-responsive center-block" ng-src="{{pony.imgUrl}}" alt="">
+        </div>
+        <h4 class="userName">{{pony.username}}</h4>
+    </div>
+    </div>
+</div>
