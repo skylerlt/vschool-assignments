@@ -23,6 +23,6 @@ app.service("PonyService", function ($http) {
 
     this.deletePonies = function (pony) {
         return $http.delete(baseUrl + pony._id)
-        self.ponyList.splice(pony, 1);
+        self.ponyList.splice(pony, 1)
     }
 });

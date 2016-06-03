@@ -4,7 +4,7 @@
 }
 
 body {
-    background-image: url(http://images6.fanpop.com/image/photos/33600000/My-Little-Pony-Wallpaper-80s-toybox-33629715-1191-670.png);
+    background-image: url(http://wallpapercave.com/wp/CRmZy32.png);
     background-attachment: fixed;
     background-position: center;
     background-size: cover;
@@ -19,21 +19,75 @@ body {
 }
 
 .navBar {
-    /*    background-color: rgba(0, 0, 0, .5);*/
+    background-image: url("https://i.ytimg.com/vi/cTor8gJj3s8/maxresdefault.jpg");
+    background-position: center;
+    background-size: cover;
     text-align: center;
     color: white;
     border-radius: 25px;
     border: solid white 5px;
+    height: 200px;
+}
+
+@media (max-width: 600px) {
+    .navList {
+        display: none
+    }
+}
+
+.navDisplay {
+    display: none;
+}
+
+@media (max-width: 600px) {
+    .navDisplay {
+        display: inline-block;
+        margin: 10px;
+    }
+}
+
+.navDivList-content {
+    display: none;
+    position: absolute;
+    padding: 0;
+    background-color: #f9f9f9;
+    box-shadow: 0px 8px 16px 0px rgba(0, 0, 0, 0.2);
+}
+
+.navDisplay:hover .navDivList-content {
+    display: block;
+    text-align: center;
+}
+
+.navDivList-content a {
+    color: white;
+    padding: 10px;
+    width: 100px;
+    text-decoration: none;
+    display: block;
+    background-color: rgba(0, 0, 0, .5);
+}
+
+.navDivList-content a:hover {
+    background-color: white;
+    color: rgba(0, 0, 0, .5);
+    text-align: center;
+}
+
+.navDivList-content:hover {
+    display: block;
 }
 
 h1 {
     font-size: 50px;
+    color: #ec3b94;
+    background-color: rgba(0, 0, 0, .5);
 }
 
 h2 {
     border: solid white 5px;
     border-radius: 25px;
-    /*    background-color: rgba(0, 0, 0, .5);*/
+    background-color: rgba(0, 0, 0, .5);
     text-align: center;
 }
 
@@ -47,14 +101,13 @@ li {
 }
 
 a {
-    color: white;
+    color: #ec3b94;
 }
 
 .scrollBar {
     height: 230px;
     border-radius: 25px;
     border: solid white 5px;
-    /*    background-color: rgba(0, 0, 0, .5);*/
     overflow-x: scroll;
     overflow-y: hidden;
     white-space: nowrap;
@@ -69,7 +122,6 @@ a {
 .scrollImage {
     height: 200px;
     width: auto;
-    background-color: rgba(0, 0, 0, .5);
     border-radius: 25px;
     border: solid white 5px;
     padding: 10px;
@@ -129,4 +181,12 @@ form {
 
 .btn-danger {
     margin: 10px;
+}
+
+.listBtn {
+    background-color: #cc94e0;
+}
+
+.removeBtn {
+    background-color: #e34285;
 }

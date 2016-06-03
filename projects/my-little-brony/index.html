@@ -9,15 +9,20 @@
     <link rel="stylesheet" href="style.css">
 </head>
 
-<body ng-controller="MainController">
+<body>
     <div class="container">
         <nav class="navBar">
             <h1>My Little Brony</h1>
-            <ul>
-                <li><a href="/#favorites">Favorites</a></li>
+            <ul class="navList">
                 <li><a href="/#add">Add Ponies</a></li>
-                <li><a href="/#contact">Contact</a></li>
+                <li><a href="/#favorites">Favorites</a></li>
             </ul>
+            <button class="navDisplay glyphicon glyphicon-menu-hamburger btn btn-sm listBtn">
+                <div class="navDivList-content">
+                    <a href="/#add">Add Ponies</a>
+                    <a href="/#favorites">Favorites</a>
+                </div>
+            </button>
         </nav>
 
 

@@ -17,14 +17,17 @@
     </div>
 </div>
 
+<br>
+<br>
+
 <div class="row">
-   <div class="center-block addWrap">
-    <div class="col-lg-3 addPony" ng-repeat="pony in ponyService.ponyList">
-        <h3 class="ponyName">{{pony.name}}</h3>
-        <div>
-            <img class="ponyImage img-responsive center-block" ng-src="{{pony.imgUrl}}" alt="">
+    <div class="center-block addWrap">
+        <div class="col-lg-3 addPony" ng-repeat="pony in ponyService.ponyList">
+            <h3 class="ponyName">{{pony.name}}</h3>
+            <div>
+                <img class="ponyImage img-responsive center-block" ng-src="{{pony.imgUrl}}" alt="">
+            </div>
+            <h4 class="userName">{{pony.username}}</h4>
         </div>
-        <h4 class="userName">{{pony.username}}</h4>
-    </div>
     </div>
 </div>
