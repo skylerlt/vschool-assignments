@@ -1,0 +1,77 @@
+<!DOCTYPE html>
+<html lang="en" ng-app="mainApp">
+
+<head>
+    <meta charset="UTF-8">
+    <title>Todo List</title>
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.6/css/bootstrap.min.css">
+    <link href='https://fonts.googleapis.com/css?family=Permanent+Marker' rel='stylesheet' type='text/css'>
+    <link rel="stylesheet" href="style.css">
+</head>
+
+<body class="container" ng-controller="MainController" ng-init="find()">
+
+    <h1>My Todo List</h1>
+
+    <div class="row">
+        <form>
+            <br>
+            <input type="text" placeholder="Name" ng-model="item.name">
+            <br>
+            <br>
+            <input type="text" placeholder="Description" ng-model="item.description">
+            <br>
+            <br>
+            <input type="text" placeholder="Image" ng-model="item.imageUrl">
+            <br>
+            <br>
+            <input type="text" placeholder="Completed" ng-model="item.completed">
+            <br>
+            <br>
+            <button class="btn btn-info glyphicon glyphicon-plus" ng-click="add(item)"></button>
+            <br>
+            <br>
+        </form>
+    </div>
+
+    <br>
+    <br>
+
+    <div>
+        <form>
+            <h2>Click to search for todo by Id</h2>
+            <input type="text" placeholder="Id number" ng-model="id.id">
+            <br>
+            <br>
+            <button class="btn btn-primary glyphicon glyphicon-search"></button>
+            <br>
+            <br>
+        </form>
+        <div ng-repeat="id in todoList">
+
+        </div>
+    </div>
+
+    <br>
+    <br>
+
+    <div class="row">
+        <div class="col-lg-3 myDiv" ng-repeat="item in todoList">
+            <h3>{{item.name}}</h3>
+            <h3>{{item.description}}</h3>
+            <img ng-src="{{item.imageUrl}}" alt="" class="img-responsive">
+            <h3>{{item.completed}}</h3>
+            <br>
+            <button class="btn btn-danger glyphicon glyphicon-trash" ng-click="remove(item)"></button>
+        </div>
+    </div>
+
+
+
+
+    <script src="https://ajax.googleapis.com/ajax/libs/angularjs/1.4.9/angular.js"></script>
+    <script src="app.js"></script>
+
+</body>
+
+</html>

@@ -12,7 +12,7 @@
             <input class="center-block" type="text" ng-model="pony.username" placeholder="User Name" required>
             <br>
             <br>
-            <button ng-click="postMyPonies(pony)" class="btn btn-lg btn-info center-block">Add</button>
+            <button ng-click="postMyPonies(pony)" class="btn btn-lg btn-info center-block" ng-disabled="ponyForm.$invalid">Add</button>
         </form>
     </div>
 </div>
@@ -22,7 +22,7 @@
 
 <div class="row">
     <div class="center-block addWrap">
-        <div class="col-lg-3 addPony" ng-repeat="pony in ponyService.ponyList">
+        <div class="col-lg-3 col-sm-4 addPony" ng-repeat="pony in ponyService.ponyList">
             <h3 class="ponyName">{{pony.name}}</h3>
             <div>
                 <img class="ponyImage img-responsive center-block" ng-src="{{pony.imgUrl}}" alt="">

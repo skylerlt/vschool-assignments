@@ -1,0 +1,23 @@
+[
+    {
+        "firstName": "Darth",
+        "lastName": "Maul",
+        "living": false,
+        "bountyAmount": 30000,
+        "type": "Sith"
+    },
+    {
+        "firstName": "Darth",
+        "lastName": "Vader",
+        "living": false,
+        "bountyAmount": 100000,
+        "type": "Sith"
+    },
+    {
+        "firstName": "Luke",
+        "lastName": "Skywalker",
+        "living": true,
+        "bountyAmount": 150000,
+        "type": "Jedi"
+    }
+]

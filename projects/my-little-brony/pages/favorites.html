@@ -1,9 +1,11 @@
 <div ng-init="getPonies()"></div>
 
-<div class="row">
+<h2>See all your favorite ponies you've added!</h2>
+
+<div class="row center-block">
     <div class="center-block addWrap">
-        <h2>See all your favorite ponies you've added!</h2>
-        <div class="col-lg-3 addPony center-block" ng-repeat="pony in ponyService.ponyList">
+
+        <div class="col-xs-8 col-sm-4 col-lg-3  addPony center-block" ng-repeat="pony in ponyService.ponyList">
             <h3 class="ponyName">{{pony.name}}</h3>
             <div class="listImage center-block">
                 <img ng-src="{{pony.imgUrl}}" alt="" class="img-responsive center-block ponyImage">

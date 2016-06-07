@@ -1,6 +1,6 @@
 * {
     font-family: 'Spicy Rice', cursive;
-    color: white;
+    color: #ec3b94;
 }
 
 body {
@@ -14,7 +14,7 @@ body {
 .container {
     border: solid white 5px;
     border-radius: 25px;
-    background-color: rgba(0, 0, 0, .5);
+    background-color: rgba(255, 255, 255, .5);
     padding: 10px;
 }
 
@@ -60,17 +60,16 @@ body {
 }
 
 .navDivList-content a {
-    color: white;
     padding: 10px;
     width: 100px;
     text-decoration: none;
     display: block;
-    background-color: rgba(0, 0, 0, .5);
+    background-color: rgba(255, 255, 255, .5);
 }
 
 .navDivList-content a:hover {
-    background-color: white;
-    color: rgba(0, 0, 0, .5);
+    background-color: rgba(0, 0, 0, .5);
+    color: white;
     text-align: center;
 }
 
@@ -81,13 +80,13 @@ body {
 h1 {
     font-size: 50px;
     color: #ec3b94;
-    background-color: rgba(0, 0, 0, .5);
+    background-color: rgba(255, 255, 255, .5);
 }
 
 h2 {
     border: solid white 5px;
     border-radius: 25px;
-    background-color: rgba(0, 0, 0, .5);
+    background-color: rgba(255, 255, 255, .5);
     text-align: center;
 }
 
@@ -126,6 +125,7 @@ a {
     border: solid white 5px;
     padding: 10px;
     margin: 10px;
+    background-color: rgba(0, 0, 0, .5);
 }
 
 .scrollImage:hover {
@@ -143,7 +143,7 @@ input {
     font-size: 35px;
     border-radius: 25px;
     color: rgba(0, 0, 0, .5);
-    border: solid white 5px;
+    border: solid (0, 0, 0, .5) 5px;
     text-align: center;
 }
 
@@ -151,6 +151,7 @@ form {
     border: solid white 5px;
     border-radius: 25px;
     padding: 20px;
+    background-color: rgba(255, 255, 255, .5);
 }
 
 .ponyName {
@@ -188,5 +189,6 @@ form {
 }
 
 .removeBtn {
-    background-color: #e34285;
+    background-color: #6b3792;
+    color: white;
 }

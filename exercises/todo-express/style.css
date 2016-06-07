@@ -1,0 +1,30 @@
+* {
+    text-align: center;
+    font-family: 'Permanent Marker', cursive;
+}
+
+h1 {
+    font-family: 'Permanent Marker', cursive;
+}
+
+form {
+    border: solid black 5px;
+    border-radius: 50px;
+    background-image: url(http://pre08.deviantart.net/071c/th/pre/i/2013/231/d/4/_fan_made_asset__big_frown_mouth_4__open__by_animalcrossing10399-d6ivvmo.png);
+    background-position: left;
+    background-size: contain;
+    background-repeat: no-repeat;
+}
+
+input {
+    border-radius: 15px;
+    width: 250px;
+    height: 50px;
+}
+
+.myDiv {
+    border: solid black 5px;
+    border-radius: 50px;
+    margin: 45px;
+    height: 520px;
+}

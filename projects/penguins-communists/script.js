@@ -29,12 +29,12 @@ function hit(agressor, attackee) {
         attackee.population -= 10000;
         console.log("Looks like the " + attackee.name + " lost about 10000 on that direct hit. ");
     }
-    //    sendNuke();
+    sendNuke();
 };
 
 function miss(party) {
     console.log("The " + party.name + " sent up a nuke, and when it came down, it splashed harmelessly into the ocean.  Some suspect sabotage.  Could they have a spy in the ranks?...");
-    //    sendNuke();
+    sendNuke();
 };
 
 
@@ -66,13 +66,27 @@ function startAndFightBattle(partyA, partyB) {
         toggleAggressor = false;
     }
 
-    //    while (partyA.population > 0 && partyB.population > 0) {
+    while (partyA.population > 0 && partyB.population > 0) {
 
-    var handler = setInterval(function () {
-        if (partyA.population <= 0 || partyB.population <= 0) {
-            declareVictory(partyA, partyB);
-            clearInterval(handler);
-        } else if (toggleAggressor) {
+        var handler = setInterval(function () {
+            if (partyA.population <= 0 || partyB.population <= 0) {
+                declareVictory(partyA, partyB);
+                clearInterval(handler);
+            } else if (toggleAggressor) {
+                sendNuke(partyB, partyA);
+                toggleAggressor = false;
+                console.log('commies', partyA.population);
+            } else {
+                sendNuke(partyA, partyB);
+                toggleAggressor = true;
+                console.log('penguins', partyB.population);
+            }
+        }, 1000);
+
+    }
+
+    while (partyA.population > 0 && partyB.population > 0) {
+        if (toggleAggressor) {
             sendNuke(partyB, partyA);
             toggleAggressor = false;
             console.log('commies', partyA.population);
@@ -81,23 +95,9 @@ function startAndFightBattle(partyA, partyB) {
             toggleAggressor = true;
             console.log('penguins', partyB.population);
         }
-    }, 1000);
+    }
 
-    //    }
-
-    //    while (partyA.population > 0 && partyB.population > 0) {
-    //        if (toggleAggressor) {
-    //            sendNuke(partyB, partyA);
-    //            toggleAggressor = false;
-    //            console.log('commies', partyA.population);
-    //        } else {
-    //            sendNuke(partyA, partyB);
-    //            toggleAggressor = true;
-    //            console.log('penguins', partyB.population);
-    //        }
-    //    }
-
-    //    declareVictory(partyA, partyB);
+    declareVictory(partyA, partyB);
 }
 
 

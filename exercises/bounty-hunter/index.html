@@ -1,0 +1,115 @@
+<!DOCTYPE html>
+<html lang="en" ng-app="mainApp">
+
+<head>
+    <meta charset="UTF-8">
+    <title>Bounty Hunter</title>
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.6/css/bootstrap.min.css">
+    <link href='https://fonts.googleapis.com/css?family=Orbitron' rel='stylesheet' type='text/css'>
+    <link rel="stylesheet" href="style.css">
+</head>
+
+<body ng-controller="MainController" ng-init="seePerson()" class="container-fluid">
+
+    <div class="backGround">
+
+        <br>
+        <br>
+        <br>
+        <br>
+        <br>
+        <br>
+
+        <div class="row">
+            <div class="col-lg-6 col-lg-offset-3">
+                <form name="myForm" class="myForm center-block">
+                    <br>
+                    <h2>Add bounties</h2>
+                    <br>
+                    <br>
+                    <input type="text" placeholder="First Name" ng-model="person.firstName">
+                    <br>
+                    <br>
+                    <input type="text" placeholder="Last Name" ng-model="person.lastName">
+                    <br>
+                    <br>
+                    <input type="text" placeholder="Living or Dead" ng-model="person.living">
+                    <br>
+                    <br>
+                    <input type="text" placeholder="Amount" ng-model="person.bountyAmount">
+                    <br>
+                    <br>
+                    <input type="text" placeholder="Jedi or Sith" ng-model="person.type">
+                    <br>
+                    <br>
+                    <button ng-click="addPerson(person)" class="btn btn-success glyphicon glyphicon-screenshot"></button>
+                    <br>
+                    <br>
+                </form>
+            </div>
+        </div>
+
+        <br>
+        <br>
+        <br>
+        <br>
+        <br>
+        <br>
+
+    </div>
+
+    <br>
+    <br>
+
+
+    <div class="back2">
+        <div class="row bountyRow">
+            <div ng-repeat="person in bountyList track by $index" class="bountyDiv">
+                <div class="person col-lg-3">
+                    <h3>{{person.firstName}}</h3>
+                    <input type="text" ng-show="person.edit">
+                    <h3>{{person.lastName}}</h3>
+                    <input type="text" ng-show="person.edit">
+                    <h3>{{person.living}}</h3>
+                    <input type="text" ng-show="person.edit">
+                    <h3>{{person.bountyAmount}}</h3>
+                    <input type="text" ng-show="person.edit">
+                    <h3>{{person.type}}</h3>
+                    <input type="text" ng-show="person.edit">
+                    <br>
+                    <br>
+                    <button class="glyphicon glyphicon-pencil btn btn-info btn-sm" ng-click="person.edit = true" ng-hide="person.edit"></button>
+                    <button class="btn btn-warning glyphicon glyphicon-pencil" ng-click="editPerson(person, $index)" ng-show="person.edit"></button>
+                    <button class="btn btn-danger glyphicon glyphicon-remove-circle" ng-click="delete(person)"></button>
+                    <br>
+                    <br>
+                </div>
+
+            </div>
+
+        </div>
+    </div>
+
+    <br>
+    <br>
+
+    <div class="back3">
+        <footer>
+            <br>
+            <br>
+            <br>
+            <h1>A little about Bobba Fett</h1>
+            <p>Boba Fett first appeared at the September 20, 1978, San Anselmo Country Fair parade.[2] The character appeared on television two months later, animated by Nelvana Studios for the Star Wars Holiday Special as a mysterious figure who betrays Luke Skywalker after saving him, Chewbacca, C-3PO and R2-D2 from a giant monster, only to be revealed as a bounty hunter working for Darth Vader.[1][2] After his image and identity were revealed in the Holiday Special, costumed Fett characters appeared in shopping malls and special events, putting up "Wanted" posters of the character to distinguish him from the franchise's Imperial characters.[3] He also appears in Marvel Comics' Star Wars newspaper strip.[1] The Empire Strikes Back features Boba Fett as the "next major villain" behind Darth Vader.[4] Fett tracks the Millennium Falcon to Cloud City, where Vader captures its passengers and tortures its captain, Han Solo. Wanting to collect a bounty on Solo, Fett confronts Vader about whether Solo will survive carbon freeze. Vader promises that the Empire will compensate Fett if Solo dies; after Solo is determined to be alive, Vader turns him over to Fett. Return of the Jedi features Boba Fett at Jabba the Hutt's palace where Solo's rescuers are captured, and he travels on Jabba's sail barge to the Great Pit of Carkoon, home of the Sarlacc, where the prisoners are to be executed. When the prisoners mount an escape he attempts to intervene, and ends up in a tussle with Luke Skywalker, but Solo accidentally ignites Fett's rocket pack, sending the bounty hunter falling into the Sarlacc's mouth. In the digitally remastered Special Edition version of Star Wars, Boba Fett briefly appears outside the Millennium Falcon while Jabba confronts Han Solo.[1]</p>
+            <br>
+            <br>
+            <br>
+        </footer>
+    </div>
+
+
+    <script src="https://ajax.googleapis.com/ajax/libs/angularjs/1.4.9/angular.js"></script>
+    <script src="app.js"></script>
+
+</body>
+
+</html>

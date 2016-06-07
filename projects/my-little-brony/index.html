@@ -9,7 +9,8 @@
     <link rel="stylesheet" href="style.css">
 </head>
 
-<body>
+<body ng-controller="MainController">
+    <div ng-init="getPonies()"></div>
     <div class="container">
         <nav class="navBar">
             <h1>My Little Brony</h1>
@@ -44,21 +45,22 @@
                 <a target="_blank" href="https://www.youtube.com/watch?v=O266NUUShwY"><img class="img-responsive scrollImage center-block" src="http://vignette3.wikia.nocookie.net/mlp-gameloft/images/7/74/Princess_Cadance_Vector.png/revision/latest?cb=20141214230014"></a>
                 <a target="_blank" href="https://www.youtube.com/watch?v=wyXgbwu2rAA"><img class="img-responsive scrollImage center-block" src="http://vignette2.wikia.nocookie.net/mlpfanart/images/a/ab/Shining_Armor_by_sakatagintoki117.png/revision/latest?cb=20140503152326"></a>
                 <a target="_blank" href="https://www.youtube.com/watch?v=98yTImVDxho"><img class="img-responsive scrollImage center-block" src="http://vignette2.wikia.nocookie.net/mlpfanart/images/5/55/Big_macintosh_2nd_best_pony_by_redink853-d5w47ka.png/revision/latest?cb=20140301075946"></a>
+                <a ng-repeat="pony in ponyService.ponyList" href="https://www.youtube.com/watch?v=GHy0xktlsSI" target="_blank"><img class="img-responsive scrollImage center-block" ng-src="{{pony.imgUrl}}"></a>
 
             </div>
         </div>
 
-        <div ng-view=""></div>
+        <div ng-view=" "></div>
 
     </div>
 
-    <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/2.2.3/jquery.js">
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/2.2.3/jquery.js ">
     </script>
-    <script src="https://ajax.googleapis.com/ajax/libs/angularjs/1.4.9/angular.js"></script>
-    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.6/js/bootstrap.min.js"></script>
-    <script src="https://cdnjs.cloudflare.com/ajax/libs/angular.js/1.5.0-rc.0/angular-route.js"></script>
-    <script src="app.js"></script>
-    <script src="services/services.js"></script>
+    <script src="https://ajax.googleapis.com/ajax/libs/angularjs/1.4.9/angular.js "></script>
+    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.6/js/bootstrap.min.js "></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/angular.js/1.5.0-rc.0/angular-route.js "></script>
+    <script src="app.js "></script>
+    <script src="services/services.js "></script>
 
 </body>
 
