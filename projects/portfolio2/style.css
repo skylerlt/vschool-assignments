@@ -114,6 +114,13 @@ h1 {
     color: black;
 }
 
+@media (max-width: 600px) {
+    .photo {
+        margin: 10px;
+        height: 50px;
+    }
+}
+
 .languages {
     text-align: center;
 }
@@ -191,7 +198,7 @@ h1 {
 }
 
 .footer {
-    padding-top: 150px;
+    padding-top: 50px;
     color: white;
 }
 
@@ -206,6 +213,15 @@ nav {
 
 ul {
     list-style: none;
+}
+
+li {
+    transition: 1s;
+}
+
+li:hover {
+    font-size: 30px;
+    transform: rotateX(360deg);
 }
 
 .langh3 {
