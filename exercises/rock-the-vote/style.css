@@ -1,0 +1,90 @@
+* {
+    text-align: center;
+    font-family: 'Rock Salt', cursive;
+}
+
+body {
+    background-image: url(http://rockandrallyforthetroops.com/wp-content/uploads/2014/11/9a920f75-c1cf-4a92-8236-c74a7f928599.jpg);
+    background-attachment: fixed;
+    background-position: center;
+    background-size: cover;
+    background-repeat: no-repeat;
+}
+
+h1,
+h2 {
+    font-family: 'Rock Salt', cursive;
+    color: white;
+}
+
+h3,
+h4 {
+    color: rgba(0, 0, 0);
+}
+
+ul {
+    list-style: none;
+}
+
+a {
+    color: white;
+}
+
+li {
+    display: inline-block;
+    margin: 30px;
+    text-align: center;
+}
+
+.headDiv {
+    border: gray;
+    background-color: rgba(0, 0, 0, .5);
+    padding: 10px;
+    margin: 10px;
+    border-radius: 25px;
+}
+
+.imgDiv {
+    text-align: center;
+}
+
+.candImg {
+    height: 300px;
+    width: auto;
+    margin: 10px;
+}
+
+.myDiv {
+    border: white;
+    background-color: rgba(225, 225, 225, .5);
+    padding: 10px;
+    margin: 10px;
+    border-radius: 25px;
+}
+
+textarea {
+    text-align: left;
+}
+
+.addComment {
+    width: 400px;
+    height: 30px;
+}
+
+.firstPost {
+    border: solid black 5px;
+}
+
+.hillaryVotes {
+    float: right;
+    right: 100px;
+}
+
+.trumpVotes {
+    float: left;
+    left: 100px;
+}
+
+h6 {
+    color: black;
+}

@@ -1,0 +1,35 @@
+[class*="bg__"] {
+    height: 50vh;
+    text-indent: -9999px;
+    /* fix background */
+    background-attachment: fixed;
+    /* center it */
+    background-position: center center;
+    /* Scale it nicely to the element */
+    background-size: cover;
+    /* just make it look a bit better ;) */
+    &:nth-child(2n) {
+        box-shadow: inset 0 0 1em #111;
+    }
+}
+
+.bg__foo {
+    background-image: url(https://s3-us-west-2.amazonaws.com/s.cdpn.io/30354/parallax1.jpg
+);
+}
+
+.bg__bar {
+    background-image: url(https://s3-us-west-2.amazonaws.com/s.cdpn.io/30354/parallax2.jpg
+);
+}
+
+.bg__baz {
+    background-image: url(https://s3-us-west-2.amazonaws.com/s.cdpn.io/30354/parallax3.jpg
+);
+}
+
+.bg__bazz {
+    height: 100vh;
+    background-image: url(https://s3-us-west-2.amazonaws.com/s.cdpn.io/30354/parallax1.jpg
+);
+}

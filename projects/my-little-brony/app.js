@@ -15,7 +15,7 @@ app.config(function ($routeProvider) {
 
 app.controller("MainController", function ($scope, PonyService) {
 
-    $scope.ponyService = PonyService;
+    $scope.PonyService = PonyService;
 
     $scope.getPonies = function () {
         PonyService.getPonies().then(function () {

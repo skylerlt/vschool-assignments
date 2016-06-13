@@ -1,0 +1,20 @@
+body {
+    background-image: url(http://i.imgur.com/JTjy2Of.jpg);
+    background-attachment: fixed;
+    background-position: center;
+    background-size: cover;
+    background-repeat: no-repeat;
+}
+
+h1 {
+    color: yellow;
+    font-size: 50px;
+    text-align: center;
+}
+
+.myDiv {
+    border: solid white 5px;
+    border-radius: 25px;
+    background-color: rgba(225, 225, 225, .5);
+    padding: 10px;
+}

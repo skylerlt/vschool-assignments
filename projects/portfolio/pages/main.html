@@ -5,52 +5,97 @@
     <meta charset="UTF-8">
     <title>My Portfolio</title>
     <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.6/css/bootstrap.min.css">
+    <link href='https://fonts.googleapis.com/css?family=Righteous' rel='stylesheet' type='text/css'>
     <link rel="stylesheet" href="/style.css">
 </head>
 
-<body class="container mainBack">
+<body class="container-fluid mainBack">
+
+    <nav>
+        <ul>
+            <li><a class="links" href="/index.html">Home</a></li>
+            <li><a class="links" href="main.html">About</a></li>
+            <li><a class="links" href="/pages/projects.html">Projects</a></li>
+        </ul>
+    </nav>
 
     <a name="main"></a>
+    <div class="container">
+        <div class="row mainRow">
+            <h2>My name is Skyler Talbot</h2>
+            <br>
 
-    <div class="row mainRow">
-        <h2>My name is Skyler Talbot</h2>
+            <div class="myImg">
+                <img class="photo img-responsive center-block" src="/photos/thumb_DSC_9070_1024.jpg" alt="">
+            </div>
 
-        <div class="myImg">
-            <img class="photo" src="/photos/thumb_DSC_9070_1024.jpg" alt="">
-        </div>
+            <br>
+            <br>
 
-
-        <br>
-        <br>
-
-        <h3>I'm a father of 5 beautiful children</h3>
-        <br>
-        <div class="myImg">
-            <img class="photo" src="/photos/thumb_SavedImage_20160530_085440_13_1024.jpg" alt="">
-            <img class="photo" src="/photos/thumb_20160601_130709_Burst15_1024.jpg" alt="">
-        </div>
-
-        <br>
-        <br>
-
-        <h3>And I love to code!</h3>
-        <br>
-        <div class="mainBtn">
-            <a href="/pages/projects.html">
-                <button>My projects</button>
+            <h3>And I am learning to code!</h3>
+            <br>
+            <div class="row">
+                <div class="languages">
+                    <img class="langImg" src="https://upload.wikimedia.org/wikipedia/commons/thumb/3/38/HTML5_Badge.svg/600px-HTML5_Badge.svg.png" alt="">
+                    <img class="langImg" src="http://www.palermo4.com/image.axd?picture=CSS3-Logo.png" alt="">
+                    <img class="langImg" src="http://darksnow.net/img/skills/javascript.svg" alt="">
+                    <img class="langImg" src="https://avatars0.githubusercontent.com/u/139426?v=3&s=400" alt="">
+                    <img class="langImg" src="https://nodejs.org/static/images/logos/nodejs-new-pantone-black.png" alt="">
+                    <img class="langImg" src="https://git-scm.com/images/logos/downloads/Git-Logo-1788C.png" alt="">
+                    <img class="langImg" src="http://baracus.com/img/express.png" alt="">
+                    <img class="langImg" src="https://upload.wikimedia.org/wikipedia/en/thumb/4/45/MongoDB-Logo.svg/1280px-MongoDB-Logo.svg.png" alt="">
+                </div>
+            </div>
+            <br>
+            <br>
+            <div class="education">
+                <h2>Education</h2>
+                <br>
+                <br>
+                <img class="langImg" src="https://course_report_production.s3.amazonaws.com/rich/rich_files/rich_files/1706/s300/v-school-abbreviated-cropped.png" alt="">
+                <img class="langImg" src="http://www.userlogos.org/files/logos/Sastre/BYUI1.png" alt="">
+            </div>
+            <br>
+            <br>
+            <div class="mainBtn">
+                <h2>Find my projects here:</h2>
+                <br>
+                <br>
+                <a href="/pages/projects.html" class="enter">My Projects
             </a>
+            </div>
+            <div class="mainBtn">
+                <br>
+                <br>
+                <div>
+                    <br>
+                    <br>
+                    <h2>Find my resume here:</h2>
+                </div>
+                <br>
+                <br>
+                <h3><a class="enter" href="https://docs.google.com/document/d/11NaKpHt24gbOo-AN7xbG9Y7SLDAfefW07B-IvcK0tRk/edit" target="_blank">My Resume</a></h3>
+                <br>
+                <br>
+                <div>
+                    <h2>Contact me:</h2>
+                    <br>
+                    <a href="https://www.facebook.com/skyler.talbot.7" target="_blank"><img class="socImg" src="http://logomecca.com/wp-content/uploads/2015/07/facebook_blue_outline_logo_transparent_background_png_font_icon_vector_button_maker_and.png" alt=""></a>
+                    <a href="https://www.linkedin.com/in/skylertalbot" target="_blank"><img class="socImg" src="https://lh5.googleusercontent.com/-_zZHR1gz8dk/VIMLMg_CUmI/AAAAAAAAHxY/Gs5OO7G6pRY/s256-no/linkedin-follow.png" alt=""></a>
+                    <a href="https://github.com/skylerlt" target="_blank"><img class="socImg" src="https://cdn4.iconfinder.com/data/icons/iconsimple-logotypes/512/github-512.png" alt=""></a>
+                </div>
+                <br>
+                <br>
+
+            </div>
         </div>
+
         <br>
         <br>
+        <br>
 
-    </div>
-
-    <br>
-    <br>
-    <br>
-
-    <script src="https://ajax.googleapis.com/ajax/libs/angularjs/1.4.9/angular.js"></script>
-    <script src="https://cdnjs.cloudflare.com/ajax/libs/angular.js/1.5.0-rc.0/angular-route.js"></script>
-    <script src="/app.js"></script>
+        <script src="https://ajax.googleapis.com/ajax/libs/angularjs/1.4.9/angular.js"></script>
+        <script src="https://cdnjs.cloudflare.com/ajax/libs/angular.js/1.5.0-rc.0/angular-route.js"></script>
+        <script src="/app.js"></script>
 
 </body>

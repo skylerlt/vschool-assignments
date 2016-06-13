@@ -1,9 +1,32 @@
+* {
+    font-family: 'Righteous', cursive;
+}
+
 body {
     background-image: url(http://hdwallpaperbackgrounds.net/wp-content/uploads/2016/05/Nature-background-12.jpg);
     background-attachment: fixed;
     background-position: center;
     background-repeat: no-repeat;
     background-size: cover;
+}
+
+nav {
+    width: 100%;
+    right: 0;
+    background-color: rgba(225, 225, 225, .5);
+}
+
+li {
+    list-style: none;
+}
+
+.links {
+    color: rgba(0, 0, 0, .5);
+    font-size: 20px;
+}
+
+.links:hover {
+    color: rgba(225, 225, 225, .5);
 }
 
 .mainBack {
@@ -22,48 +45,82 @@ body {
     background-size: cover;
 }
 
+.lastBack {
+    background-image: url(https://newevolutiondesigns.com/images/freebies/nature-hd-background-10.jpg);
+    background-attachment: fixed;
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: cover;
+}
+
 h1,
 h2,
 h3 {
     text-align: center;
     color: white;
+    font-family: 'Righteous', cursive;
 }
 
 .mainBtn {
     text-align: center;
 }
 
-button {
+.enter {
     text-align: center;
-    opacity: .6;
+    background-color: none;
+    border: solid white 1px;
     height: 100px;
     width: 100px;
-    border-radius: 50px;
+    border-radius: 15px;
+    padding: 30px;
+    color: white;
+    transition: 1s;
 }
 
-.mainRow {
+.enter:hover {
+    background-color: rgba(225, 225, 225, .5);
+    color: rgba(0, 0, 0, .5);
+    border-color: rgba(0, 0, 0, .5);
+    text-decoration: none;
+}
+
+.mainRow,
+.myProjects {
     border: solid white 5px;
     border-radius: 25px;
-    background-color: rgba(225, 225, 225, .5);
+    background-color: rgba(0, 0, 0, .6);
 }
 
 .myImg {
-    text-align: center;
+    margin: 10px;
 }
 
 .photo {
     height: 300px;
+    margin-top: 10px;
+    border-radius: 15px;
+}
+
+.languages {
     text-align: center;
+    margin: 10px;
+}
+
+.langImg {
+    height: 150px;
+    width: auto;
 }
 
 .projectPhoto {
     height: 300px;
+    transition: 2s ease;
+    display: inline-block;
 }
 
 .projectPhoto:hover {
     height: 400px;
     width: auto;
-    transition: 2s;
+    border-radius: 50px;
 }
 
 @media (max-width: 600px) {
@@ -74,12 +131,12 @@ button {
 
 .projectDiv {
     opacity: .8;
+    transition: 2s;
 }
 
 .projectDiv:hover {
     z-index: 200;
     opacity: 1;
-    transition: 2s;
 }
 
 .bronies {
@@ -89,11 +146,47 @@ button {
 .bronyImg {
     height: 500px;
     width: auto;
+    transition: 2s;
 }
 
 .bronyImg:hover {
     height: 800px;
     width: auto;
     left: 0;
-    transition: 2s;
+}
+
+.title {
+    text-align: center;
+}
+
+.projTitle {
+    color: rgba(0, 0, 0, .5);
+    background-color: rgba(225, 225, 225, .5);
+    border-radius: 25px;
+    border: solid rgba(0, 0, 0, .5) 5px;
+}
+
+.socImg {
+    height: 50px;
+    transition: 1s ease-in-out;
+}
+
+.socImg:hover {
+    height: 60px;
+    -webkit-transform: rotateY(720deg);
+    transform: rotateY(720deg);
+}
+
+.center-block {
+    display: block;
+    margin-left: auto;
+    margin-right: auto;
+}
+
+.element {
+    .center-block();
+}
+
+.education {
+    text-align: center;
 }

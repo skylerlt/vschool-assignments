@@ -15,7 +15,7 @@ input {
 
 h3 {
     border: solid black 2px;
-    background-color: gray;
+    /*    background-color: gray;*/
     border-radius: 5px;
     height: 40px;
     padding: 5px;

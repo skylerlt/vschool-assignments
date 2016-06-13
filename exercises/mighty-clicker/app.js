@@ -2,12 +2,16 @@ var app = angular.module("mainApp", []);
 
 app.controller("MainController", function ($scope, blueService, redService) {
 
-    blueService.addCap().then(function () {
-        $scope.total.cap = totalcap;
-    });
+    $scope.total = {};
 
-    redService.addIronman().then(function () {
-        $scope.total.ironMan = totalironman;
-    });
+    $scope.voteCap = function () {
+        $scope.total.cap = blueService.addCap();
+        $scope.total.ironman = redService.removeIronMan();
+    }
+
+    $scope.voteIron = function () {
+        $scope.total.ironman = redService.addIronman();
+        $scope.total.cap = blueService.removeCap();
+    };
 
 });

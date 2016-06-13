@@ -32,7 +32,7 @@
     </div>
 
     <div class="row displayDiv" ng-repeat="person in people track by $index">
-        <h3 ng-style="{'background-color: colors[index]'}">Badge:</h3>
+        <h3 ng-style="{'background-color': colors[$index % colors.length]}">Badge:</h3>
         <form class="displayForm row">
             <fieldset>
                 <div class="topLine col-lg-6 col-lg-offset-3">

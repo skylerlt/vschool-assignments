@@ -1,0 +1,59 @@
+<!DOCTYPE html>
+<html lang="en" ng-app="MainApp">
+
+<head>
+    <meta charset="UTF-8">
+    <title>Rock the Vote</title>
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.6/css/bootstrap.min.css">
+    <link href='https://fonts.googleapis.com/css?family=Rock+Salt' rel='stylesheet' type='text/css'>
+    <link rel="stylesheet" href="style.css">
+</head>
+
+<body class="container-fluid" ng-controller="MainController" ng-init="getPosts()">
+
+    <div class="container">
+
+        <div class="headDiv row">
+            <h1>Rock the vote!</h1>
+
+            <br>
+            <br>
+
+            <h2>Post title:</h3>
+            <input type="text" ng-model="post.title">
+            <br>
+            <br>
+            <h2>Post Description:</h3>
+            <input type="text" ng-model="post.description">
+            <br>
+            <br>
+
+            <button class="btn btn-primary glyphicon glyphicon-plus" type="button" ng-click="postPosts(post)"></button>
+
+        </div><div ng-repeat="post in allPosts | orderBy: '-popular'">
+    <div class="myDiv row">
+                <br>
+                <h3>{{post.title}}</h3>
+                <h3>{{post.description}}</h3>
+                <button ng-click="post.popular = post.popular + 1">Add vote</button>
+                <h3>{{post.popular}}</h3>
+                <br>
+                <button ng-click="post.popular = post.popular - 1">Down vote</button>
+                <br>
+                <h3>Make a comment:</h3>
+                <br>
+                <input type="text" placeholder="Comment">
+                <button class="btn btn-info glyphicon glyphicon-pencil"></button>
+            </div>
+
+        </div>
+    </div>
+
+    <script src="https://ajax.googleapis.com/ajax/libs/angularjs/1.4.9/angular.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/angular.js/1.5.0-rc.0/angular-route.js"></script>
+    <script src="app.js"></script>
+    <script src="service.js"></script>
+
+</body>
+
+</html>

@@ -1,0 +1,83 @@
+.back {
+    position: relative;
+}
+
+.back::after {
+    content: "";
+    display: block;
+    position: absolute;
+    top: 0;
+    left: 0;
+    background-image: url("photos/20160511_185717_HDR%20(1).jpg");
+    width: 100%;
+    height: 100%;
+    opacity: .9;
+    z-index: -1;
+    background-repeat: no-repeat;
+    background-position: center;
+    background-size: cover;
+    background-attachment: fixed;
+}
+
+.back1 {
+    position: relative;
+}
+
+.back1::after {
+    content: "";
+    display: block;
+    position: absolute;
+    top: 0;
+    left: 0;
+    background-image: url("photos/20160511_185717_HDR%20(2).jpg");
+    width: 100%;
+    height: 100%;
+    opacity: .9;
+    z-index: -1;
+    background-repeat: no-repeat;
+    background-position: center;
+    background-size: cover;
+    background-attachment: fixed;
+}
+
+.back2 {
+    position: relative;
+}
+
+.back2::after {
+    content: "";
+    display: block;
+    position: absolute;
+    top: 0;
+    left: 0;
+    background-image: url("photos/20160511_185717_HDR%20(3).jpg");
+    width: 100%;
+    height: 100%;
+    opacity: .9;
+    z-index: -1;
+    background-repeat: no-repeat;
+    background-position: center;
+    background-size: cover;
+    background-attachment: fixed;
+}
+
+.back3 {
+    position: relative;
+}
+
+.back3::after {
+    content: "";
+    display: block;
+    position: absolute;
+    top: 0;
+    left: 0;
+    background-image: url("photos/20160511_185717_HDR.jpg");
+    width: 100%;
+    height: 100%;
+    opacity: .9;
+    z-index: -1;
+    background-repeat: no-repeat;
+    background-position: center;
+    background-size: cover;
+    background-attachment: fixed;
+}

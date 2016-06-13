@@ -1,0 +1,93 @@
+<!DOCTYPE html>
+<html lang="en" ng-app="mainApp">
+
+<head>
+    <meta charset="UTF-8">
+    <title>Personal Portfolio</title>
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.6/css/bootstrap.min.css">
+    <link href='https://fonts.googleapis.com/css?family=Righteous' rel='stylesheet' type='text/css'>
+    <link rel="stylesheet" href="style.css">
+</head>
+
+<body class="container-fluid projectBack">
+    <a name="projects"></a>
+    <nav class="links">
+        <ul>
+            <li><a class="links" href="/index.html">Home</a></li>
+        </ul>
+    </nav>
+
+    <div class="myProjects">
+        <br>
+        <br>
+        <br>
+        <br>
+        <br>
+        <h2>My Projects</h2>
+        <h3>Follow the links below to see my projects</h3>
+
+        <br>
+        <br>
+        <div class="container">
+            <div class="row">
+                <div class="col-lg-3 projectDiv">
+                    <a href="#/project1">
+                        <div class="photo"><img class="projectPhoto" src="http://www.animationmagazine.net/wordpress/wp-content/uploads/my-little-pony-post1.jpg" alt="">
+                            <h3>My Little Brony</h3></div>
+                    </a>
+                </div>
+
+                <br>
+                <br>
+                <br>
+                <br>
+                <br>
+                <br>
+                <br>
+                <br>
+
+                <div class="col-lg-3 projectDiv">
+                    <a href="#/project2">
+                        <div class="photo"><img class="projectPhoto" src="/photos/Screen%20Shot%202016-06-06%20at%202.31.18%20PM%20(2).png" alt="">
+                            <h3>My Movie Finder</h3></div>
+                    </a>
+                </div>
+
+                <br>
+                <br>
+                <br>
+                <br>
+                <br>
+                <br>
+                <br>
+                <br>
+
+                <div class="col-lg-3 projectDiv">
+                    <a href="#/project3">
+                        <div class="photo"><img class="projectPhoto" src="http://www.newsmax.com/Newsmax/files/9c/9c022148-1399-4e12-a82e-85bf37bec717.jpg" alt="">
+                            <h3>My Favorite State</h3></div>
+                    </a>
+                </div>
+            </div>
+        </div>
+        <br>
+        <br>
+        <br>
+        <br>
+    </div>
+
+    <br>
+    <br>
+    <br>
+    <br>
+
+    <div ng-view=""></div>
+
+    <script src="https://ajax.googleapis.com/ajax/libs/angularjs/1.4.9/angular.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/angular.js/1.5.0-rc.0/angular-route.js"></script>
+    <script src="/app.js"></script>
+
+
+</body>
+
+</html>

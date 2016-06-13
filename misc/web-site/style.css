@@ -156,3 +156,27 @@ li a::after .background {
     background-color: white;
     width: 100%;
 }
+
+#loremdiv {
+    margin: 100px;
+    height: 200px;
+    width: 200px;
+    background: black;
+    -webkit-transition: all 1s ease;
+    -moz-transition: all 1s ease;
+    -o-transition: all 1s ease;
+    -ms-transition: all 1s ease;
+    transition: all 1s ease;
+}
+
+#loremdiv:hover {
+    background: gray;
+    -webkit-transform: rotate(1080deg);
+    -moz-transform: rotate(1080deg);
+    -o-transform: rotate(1080deg);
+    -ms-transform: rotate(1080deg);
+    transform: rotate(1080deg);
+    -webkit-border-radius: 100px;
+    -moz-border-radius: 100px;
+    border-radius: 100px;
+}

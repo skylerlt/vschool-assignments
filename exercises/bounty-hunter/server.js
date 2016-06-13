@@ -13,7 +13,8 @@ var bounties = [
         "lastName": "Skywalker",
         "living": true,
         "bountyAmount": 150000,
-        "type": "Jedi"
+        "type": "Jedi",
+        "id": uuid.v4()
     }
 ];
 
@@ -31,7 +32,7 @@ app.put("/bounty/:bountyId", function (req, res) {
     for (var i = 0; i < bounties.length; i++) {
         if (bounties[i].id === req.params.bountyId) {
             bounties[i] = req.body;
-            res.send(bounties[i]);
+            return res.send(bounties[i]);
         }
     }
     res.send("No bounty found.");
@@ -41,7 +42,7 @@ app.delete("/bounty/:bountyId", function (req, res) {
     for (var i = 0; i < bounties.length; i++) {
         if (bounties[i].id === req.params.bountyId) {
             bounties.splice(i, 1);
-            res.send("Deleted!");
+            return res.send("Deleted!");
         }
     }
 });

@@ -25,14 +25,13 @@ app.controller("MainController", function ($scope, $http) {
         })
     };
 
-    $scope.delete = function (person) {
+    $scope.delete = function (person, index) {
         var confirmed = confirm("Are you sure?  Once it's gone, it's gone!");
         if (confirmed) {
-            $http.delete(baseUrl + person.id).then(function (response) {
-                $scope.bountyList.splice(response, 1);
+            $http.delete(baseUrl + person.id).then(function () {
+                $scope.bountyList.splice(index, 1);
             })
         }
     };
 
 });
-
