@@ -13,8 +13,8 @@ app.service("CommentService", function ($http) {
             })
     };
 
-    this.postPosts = function (post) {
-        return $http.post(baseUrl, post)
+    this.postPosts = function (person) {
+        return $http.person(baseUrl, person.id)
             .then(function (response) {
                 userPosts.push(response.data);
             })

@@ -27,19 +27,23 @@
                     <h2>Add bounties</h2>
                     <br>
                     <br>
-                    <input type="text" placeholder="First Name" ng-model="person.firstName">
+                    <input class="input" type="text" placeholder="First Name" ng-model="person.firstName">
                     <br>
                     <br>
-                    <input type="text" placeholder="Last Name" ng-model="person.lastName">
+                    <input class="input" type="text" placeholder="Last Name" ng-model="person.lastName">
                     <br>
                     <br>
-                    <input type="text" placeholder="Living or Dead" ng-model="person.living">
+                    <input class="input" type="text" placeholder="Amount" ng-model="person.bountyAmount">
                     <br>
                     <br>
-                    <input type="text" placeholder="Amount" ng-model="person.bountyAmount">
+                    <input class="input" type="text" placeholder="Jedi or Sith" ng-model="person.type">
                     <br>
                     <br>
-                    <input type="text" placeholder="Jedi or Sith" ng-model="person.type">
+                    <input class="check" type="radio" ng-model="person.living" ng-value="false">
+                    <label>Dead</label>
+                    <br>
+                    <input class="check" type="radio" ng-model="person.living" ng-value="true">
+                    <label>Alive</label>
                     <br>
                     <br>
                     <button ng-click="addPerson(person)" class="btn btn-success glyphicon glyphicon-screenshot"></button>
@@ -64,23 +68,24 @@
 
     <div class="back2">
         <div class="row bountyRow">
-            <div ng-repeat="person in bountyList track by $index" class="bountyDiv">
+            <div ng-repeat="person in BountyService.myBounties track by $index" class="bountyDiv">
                 <div class="person col-lg-3">
                     <h3>{{person.firstName}}</h3>
-                    <input type="text" ng-show="person.edit">
+                    <input type="text" ng-show="person.edit" ng-model="person.firstName">
                     <h3>{{person.lastName}}</h3>
-                    <input type="text" ng-show="person.edit">
-                    <h3>{{person.living}}</h3>
-                    <input type="text" ng-show="person.edit">
+                    <input type="text" ng-show="person.edit" ng-model="person.lastName">
+                    <h3 ng-show="person.living">Alive</h3>
+                    <h3 ng-hide="person.living">Dead</h3>
+                    <input type="text" ng-show="person.edit" ng-model="person.living">
                     <h3>{{person.bountyAmount}}</h3>
-                    <input type="text" ng-show="person.edit">
+                    <input type="text" ng-show="person.edit" ng-model="person.bountyAmount">
                     <h3>{{person.type}}</h3>
-                    <input type="text" ng-show="person.edit">
+                    <input type="text" ng-show="person.edit" ng-model="person.type">
                     <br>
                     <br>
                     <button class="glyphicon glyphicon-pencil btn btn-info btn-sm" ng-click="person.edit = true" ng-hide="person.edit"></button>
-                    <button class="btn btn-warning glyphicon glyphicon-pencil" ng-click="editPerson(person, $index)" ng-show="person.edit"></button>
-                    <button class="btn btn-danger glyphicon glyphicon-remove-circle" ng-click="delete(person, $index)"></button>
+                    <button class="btn btn-success glyphicon glyphicon-floppy-disk" ng-click="editPerson(person, $index)" ng-show="person.edit"></button>
+                    <button class="btn btn-danger glyphicon glyphicon-remove-circle" ng-click="deletePerson(person, $index)"></button>
                     <br>
                     <br>
                 </div>
@@ -109,6 +114,7 @@
 
     <script src="https://ajax.googleapis.com/ajax/libs/angularjs/1.4.9/angular.js"></script>
     <script src="app.js"></script>
+    <script src="service.js"></script>
 
 </body>
 

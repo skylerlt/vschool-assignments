@@ -5,14 +5,14 @@
 <div class="row center-block">
     <div class="center-block addWrap">
 
-        <div class="col-xs-8 col-sm-4 col-lg-3  addPony center-block" ng-repeat="pony in ponyService.ponyList">
+        <div class="col-xs-8 col-sm-4 col-lg-3  addPony center-block" ng-repeat="pony in ponyService.ponyList track by $index">
             <h3 class="ponyName">{{pony.name}}</h3>
             <div class="listImage center-block">
                 <img ng-src="{{pony.imgUrl}}" alt="" class="img-responsive center-block ponyImage">
             </div>
             <h4 class="userName">{{pony.username}}</h4>
             <br>
-            <button class="btn btn-sm removeBtn" ng-click="removePonies(pony)">Remove</button>
+            <button class="btn btn-sm removeBtn" ng-click="removePonies(pony, $index)">Remove</button>
             <br>
             <br>
         </div>

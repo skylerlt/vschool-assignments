@@ -1,8 +1,8 @@
 {
-  "name": "bounty-hunter",
+  "name": "super-dates",
   "version": "1.0.0",
   "description": "",
-  "main": "server.js",
+  "main": "app.js",
   "scripts": {
     "test": "echo \"Error: no test specified\" && exit 1",
     "start": "node server.js"
@@ -14,7 +14,7 @@
     "body-parser": "^1.15.1",
     "cors": "^2.7.1",
     "express": "^4.13.4",
-    "mongoose": "^4.5.0",
-    "uuid": "^2.0.2"
+    "mongodb": "^2.1.18",
+    "mongoose": "^4.5.0"
   }
 }

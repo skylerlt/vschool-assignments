@@ -1,37 +1,32 @@
 var app = angular.module("mainApp", []);
 
-app.controller("MainController", function ($scope, $http) {
+app.controller("MainController", function ($scope, BountyService) {
 
-    var baseUrl = "http://localhost:8000/bounty/";
-    var bountyList = [];
+    $scope.BountyService = BountyService;
 
-    $scope.addPerson = function (person) {
-        $http.post(baseUrl, person).then(function (response) {
-            $scope.bountyList.push(response.data)
-            $scope.person = {};
+    $scope.seePerson = function () {
+        BountyService.getBounties().then(function () {
+            $scope.bounties = BountyService.myBounties;
         });
     };
 
-    $scope.seePerson = function () {
-        $http.get(baseUrl).then(function (response) {
-            $scope.bountyList = response.data;
-        })
+    $scope.addPerson = function (person) {
+        BountyService.postBounties(person).then(function () {
+            $scope.person = null;
+        });
     };
 
     $scope.editPerson = function (person, index) {
-        $http.put(baseUrl + person.id, person).then(function (response) {
-            $scope.bountyList[index] = response.data;
-            person.editing = false;
+        BountyService.editBounties(person, index).then(function (myBounties) {
+            $scope.bounties = BountyService.myBounties;
+            person.edit = false;
         })
     };
 
-    $scope.delete = function (person, index) {
-        var confirmed = confirm("Are you sure?  Once it's gone, it's gone!");
-        if (confirmed) {
-            $http.delete(baseUrl + person.id).then(function () {
-                $scope.bountyList.splice(index, 1);
-            })
-        }
+    $scope.deletePerson = function (person, index) {
+        BountyService.deleteBounties(person, index).then(function (myBounties) {
+            $scope.bounties = BountyService.myBounties;
+        });
     };
 
 });

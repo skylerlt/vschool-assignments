@@ -1,0 +1,133 @@
+<!DOCTYPE html>
+<html lang="en" ng-app="mainApp">
+
+<head>
+    <meta charset="UTF-8">
+    <title>Super Dates!</title>
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.6/css/bootstrap.min.css">
+    <link href='https://fonts.googleapis.com/css?family=Bangers' rel='stylesheet' type='text/css'>
+    <link rel="stylesheet" href="style.css">
+</head>
+
+<body ng-controller="MainController" class="container-fluid">
+    <div ng-init="get()"></div>
+
+    <h1>Super Dates!</h1>
+    <h2>For all the superheroes looking for a super good time!</h2>
+
+    <div class="row">
+        <div class="scrollBar">
+
+            <a href=""><img class="img-responsive scrollImage center-block" src="http://vignette1.wikia.nocookie.net/marveldatabase/images/a/a0/Thor_Odinson_(Earth-12041)_004.png/revision/latest?cb=20141124174033" alt=""></a>
+            <a href=""><img class="img-responsive scrollImage center-block" src="http://vignette2.wikia.nocookie.net/mkwikia/images/d/df/Iron_man_comic.gif/revision/latest?cb=20110922082745" alt=""></a>
+            <a href=""><img class="img-responsive scrollImage center-block" src="http://www.mackrichardson.com/wp-content/uploads/2012/06/Batman-Earth-One.png" alt=""></a>
+            <a href=""><img class="img-responsive scrollImage center-block" src="http://vignette4.wikia.nocookie.net/marveldatabase/images/8/8c/Carol_Danvers_(Earth-12131)_001.png/revision/latest?cb=20130518181122" alt=""></a>
+            <a href=""><img class="img-responsive scrollImage center-block" src="http://static.comicvine.com/uploads/original/0/9436/207182-166314-green-lantern.png" alt=""></a>
+            <a href=""><img class="img-responsive scrollImage center-block" src="http://img15.deviantart.net/580a/i/2014/021/f/7/batgirl_1_by_bobhertley-d736qmr.png" alt=""></a>
+            <a href=""><img class="img-responsive scrollImage center-block" src="http://vignette2.wikia.nocookie.net/vsbattles/images/9/9a/QDNpnla.png/revision/latest?cb=20160511135042" alt=""></a>
+            <a href=""><img class="img-responsive scrollImage center-block" src="http://vignette1.wikia.nocookie.net/marvelcrossroads/images/b/bf/Hro_Talak_(Earth-6203).png/revision/latest?cb=20150723222618" alt=""></a>
+            <a href=""><img class="img-responsive scrollImage center-block" src="http://img12.deviantart.net/dcfb/i/2013/108/2/b/star_sapphire_by_msciuto-d532ymq.png" alt=""></a>
+            <a ng-repeat="user in DatingService.userProfiles" href=""><img class="img-responsive scrollImage center-block" ng-src="{{user.photo}}"></a>
+
+        </div>
+    </div>
+
+    <br>
+
+    <div>
+        <h2>Create a new profile</h2>
+        <button ng-click="toggle=!toggle">Check Here</button>
+    </div>
+
+    <br>
+    <br>
+
+    <div class="container">
+        <div class="row">
+            <div class="col-lg-6 col-lg-offset-3">
+                <form ng-show="toggle" name="userForm" class="createDiv">
+                    <h2>Create a new account</h2>
+                    <br>
+                    <br>
+                    <h3>Create a unique user name</h3>
+                    <input type="text" ng-model="user.userName">
+                    <br>
+                    <br>
+                    <h3>Tell us your Identity</h3>
+                    <input type="text" ng-model="user.identity">
+                    <br>
+                    <br>
+                    <h3>Add your Secret Identity (optional)</h3>
+                    <input type="text" ng-model="user.secretIdentity">
+                    <br>
+                    <br>
+                    <h3>What are your abilities</h3>
+                    <input type="text" ng-model="user.abilities">
+                    <br>
+                    <br>
+                    <h3>Gender</h3>
+                    <input type="radio" ng-model="user.gender" value="male">
+                    <label>Male</label>
+                    <input type="radio" ng-model="user.gender" value="female">
+                    <label>Female</label>
+                    <input type="radio" ng-model="user.gender" value="other">
+                    <label>Other</label>
+                    <br>
+                    <br>
+                    <h3>Which city do you protect</h3>
+                    <input type="text" ng-model="user.city">
+                    <br>
+                    <br>
+                    <h3>Who are you looking for</h3>
+                    <input type="checkbox" ng-model="user.lookingFor" ng-true-value="'male'">
+                    <label>Male</label>
+                    <input type="checkbox" ng-model="user.lookingFor" ng-true-value="'female'">
+                    <label>Female</label>
+                    <input type="checkbox" ng-model="user.lookingFor" ng-true-value="'other'">
+                    <label>Other</label>
+                    <br>
+                    <br>
+                    <h3>And add a profile picture</h3>
+                    <input type="text" ng-model="user.photo">
+                    <br>
+                    <br>
+                    <a href="#/create">
+                        <button class="btn btn-info glyphicon glyphicon-plus" ng-click="create(user)"></button>
+                    </a>
+                    <br>
+                    <br>
+                </form>
+            </div>
+        </div>
+    </div>
+
+    <br>
+    <br>
+
+    <div ng-view=""></div>
+
+    <br>
+    <br>
+
+    <div>
+        <h2>Search for certain profiles</h2>
+        <br>
+        <input type="text">
+        <br>
+
+        <button ng-click="get()"></button>
+
+    </div>
+
+    <!--
+    search for profiles
+    find matches
+-->
+    <script src="https://ajax.googleapis.com/ajax/libs/angularjs/1.4.9/angular.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/angular.js/1.5.0-rc.0/angular-route.js "></script>
+    <script src="app.js"></script>
+    <script src="service.js"></script>
+
+</body>
+
+</html>

@@ -30,10 +30,10 @@ app.controller("MainController", function ($scope, PonyService) {
         })
     }
 
-    $scope.removePonies = function (pony) {
+    $scope.removePonies = function (pony, index) {
         var confirmed = confirm("Are you sure?  Once it's gone, it's gone!");
         if (confirmed) {
-            PonyService.deletePonies(pony).then(function (myPonies) {
+            PonyService.deletePonies(pony, index).then(function (myPonies) {
                 $scope.ponies = PonyService.ponyList;
             })
         }

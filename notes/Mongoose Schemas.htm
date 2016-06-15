@@ -1,0 +1,437 @@
+<!DOCTYPE html>
+<!-- saved from url=(0046)http://coursework.vschool.io/mongoose-schemas/ -->
+<html><head><meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+    
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+
+    <title>Mongoose Schemas</title>
+    <meta name="description" content="">
+
+    <meta name="HandheldFriendly" content="True">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <link rel="shortcut icon" href="http://coursework.vschool.io/favicon.ico">
+
+    <link rel="stylesheet" type="text/css" href="./Mongoose Schemas_files/screen.css">
+    <link rel="stylesheet" type="text/css" href="./Mongoose Schemas_files/css">
+	<link rel="stylesheet" type="text/css" href="./Mongoose Schemas_files/prism.css">
+
+    <link rel="canonical" href="http://coursework.vschool.io/mongoose-schemas/">
+    <meta name="referrer" content="origin">
+    
+    <meta property="og:site_name" content="V School Web Development">
+    <meta property="og:type" content="article">
+    <meta property="og:title" content="Mongoose Schemas">
+    <meta property="og:description" content="Understanding Schemas A &quot;Schema&quot; can be a tough thing to understand at first, but in reality it&#39;s pretty straightforward. A Schema for a database is akin to a &quot;Class&quot; in Object-Oriented Programming. Where a class is like a blueprint for...">
+    <meta property="og:url" content="http://coursework.vschool.io/mongoose-schemas/">
+    <meta property="og:image" content="http://coursework.vschool.io/content/images/2015/12/Blueprint_banner.jpg">
+    <meta property="article:published_time" content="2015-12-07T20:15:39.026Z">
+    <meta property="article:modified_time" content="2016-03-16T20:50:32.591Z">
+    <meta property="article:tag" content="Mongoose">
+    <meta property="article:tag" content="Database">
+    <meta property="article:tag" content="Level 3">
+    <meta property="article:tag" content="Lesson">
+    
+    <meta name="twitter:card" content="summary_large_image">
+    <meta name="twitter:title" content="Mongoose Schemas">
+    <meta name="twitter:description" content="Understanding Schemas A &quot;Schema&quot; can be a tough thing to understand at first, but in reality it&#39;s pretty straightforward. A Schema for a database is akin to a &quot;Class&quot; in Object-Oriented Programming. Where a class is like a blueprint for...">
+    <meta name="twitter:url" content="http://coursework.vschool.io/mongoose-schemas/">
+    <meta name="twitter:image:src" content="http://coursework.vschool.io/content/images/2015/12/Blueprint_banner.jpg">
+    
+    <script type="application/ld+json">
+{
+    "@context": "http://schema.org",
+    "@type": "Article",
+    "publisher": "V School Web Development",
+    "author": {
+        "@type": "Person",
+        "name": "Bob Ziroll",
+        "image": "http://coursework.vschool.io/content/images/2016/04/1526275_10152073097568744_1599449422_n.jpg",
+        "url": "http://coursework.vschool.io/author/bob",
+        "sameAs": null,
+        "description": null
+    },
+    "headline": "Mongoose Schemas",
+    "url": "http://coursework.vschool.io/mongoose-schemas/",
+    "datePublished": "2015-12-07T20:15:39.026Z",
+    "dateModified": "2016-03-16T20:50:32.591Z",
+    "image": "http://coursework.vschool.io/content/images/2015/12/Blueprint_banner.jpg",
+    "keywords": "Mongoose, Database, Level 3, Lesson",
+    "description": "Understanding Schemas A &quot;Schema&quot; can be a tough thing to understand at first, but in reality it&#x27;s pretty straightforward. A Schema for a database is akin to a &quot;Class&quot; in Object-Oriented Programming. Where a class is like a blueprint for..."
+}
+    </script>
+
+    <meta name="generator" content="Ghost 0.7">
+    <link rel="alternate" type="application/rss+xml" title="V School Web Development" href="http://coursework.vschool.io/rss/">
+    <link href="./Mongoose Schemas_files/css(1)" rel="stylesheet" type="text/css">
+<style>
+/*body, h1, h2, h3, h4, h5, h6,  
+.main-nav a,
+.subscribe-button,
+.page-title,
+.post-meta,
+.read-next-story .post:before,
+.pagination,
+.site-footer,
+[class^="icon-"]:before, [class*=" icon-"]:before {
+    font-family:"HelveticaNeue-Light", "Helvetica Neue Light", "Helvetica Neue", Helvetica, Arial, "Lucida Grande", sans-serif; /* }*/
+.page-title {
+	background-color: rgba(68, 68, 68, 0.46);
+    font-family:"HelveticaNeue-Light", "Helvetica Neue Light", "Helvetica Neue", Helvetica, Arial, "Lucida Grande", sans-serif;
+    font-weight: 200;
+}
+.page-description {
+	background-color: rgba(68, 68, 68, 0.46);
+}
+code {
+    color: #c25;
+}
+    
+a {
+    color: #60B2B0;
+}
+
+</style>
+<style id="fit-vids-style">.fluid-width-video-wrapper{width:100%;position:relative;padding:0;}.fluid-width-video-wrapper iframe,.fluid-width-video-wrapper object,.fluid-width-video-wrapper embed {position:absolute;top:0;left:0;width:100%;height:100%;}</style></head>
+<body class="post-template tag-mongoose tag-database tag-level-3 tag-lesson nav-closed" cz-shortcut-listen="true">
+
+    <div class="nav">
+    <h3 class="nav-title">Menu</h3>
+    <a href="http://coursework.vschool.io/mongoose-schemas/#" class="nav-close">
+        <span class="hidden">Close</span>
+    </a>
+    <ul>
+            <li class="nav-dashboard" role="presentation"><a href="http://coursework.vschool.io/">Dashboard</a></li>
+            <li class="nav-outside-resources" role="presentation"><a href="http://coursework.vschool.io/resource-list/">Outside Resources</a></li>
+            <li class="nav-homework" role="presentation"><a href="http://coursework.vschool.io/tag/homework/">Homework</a></li>
+            <li class="nav-exercises" role="presentation"><a href="http://coursework.vschool.io/tag/exercises/">Exercises</a></li>
+            <li class="nav-precourse" role="presentation"><a href="http://coursework.vschool.io/tag/pre-course/">Pre-Course</a></li>
+            <li class="nav-angular" role="presentation"><a href="http://coursework.vschool.io/tag/angular/">Angular</a></li>
+            <li class="nav-bootstrap" role="presentation"><a href="http://coursework.vschool.io/tag/bootstrap/">Bootstrap</a></li>
+            <li class="nav-css" role="presentation"><a href="http://coursework.vschool.io/tag/css/">CSS</a></li>
+            <li class="nav-javascript" role="presentation"><a href="http://coursework.vschool.io/tag/javascript/">Javascript</a></li>
+            <li class="nav-html" role="presentation"><a href="http://coursework.vschool.io/tag/html/">HTML</a></li>
+            <li class="nav-jquery" role="presentation"><a href="http://coursework.vschool.io/tag/jquery/">jQuery</a></li>
+            <li class="nav-mongo" role="presentation"><a href="http://coursework.vschool.io/tag/mongo/">Mongo</a></li>
+            <li class="nav-node" role="presentation"><a href="http://coursework.vschool.io/tag/node/">Node</a></li>
+            <li class="nav-tools" role="presentation"><a href="http://coursework.vschool.io/tag/tools/">Tools</a></li>
+            <li class="nav-warmups" role="presentation"><a href="http://coursework.vschool.io/tag/warmups/">Warmups</a></li>
+            <li class="nav-career" role="presentation"><a href="http://coursework.vschool.io/tag/career/">Career</a></li>
+            <li class="nav-mean-stack" role="presentation"><a href="http://coursework.vschool.io/tag/mean-stack/">MEAN Stack</a></li>
+            <li class="nav-authentication" role="presentation"><a href="http://coursework.vschool.io/tag/authentication/">Authentication</a></li>
+            <li class="nav-intro" role="presentation"><a href="http://coursework.vschool.io/tag/intro/">Intro</a></li>
+            <li class="nav-class-instruction" role="presentation"><a href="http://coursework.vschool.io/tag/instruction">Class Instruction</a></li>
+    </ul>
+<!-- This is a search field, but it's putting the results below so I commented it out.
+Instructions from https://www.ghostforbeginners.com/how-to-add-a-search-box-to-your-ghost-blog/
+    <form style="text-align:center">
+        <input id="search-field" />
+        <input type="submit" value="search">
+    </form>
+    <section id="results" style="text-align:center"></section>
+-->   
+    <!-- no need for rss subscribe button -->
+    <!--<a class="subscribe-button icon-feed" href="http://coursework.vschool.io/rss/">Subscribe</a>-->
+</div>
+<span class="nav-cover"></span>
+
+
+    <div class="site-wrapper">
+
+        
+
+
+<header class="main-header post-head " style="background-image: url(/content/images/2015/12/Blueprint_banner.jpg)">
+    <nav class="main-nav overlay clearfix">
+        <a class="blog-logo" href="http://coursework.vschool.io/"><img src="./Mongoose Schemas_files/v-school_Abbreviated.png" alt="Blog Logo"></a>
+            <a class="menu-button icon-menu" href="http://coursework.vschool.io/mongoose-schemas/#"><span class="word">Menu</span></a>
+    </nav>
+</header>
+
+<main class="content" role="main">
+    <article class="post tag-mongoose tag-database tag-level-3 tag-lesson">
+
+        <header class="post-header">
+            <h1 class="post-title">Mongoose Schemas</h1>
+            <section class="post-meta">
+                <time class="post-date" datetime="2015-12-07">07 December 2015</time>  on <a href="http://coursework.vschool.io/tag/mongoose/" target="_blank">Mongoose</a>, <a href="http://coursework.vschool.io/tag/database/" target="_blank">Database</a>, <a href="http://coursework.vschool.io/tag/level-3/" target="_blank">Level 3</a>, <a href="http://coursework.vschool.io/tag/lesson/" target="_blank">Lesson</a>
+            </section>
+        </header>
+
+        <section class="post-content">
+            <h3 id="understandingschemas">Understanding Schemas</h3>
+
+<p>A "Schema" can be a tough thing to understand at first, but in reality it's pretty straightforward. A Schema for a database is akin to a "Class" in Object-Oriented Programming. Where a class is like a blueprint for creating objects in a program, a <strong>Schema</strong> is a blueprint for creating objects (MongoDB calls them "documents") in a database. We tell the database how the documents we're going to insert will be structured (it's going to have a "name" property which will be a "String" type, an "admin" property which will be of "Boolean" type, etc.), and the database can then do some validation for us. ("Hey, you said any 'Person' object is going to have a required 'name' field, but this Person object you just tried to save doesn't. I'm rejecting it, and won't be adding it to the database. <a href="http://www.urbandictionary.com/define.php?term=kthxbye" target="_blank">Kthxbye</a>.").</p>
+
+<p>Typically, NoSQL databases are <em>super</em> flexible, in that they allow us to put whatever we want in them without enforcing any specific kind of structure. (Relational databases tend to be the opposite, enforcing that all items in the database look similar. So if you want to change the way your data looks, good luck because you'll need to change all items that are already in there).</p>
+
+<p>However, Mongoose adds a layer of structure on top of the typical "Wild West" MongoDB way of doing things. This helps us perform additional validation to ensure that our users aren't submitting junk data into our database without us having to write tons of <a href="https://en.wikipedia.org/wiki/Boilerplate_code" target="_blank">boilerplate code</a> ourselves.</p>
+
+<p><a href="http://mongoosejs.com/docs/schematypes.html" target="_blank">Mongoose Schemas</a> can be very powerful, but before we jump into the nitty gritty, let's make sure we cover the basics. We'll be using the following Mongoose Schema for reference:</p>
+
+<pre class=" language-javascript"><code class=" language-javascript"><span class="token comment" spellcheck="true">// grab the things we need</span>
+<span class="token keyword">var</span> mongoose <span class="token operator">=</span> <span class="token function">require</span><span class="token punctuation">(</span><span class="token string">'mongoose'</span><span class="token punctuation">)</span><span class="token punctuation">;</span>  
+<span class="token keyword">var</span> Schema <span class="token operator">=</span> mongoose<span class="token punctuation">.</span>Schema<span class="token punctuation">;</span>
+
+<span class="token comment" spellcheck="true">// create a schema</span>
+<span class="token keyword">var</span> userSchema <span class="token operator">=</span> <span class="token keyword">new</span> <span class="token class-name">Schema</span><span class="token punctuation">(</span><span class="token punctuation">{</span>  
+    <span class="token comment" spellcheck="true">// Simple declaration of datatype that will be used:</span>
+    name<span class="token punctuation">:</span> String<span class="token punctuation">,</span>
+    <span class="token comment" spellcheck="true">// You can add specifics to each one too that help with validation, like making something required, or unique</span>
+    username<span class="token punctuation">:</span> <span class="token punctuation">{</span>
+        type<span class="token punctuation">:</span> String<span class="token punctuation">,</span>
+        required<span class="token punctuation">:</span> <span class="token boolean">true</span><span class="token punctuation">,</span>
+        unique<span class="token punctuation">:</span> <span class="token boolean">true</span>
+    <span class="token punctuation">}</span><span class="token punctuation">,</span>
+    password<span class="token punctuation">:</span> <span class="token punctuation">{</span>
+        type<span class="token punctuation">:</span> String<span class="token punctuation">,</span>
+        required<span class="token punctuation">:</span> <span class="token boolean">true</span>
+    <span class="token punctuation">}</span><span class="token punctuation">,</span>
+    emailAddress<span class="token punctuation">:</span> <span class="token punctuation">[</span>String<span class="token punctuation">]</span><span class="token punctuation">,</span>
+    <span class="token comment" spellcheck="true">// Add 'enum' of an array of options to force selection between a given number of options.</span>
+    <span class="token comment" spellcheck="true">// Anything other than "male" or "female" will be invalid.</span>
+    gender<span class="token punctuation">:</span> <span class="token punctuation">{</span>
+        type<span class="token punctuation">:</span> String<span class="token punctuation">,</span>
+        <span class="token keyword">enum</span><span class="token punctuation">:</span> <span class="token punctuation">[</span><span class="token string">"male"</span><span class="token punctuation">,</span> <span class="token string">"female"</span><span class="token punctuation">]</span>
+    <span class="token punctuation">}</span>
+    admin<span class="token punctuation">:</span> Boolean<span class="token punctuation">,</span>
+    location<span class="token punctuation">:</span> String
+<span class="token punctuation">}</span><span class="token punctuation">)</span><span class="token punctuation">;</span>
+
+<span class="token comment" spellcheck="true">// Turn the schema you created into a "Model".</span>
+<span class="token comment" spellcheck="true">// mongoose.model("ModelNameSingular", modelSchema);</span>
+<span class="token comment" spellcheck="true">// "ModelNameSingular" will automatically be pluralized for you.</span>
+mongoose<span class="token punctuation">.</span><span class="token function">model</span><span class="token punctuation">(</span><span class="token string">"User"</span><span class="token punctuation">,</span> userSchema<span class="token punctuation">)</span><span class="token punctuation">;</span>  
+</code></pre>
+
+<h6 id="simpledatatypes">Simple data types</h6>
+
+<p>Above you saw examples of simple datatypes such as <code>name: String</code>, <code>admin: Boolean</code>, etc. You also saw the ability to add more specific instructions on how the validation should be handled. For example, if a user submits their information without a <code>name</code> property, it will still pass validation because we didn't specify that names are required. However, if they try to submit their info without a <code>username</code>, OR if they try to submit a <code>username</code> that's already being used (I.e. <em>not unique</em>), it will fail validation and come back with an error. This is an excellent and dead-simple way to ensure that our data is sanitized before it gets saved to the database, and it's all thanks to Mongoose!</p>
+
+<h6 id="collectionsofdata">Collections of data</h6>
+
+<p>You can also see examples of collections or more complex datatypes in the <code>userSchema</code> above. <code>emailAddress</code> for example, is going to be an array of strings. This way, a user is allowed to register multiple email addresses under their account information.</p>
+
+<p>But what if the second level of data needs to be more complex? Let's look at an example below to better understand one of the major design decisions you'll need to make as a database admin in MongoDB.</p>
+
+<h3 id="collectionstructure">Collection Structure</h3>
+
+<p>Oftentimes the data you're designing will need more than just a simple datatype to contain all the information. Sometimes the nested data will need to have a whole structure of its own. This is where you will need to ask yourself a crucial question: should I use embedded documents or reference a separate document with an ObjectId? Let's look at examples of both:</p>
+
+<h6 id="embeddeddocuments">Embedded documents</h6>
+
+<p>Embedding documents looks very similar to what you've probably seen already with most complex JSON: arrays inside of objects, objects inside of arrays, objects inside of other objects, etc. Let's look at an example of a good time to use the embedded document style:</p>
+
+<pre class=" language-javascript"><code class=" language-javascript"><span class="token keyword">var</span> userSchema <span class="token operator">=</span> <span class="token keyword">new</span> <span class="token class-name">Schema</span><span class="token punctuation">(</span><span class="token punctuation">{</span>  
+    name<span class="token punctuation">:</span> String<span class="token punctuation">,</span>
+    address<span class="token punctuation">:</span> String
+<span class="token punctuation">}</span><span class="token punctuation">)</span><span class="token punctuation">;</span>
+</code></pre>
+
+<p>As it is now, a user will need to submit their address as a single string: <code>123 West Example St. Pawnee, IN, 12345</code>. This isn't very helpful though, because what if we someday want to query the database for all citizens in the city of Pawnee? It would be very difficult and burdensome to do so if we leave our <code>address</code> property as a single string. Instead, we need to split it into its own object:</p>
+
+<pre class=" language-javascript"><code class=" language-javascript"><span class="token keyword">var</span> userSchema <span class="token operator">=</span> <span class="token keyword">new</span> <span class="token class-name">Schema</span><span class="token punctuation">(</span><span class="token punctuation">{</span>  
+    name<span class="token punctuation">:</span> String<span class="token punctuation">,</span>
+    address<span class="token punctuation">:</span> <span class="token punctuation">{</span>
+        street<span class="token punctuation">:</span> String<span class="token punctuation">,</span>
+        city<span class="token punctuation">:</span> String<span class="token punctuation">,</span>
+        state<span class="token punctuation">:</span> String<span class="token punctuation">,</span>
+        zip<span class="token punctuation">:</span> Number
+    <span class="token punctuation">}</span>
+<span class="token punctuation">}</span><span class="token punctuation">)</span><span class="token punctuation">;</span>
+</code></pre>
+
+<p>This allows us to do some additional validation and manipulation of the incoming data by adding options to each of these embedded properties:</p>
+
+<pre class=" language-javascript"><code class=" language-javascript"><span class="token keyword">var</span> statesArray <span class="token operator">=</span> <span class="token punctuation">[</span><span class="token string">"AL"</span><span class="token punctuation">,</span> <span class="token string">"AK"</span><span class="token punctuation">,</span> <span class="token string">"AZ"</span><span class="token punctuation">,</span> <span class="token string">"AR"</span><span class="token punctuation">,</span> <span class="token string">"CA"</span><span class="token punctuation">,</span> <span class="token string">"CO"</span><span class="token punctuation">,</span> <span class="token string">"CT"</span><span class="token punctuation">,</span> <span class="token string">"DC"</span><span class="token punctuation">,</span> <span class="token string">"DE"</span><span class="token punctuation">,</span> <span class="token string">"FL"</span><span class="token punctuation">,</span> <span class="token string">"GA"</span><span class="token punctuation">,</span> <span class="token string">"HI"</span><span class="token punctuation">,</span> <span class="token string">"ID"</span><span class="token punctuation">,</span> <span class="token string">"IL"</span><span class="token punctuation">,</span> <span class="token string">"IN"</span><span class="token punctuation">,</span> <span class="token string">"IA"</span><span class="token punctuation">,</span> <span class="token string">"KS"</span><span class="token punctuation">,</span> <span class="token string">"KY"</span><span class="token punctuation">,</span> <span class="token string">"LA"</span><span class="token punctuation">,</span> <span class="token string">"ME"</span><span class="token punctuation">,</span> <span class="token string">"MD"</span><span class="token punctuation">,</span> <span class="token string">"MA"</span><span class="token punctuation">,</span> <span class="token string">"MI"</span><span class="token punctuation">,</span> <span class="token string">"MN"</span><span class="token punctuation">,</span> <span class="token string">"MS"</span><span class="token punctuation">,</span> <span class="token string">"MO"</span><span class="token punctuation">,</span> <span class="token string">"MT"</span><span class="token punctuation">,</span> <span class="token string">"NE"</span><span class="token punctuation">,</span> <span class="token string">"NV"</span><span class="token punctuation">,</span> <span class="token string">"NH"</span><span class="token punctuation">,</span> <span class="token string">"NJ"</span><span class="token punctuation">,</span> <span class="token string">"NM"</span><span class="token punctuation">,</span> <span class="token string">"NY"</span><span class="token punctuation">,</span> <span class="token string">"NC"</span><span class="token punctuation">,</span> <span class="token string">"ND"</span><span class="token punctuation">,</span> <span class="token string">"OH"</span><span class="token punctuation">,</span> <span class="token string">"OK"</span><span class="token punctuation">,</span> <span class="token string">"OR"</span><span class="token punctuation">,</span> <span class="token string">"PA"</span><span class="token punctuation">,</span> <span class="token string">"RI"</span><span class="token punctuation">,</span> <span class="token string">"SC"</span><span class="token punctuation">,</span> <span class="token string">"SD"</span><span class="token punctuation">,</span> <span class="token string">"TN"</span><span class="token punctuation">,</span> <span class="token string">"TX"</span><span class="token punctuation">,</span> <span class="token string">"UT"</span><span class="token punctuation">,</span> <span class="token string">"VT"</span><span class="token punctuation">,</span> <span class="token string">"VA"</span><span class="token punctuation">,</span> <span class="token string">"WA"</span><span class="token punctuation">,</span> <span class="token string">"WV"</span><span class="token punctuation">,</span> <span class="token string">"WI"</span><span class="token punctuation">,</span> <span class="token string">"WY"</span><span class="token punctuation">]</span><span class="token punctuation">;</span>
+
+<span class="token keyword">var</span> userSchema <span class="token operator">=</span> <span class="token keyword">new</span> <span class="token class-name">Schema</span><span class="token punctuation">(</span><span class="token punctuation">{</span>  
+    name<span class="token punctuation">:</span> String<span class="token punctuation">,</span>
+    address<span class="token punctuation">:</span> <span class="token punctuation">{</span>
+        street<span class="token punctuation">:</span> String<span class="token punctuation">,</span>
+        city<span class="token punctuation">:</span> String<span class="token punctuation">,</span>
+        state<span class="token punctuation">:</span> <span class="token punctuation">{</span>
+            type<span class="token punctuation">:</span> String<span class="token punctuation">,</span>
+            uppercase<span class="token punctuation">:</span> <span class="token boolean">true</span><span class="token punctuation">,</span>
+            required<span class="token punctuation">:</span> <span class="token boolean">true</span><span class="token punctuation">,</span>
+            <span class="token keyword">enum</span><span class="token punctuation">:</span> statesArray
+        <span class="token punctuation">}</span><span class="token punctuation">,</span>
+        zip<span class="token punctuation">:</span> Number
+    <span class="token punctuation">}</span>
+<span class="token punctuation">}</span><span class="token punctuation">)</span><span class="token punctuation">;</span>
+</code></pre>
+
+<p>This is considered a good use-case for embedding information directly into the parent document - you might frequently need the address of a user, and in this case you can get all that information in one <code>Read</code> of the database (one call to the database for information). It's also a good use-case for this type of structure because any specific user's address isn't likely to be repeated all that much throughout the database. Even if there are 10 users all living at the same address, that same information is only being repeated 10 times throughout the whole database.</p>
+
+<h6 id="references">References</h6>
+
+<p>On the other hand, there are times when instead of embedding the data directly into the parent resource, it makes sense to save that data as its own separate document in its own separate collection, and then reference the <code>_id</code> of the child document inside the parent document. Let's look at a good example of when this might be the best way to structure your data, straight from the <a href="https://docs.mongodb.org/manual/tutorial/model-referenced-one-to-many-relationships-between-documents/" target="_blank">MongoDB docs</a>:</p>
+
+<pre class=" language-javascript"><code class=" language-javascript"><span class="token comment" spellcheck="true">// Object 1</span>
+<span class="token punctuation">{</span>
+    title<span class="token punctuation">:</span> <span class="token string">"MongoDB: The Definitive Guide"</span><span class="token punctuation">,</span>
+    author<span class="token punctuation">:</span> <span class="token punctuation">[</span> <span class="token string">"Kristina Chodorow"</span><span class="token punctuation">,</span> <span class="token string">"Mike Dirolf"</span> <span class="token punctuation">]</span><span class="token punctuation">,</span>
+    published_date<span class="token punctuation">:</span> <span class="token function">ISODate</span><span class="token punctuation">(</span><span class="token string">"2010-09-24"</span><span class="token punctuation">)</span><span class="token punctuation">,</span>
+    pages<span class="token punctuation">:</span> <span class="token number">216</span><span class="token punctuation">,</span>
+    language<span class="token punctuation">:</span> <span class="token string">"English"</span><span class="token punctuation">,</span>
+    publisher<span class="token punctuation">:</span> <span class="token punctuation">{</span>
+        name<span class="token punctuation">:</span> <span class="token string">"O'Reilly Media"</span><span class="token punctuation">,</span>
+        founded<span class="token punctuation">:</span> <span class="token number">1980</span><span class="token punctuation">,</span>
+        location<span class="token punctuation">:</span> <span class="token string">"CA"</span>
+    <span class="token punctuation">}</span>
+<span class="token punctuation">}</span>
+
+<span class="token comment" spellcheck="true">// Object 2</span>
+<span class="token punctuation">{</span>
+    title<span class="token punctuation">:</span> <span class="token string">"50 Tips and Tricks for MongoDB Developer"</span><span class="token punctuation">,</span>
+    author<span class="token punctuation">:</span> <span class="token string">"Kristina Chodorow"</span><span class="token punctuation">,</span>
+    published_date<span class="token punctuation">:</span> <span class="token function">ISODate</span><span class="token punctuation">(</span><span class="token string">"2011-05-06"</span><span class="token punctuation">)</span><span class="token punctuation">,</span>
+    pages<span class="token punctuation">:</span> <span class="token number">68</span><span class="token punctuation">,</span>
+    language<span class="token punctuation">:</span> <span class="token string">"English"</span><span class="token punctuation">,</span>
+
+    publisher<span class="token punctuation">:</span> <span class="token punctuation">{</span>
+        name<span class="token punctuation">:</span> <span class="token string">"O'Reilly Media"</span><span class="token punctuation">,</span>
+        founded<span class="token punctuation">:</span> <span class="token number">1980</span><span class="token punctuation">,</span>
+        location<span class="token punctuation">:</span> <span class="token string">"CA"</span>
+    <span class="token punctuation">}</span>
+<span class="token punctuation">}</span>
+</code></pre>
+
+<p>In this instance, the <code>publisher</code> data is repeated. This will begin to make our database slow and bulky when we begin to enter thousands or tens of thousands of repeated information about the same publisher in the parent data of all the books that publisher has published.</p>
+
+<p>A better way to structure data like this is to make a separate Schema of the nested data and use what are called <code>ObjectId</code>s to reference the ID of the object in its own collection:</p>
+
+<p><strong>publisher.js:</strong></p>
+
+<pre class=" language-javascript"><code class=" language-javascript"><span class="token keyword">var</span> mongoose <span class="token operator">=</span> <span class="token function">require</span><span class="token punctuation">(</span><span class="token string">'mongoose'</span><span class="token punctuation">)</span><span class="token punctuation">;</span>  
+<span class="token keyword">var</span> Schema <span class="token operator">=</span> mongoose<span class="token punctuation">.</span>Schema<span class="token punctuation">;</span>
+
+<span class="token keyword">var</span> publisherSchema <span class="token operator">=</span> <span class="token keyword">new</span> <span class="token class-name">Schema</span><span class="token punctuation">(</span><span class="token punctuation">{</span>  
+    name<span class="token punctuation">:</span> <span class="token punctuation">{</span>
+        type<span class="token punctuation">:</span> String<span class="token punctuation">,</span>
+        required<span class="token punctuation">:</span> <span class="token boolean">true</span>
+    <span class="token punctuation">}</span><span class="token punctuation">,</span>
+    founded<span class="token punctuation">:</span> Number<span class="token punctuation">,</span>
+    location<span class="token punctuation">:</span> String
+<span class="token punctuation">}</span><span class="token punctuation">)</span><span class="token punctuation">;</span>
+
+module<span class="token punctuation">.</span>exports <span class="token operator">=</span> mongoose<span class="token punctuation">.</span><span class="token function">model</span><span class="token punctuation">(</span><span class="token string">"Publisher"</span><span class="token punctuation">,</span> publisherSchema<span class="token punctuation">)</span><span class="token punctuation">;</span>  
+</code></pre>
+
+<p><br> <br>
+<strong>book.js:</strong></p>
+
+<pre class=" language-javascript"><code class=" language-javascript"><span class="token keyword">var</span> mongoose <span class="token operator">=</span> <span class="token function">require</span><span class="token punctuation">(</span><span class="token string">'mongoose'</span><span class="token punctuation">)</span><span class="token punctuation">;</span>  
+<span class="token keyword">var</span> Schema <span class="token operator">=</span> mongoose<span class="token punctuation">.</span>Schema<span class="token punctuation">;</span>
+
+<span class="token keyword">var</span> bookSchema <span class="token operator">=</span> <span class="token keyword">new</span> <span class="token class-name">Schema</span><span class="token punctuation">(</span><span class="token punctuation">{</span>  
+    title<span class="token punctuation">:</span> String<span class="token punctuation">,</span>
+    publishedDate<span class="token punctuation">:</span> Date<span class="token punctuation">,</span>
+    language<span class="token punctuation">:</span> String<span class="token punctuation">,</span>
+
+    <span class="token comment" spellcheck="true">// "type" should be Schema.Types.ObjectId and "ref" should point</span>
+    <span class="token comment" spellcheck="true">// to the "ModelName" you choose when using mongoose.model("ModelName", modelSchema)</span>
+    publisher<span class="token punctuation">:</span> <span class="token punctuation">{</span>
+        type<span class="token punctuation">:</span> Schema<span class="token punctuation">.</span>Types<span class="token punctuation">.</span>ObjectId<span class="token punctuation">,</span>
+        ref<span class="token punctuation">:</span> <span class="token string">"Publisher"</span>
+    <span class="token punctuation">}</span>
+<span class="token punctuation">}</span><span class="token punctuation">)</span><span class="token punctuation">;</span>
+
+module<span class="token punctuation">.</span>exports <span class="token operator">=</span> mongoose<span class="token punctuation">.</span><span class="token function">model</span><span class="token punctuation">(</span><span class="token string">"Book"</span><span class="token punctuation">,</span> bookSchema<span class="token punctuation">)</span><span class="token punctuation">;</span>  
+</code></pre>
+
+<p>Now when you add a new book, you need to make sure that it has a valid reference to an existing publisher's <code>_id</code> attribute. If that publisher doesn't exist, you'll either need to submit a book without a publisher and add that in later, or make sure to create the publisher before you save the book to the database so you have a working reference to the publisher.</p>
+
+<p>Depending on how you decide is best to perform these operations, you may benefit from a third-party plugin/package called <a href="https://github.com/drudge/mongoose-findorcreate" target="_blank">mongoose-findorcreate</a>.</p>
+
+<h3 id="conclusion">Conclusion</h3>
+
+<p>Database modeling is <em>not</em> a simple task. This is the kind of thing that database architects get paid 6 figures to figure out. So don't feel bad if it takes <em>a lot</em> of practice before some of this starts to make sense.</p>
+
+<p>The first thing you could do when deciding which structure for your data you should use is to ask yourself: is the relationship I'm thinking about embedding repetitive? If the answer is "no", consider using embedded types. If the answer is "yes", consider using references to ObjectIds.</p>
+
+<p>Happy practicing!</p>
+        </section>
+
+        <footer class="post-footer">
+
+
+            <figure class="author-image">
+                <a class="img" href="http://coursework.vschool.io/author/bob/" style="background-image: url(/content/images/2016/04/1526275_10152073097568744_1599449422_n.jpg)" target="_blank"><span class="hidden">Bob Ziroll's Picture</span></a>
+            </figure>
+
+            <section class="author">
+                <h4><a href="http://coursework.vschool.io/author/bob/" target="_blank">Bob Ziroll</a></h4>
+
+                    <p>Read <a href="http://coursework.vschool.io/author/bob/" target="_blank">more posts</a> by this author.</p>
+                <div class="author-meta">
+                    
+                    
+                </div>
+            </section>
+
+
+            <section class="share">
+                <h4>Share this post</h4>
+                <a class="icon-twitter" href="https://twitter.com/share?text=Mongoose%20Schemas&amp;url=http://coursework.vschool.io/mongoose-schemas/" onclick="window.open(this.href, &#39;twitter-share&#39;, &#39;width=550,height=235&#39;);return false;" target="_blank">
+                    <span class="hidden">Twitter</span>
+                </a>
+                <a class="icon-facebook" href="https://www.facebook.com/sharer/sharer.php?u=http://coursework.vschool.io/mongoose-schemas/" onclick="window.open(this.href, &#39;facebook-share&#39;,&#39;width=580,height=296&#39;);return false;" target="_blank">
+                    <span class="hidden">Facebook</span>
+                </a>
+                <a class="icon-google-plus" href="https://plus.google.com/share?url=http://coursework.vschool.io/mongoose-schemas/" onclick="window.open(this.href, &#39;google-plus-share&#39;, &#39;width=490,height=530&#39;);return false;" target="_blank">
+                    <span class="hidden">Google+</span>
+                </a>
+            </section>
+
+        </footer>
+
+    </article>
+</main>
+
+<aside class="read-next">
+    <a class="read-next-story " style="background-image: url(/content/images/2015/12/banner-06.jpg)" href="http://coursework.vschool.io/authentication-basics/">
+        <section class="post">
+            <h2>Authentication Basics</h2>
+            <p>Authentication is the process of allowing a user of your application to create an account, sign in, have specific…</p>
+        </section>
+    </a>
+    <a class="read-next-story prev no-cover" href="http://coursework.vschool.io/mongoose-crud/">
+        <section class="post">
+            <h2>Mongoose CRUD (Create, Read, Update, Delete)</h2>
+            <p>We've covered the basics of making queries in the MongoDB Shell, but since we'll mostly be writing our queries…</p>
+        </section>
+    </a>
+</aside>
+
+
+
+        <footer class="site-footer clearfix">
+            <section class="copyright"><a href="http://coursework.vschool.io/">V School Web Development</a> © 2016</section>
+            <section class="poweredby">Proudly published with <a href="https://ghost.org/">Ghost</a></section>
+        </footer>
+
+    </div>
+
+    <!-- You can safely delete this line if your theme does not require jQuery -->
+<script type="text/javascript" src="./Mongoose Schemas_files/jquery-1.11.3.min.js"></script>
+
+<script>  
+  $('.post a').attr('target', '_blank');
+  $('h2.post-title a').attr('target', '_self');
+</script>
+
+    <script type="text/javascript" src="./Mongoose Schemas_files/jquery.fitvids.js"></script>
+    <script type="text/javascript" src="./Mongoose Schemas_files/index.js"></script>
+	<script type="text/javascript" src="./Mongoose Schemas_files/main.js"></script>
+	<script type="text/javascript" src="./Mongoose Schemas_files/prism.js"></script>
+    <script src="./Mongoose Schemas_files/jquery.ghostHunter.min.js"></script>
+    <!-- Search field added  -->
+    <script>
+        $("#search-field").ghostHunter({
+            results   : "#results"
+        });
+    </script>
+
+
+</body></html>

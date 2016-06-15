@@ -1,0 +1,58 @@
+* {
+    font-family: 'Bangers', cursive;
+    text-align: center;
+}
+
+body {
+    background-image: url(http://firstscene.co.nz/sites/default/files/superhero.jpg);
+    background-attachment: fixed;
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: cover;
+}
+
+h1,
+h2,
+h3,
+label {
+    font-family: 'Bangers', cursive;
+    color: white;
+}
+
+.scrollBar {
+    overflow-x: scroll;
+    overflow-y: hidden;
+    white-space: nowrap;
+    margin: 10px;
+    text-align: center;
+    border-top: solid white 2px;
+    border-bottom: solid white 2px;
+}
+
+.scrollBar a {
+    display: inline-block;
+}
+
+.scrollImage {
+    height: 250px;
+    width: auto;
+    border-radius: 15px;
+    padding: 10px;
+    margin: 10px;
+    background-color: rgba(0, 0, 0, .5);
+    transition: 1s;
+}
+
+.scrollImage:hover {
+    background-image: url(https://s-media-cache-ak0.pinimg.com/736x/d9/ac/3d/d9ac3d3e98488e4ff6805e2bce4f744e.jpg);
+    background-size: cover;
+    background-position: center;
+    background-color: white;
+    border: solid rgba(0, 0, 0, .5) 5px;
+    border-radius: 75px;
+}
+
+.createDiv {
+    border: solid white 5px;
+    background-color: rgba(0, 0, 0, .5);
+}

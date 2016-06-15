@@ -21,9 +21,12 @@ app.service("PonyService", function ($http) {
             })
     };
 
-    this.deletePonies = function (pony) {
-        return $http.delete(baseUrl + pony._id)
-        self.ponyList.splice(pony, 1)
-        return this.ponyList;
-    };
+    $scope.delete = function (pony, index) {
+        var confirmed = confirm("Are you sure?  Once it's gone, it's gone!");
+        if (confirmed) {
+            $http.delete(baseUrl + pony.id).then(function () {
+                $scope.ponyList.splice(index, 1);
+            })
+        }
+    }
 });

@@ -1,0 +1,478 @@
+<!DOCTYPE html>
+<!-- saved from url=(0043)http://coursework.vschool.io/mongoose-crud/ -->
+<html><head><meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+    
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+
+    <title>Mongoose CRUD (Create, Read, Update, Delete)</title>
+    <meta name="description" content="">
+
+    <meta name="HandheldFriendly" content="True">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <link rel="shortcut icon" href="http://coursework.vschool.io/favicon.ico">
+
+    <link rel="stylesheet" type="text/css" href="./Mongoose CRUD (Create, Read, Update, Delete)_files/screen.css">
+    <link rel="stylesheet" type="text/css" href="./Mongoose CRUD (Create, Read, Update, Delete)_files/css">
+	<link rel="stylesheet" type="text/css" href="./Mongoose CRUD (Create, Read, Update, Delete)_files/prism.css">
+
+    <link rel="canonical" href="http://coursework.vschool.io/mongoose-crud/">
+    <meta name="referrer" content="origin">
+    
+    <meta property="og:site_name" content="V School Web Development">
+    <meta property="og:type" content="article">
+    <meta property="og:title" content="Mongoose CRUD (Create, Read, Update, Delete)">
+    <meta property="og:description" content="We&#39;ve covered the basics of making queries in the MongoDB Shell, but since we&#39;ll mostly be writing our queries in our server&#39;s JavaScript code using Mongoose, it makes sense to understand how Mongoose does queries. We&#39;ll be covering basic CRUD...">
+    <meta property="og:url" content="http://coursework.vschool.io/mongoose-crud/">
+    <meta property="article:published_time" content="2015-12-03T23:15:12.533Z">
+    <meta property="article:modified_time" content="2016-03-16T20:42:56.285Z">
+    <meta property="article:tag" content="Mongoose">
+    <meta property="article:tag" content="Database">
+    <meta property="article:tag" content="HTTP/API">
+    <meta property="article:tag" content="Level 4">
+    <meta property="article:tag" content="Lesson">
+    
+    <meta name="twitter:card" content="summary">
+    <meta name="twitter:title" content="Mongoose CRUD (Create, Read, Update, Delete)">
+    <meta name="twitter:description" content="We&#39;ve covered the basics of making queries in the MongoDB Shell, but since we&#39;ll mostly be writing our queries in our server&#39;s JavaScript code using Mongoose, it makes sense to understand how Mongoose does queries. We&#39;ll be covering basic CRUD...">
+    <meta name="twitter:url" content="http://coursework.vschool.io/mongoose-crud/">
+    
+    <script type="application/ld+json">
+{
+    "@context": "http://schema.org",
+    "@type": "Article",
+    "publisher": "V School Web Development",
+    "author": {
+        "@type": "Person",
+        "name": "Bob Ziroll",
+        "image": "http://coursework.vschool.io/content/images/2016/04/1526275_10152073097568744_1599449422_n.jpg",
+        "url": "http://coursework.vschool.io/author/bob",
+        "sameAs": null,
+        "description": null
+    },
+    "headline": "Mongoose CRUD (Create, Read, Update, Delete)",
+    "url": "http://coursework.vschool.io/mongoose-crud/",
+    "datePublished": "2015-12-03T23:15:12.533Z",
+    "dateModified": "2016-03-16T20:42:56.285Z",
+    "keywords": "Mongoose, Database, HTTP/API, Level 4, Lesson",
+    "description": "We&#x27;ve covered the basics of making queries in the MongoDB Shell, but since we&#x27;ll mostly be writing our queries in our server&#x27;s JavaScript code using Mongoose, it makes sense to understand how Mongoose does queries. We&#x27;ll be covering basic CRUD..."
+}
+    </script>
+
+    <meta name="generator" content="Ghost 0.7">
+    <link rel="alternate" type="application/rss+xml" title="V School Web Development" href="http://coursework.vschool.io/rss/">
+    <link href="./Mongoose CRUD (Create, Read, Update, Delete)_files/css(1)" rel="stylesheet" type="text/css">
+<style>
+/*body, h1, h2, h3, h4, h5, h6,  
+.main-nav a,
+.subscribe-button,
+.page-title,
+.post-meta,
+.read-next-story .post:before,
+.pagination,
+.site-footer,
+[class^="icon-"]:before, [class*=" icon-"]:before {
+    font-family:"HelveticaNeue-Light", "Helvetica Neue Light", "Helvetica Neue", Helvetica, Arial, "Lucida Grande", sans-serif; /* }*/
+.page-title {
+	background-color: rgba(68, 68, 68, 0.46);
+    font-family:"HelveticaNeue-Light", "Helvetica Neue Light", "Helvetica Neue", Helvetica, Arial, "Lucida Grande", sans-serif;
+    font-weight: 200;
+}
+.page-description {
+	background-color: rgba(68, 68, 68, 0.46);
+}
+code {
+    color: #c25;
+}
+    
+a {
+    color: #60B2B0;
+}
+
+</style>
+<style id="fit-vids-style">.fluid-width-video-wrapper{width:100%;position:relative;padding:0;}.fluid-width-video-wrapper iframe,.fluid-width-video-wrapper object,.fluid-width-video-wrapper embed {position:absolute;top:0;left:0;width:100%;height:100%;}</style></head>
+<body class="post-template tag-mongoose tag-database tag-http-api tag-level-4 tag-lesson nav-closed" cz-shortcut-listen="true">
+
+    <div class="nav">
+    <h3 class="nav-title">Menu</h3>
+    <a href="http://coursework.vschool.io/mongoose-crud/#" class="nav-close">
+        <span class="hidden">Close</span>
+    </a>
+    <ul>
+            <li class="nav-dashboard" role="presentation"><a href="http://coursework.vschool.io/">Dashboard</a></li>
+            <li class="nav-outside-resources" role="presentation"><a href="http://coursework.vschool.io/resource-list/">Outside Resources</a></li>
+            <li class="nav-homework" role="presentation"><a href="http://coursework.vschool.io/tag/homework/">Homework</a></li>
+            <li class="nav-exercises" role="presentation"><a href="http://coursework.vschool.io/tag/exercises/">Exercises</a></li>
+            <li class="nav-precourse" role="presentation"><a href="http://coursework.vschool.io/tag/pre-course/">Pre-Course</a></li>
+            <li class="nav-angular" role="presentation"><a href="http://coursework.vschool.io/tag/angular/">Angular</a></li>
+            <li class="nav-bootstrap" role="presentation"><a href="http://coursework.vschool.io/tag/bootstrap/">Bootstrap</a></li>
+            <li class="nav-css" role="presentation"><a href="http://coursework.vschool.io/tag/css/">CSS</a></li>
+            <li class="nav-javascript" role="presentation"><a href="http://coursework.vschool.io/tag/javascript/">Javascript</a></li>
+            <li class="nav-html" role="presentation"><a href="http://coursework.vschool.io/tag/html/">HTML</a></li>
+            <li class="nav-jquery" role="presentation"><a href="http://coursework.vschool.io/tag/jquery/">jQuery</a></li>
+            <li class="nav-mongo" role="presentation"><a href="http://coursework.vschool.io/tag/mongo/">Mongo</a></li>
+            <li class="nav-node" role="presentation"><a href="http://coursework.vschool.io/tag/node/">Node</a></li>
+            <li class="nav-tools" role="presentation"><a href="http://coursework.vschool.io/tag/tools/">Tools</a></li>
+            <li class="nav-warmups" role="presentation"><a href="http://coursework.vschool.io/tag/warmups/">Warmups</a></li>
+            <li class="nav-career" role="presentation"><a href="http://coursework.vschool.io/tag/career/">Career</a></li>
+            <li class="nav-mean-stack" role="presentation"><a href="http://coursework.vschool.io/tag/mean-stack/">MEAN Stack</a></li>
+            <li class="nav-authentication" role="presentation"><a href="http://coursework.vschool.io/tag/authentication/">Authentication</a></li>
+            <li class="nav-intro" role="presentation"><a href="http://coursework.vschool.io/tag/intro/">Intro</a></li>
+            <li class="nav-class-instruction" role="presentation"><a href="http://coursework.vschool.io/tag/instruction">Class Instruction</a></li>
+    </ul>
+<!-- This is a search field, but it's putting the results below so I commented it out.
+Instructions from https://www.ghostforbeginners.com/how-to-add-a-search-box-to-your-ghost-blog/
+    <form style="text-align:center">
+        <input id="search-field" />
+        <input type="submit" value="search">
+    </form>
+    <section id="results" style="text-align:center"></section>
+-->   
+    <!-- no need for rss subscribe button -->
+    <!--<a class="subscribe-button icon-feed" href="http://coursework.vschool.io/rss/">Subscribe</a>-->
+</div>
+<span class="nav-cover"></span>
+
+
+    <div class="site-wrapper">
+
+        
+
+
+<header class="main-header post-head no-cover">
+    <nav class="main-nav  clearfix">
+        <a class="blog-logo" href="http://coursework.vschool.io/"><img src="./Mongoose CRUD (Create, Read, Update, Delete)_files/v-school_Abbreviated.png" alt="Blog Logo"></a>
+            <a class="menu-button icon-menu" href="http://coursework.vschool.io/mongoose-crud/#"><span class="word">Menu</span></a>
+    </nav>
+</header>
+
+<main class="content" role="main">
+    <article class="post tag-mongoose tag-database tag-http-api tag-level-4 tag-lesson">
+
+        <header class="post-header">
+            <h1 class="post-title">Mongoose CRUD (Create, Read, Update, Delete)</h1>
+            <section class="post-meta">
+                <time class="post-date" datetime="2015-12-03">03 December 2015</time>  on <a href="http://coursework.vschool.io/tag/mongoose/" target="_blank">Mongoose</a>, <a href="http://coursework.vschool.io/tag/database/" target="_blank">Database</a>, <a href="http://coursework.vschool.io/tag/http-api/" target="_blank">HTTP/API</a>, <a href="http://coursework.vschool.io/tag/level-4/" target="_blank">Level 4</a>, <a href="http://coursework.vschool.io/tag/lesson/" target="_blank">Lesson</a>
+            </section>
+        </header>
+
+        <section class="post-content">
+            <p>We've covered the basics of making queries in the <a href="http://coursework.codingcamp.us/mongodb-overview/" target="_blank">MongoDB Shell</a>, but since we'll mostly be writing our queries in our server's JavaScript code using Mongoose, it makes sense to understand how Mongoose does queries. We'll be covering basic CRUD (Create, Read, Update, Delete) operations.</p>
+
+<p>With Mongoose, you can perform these operations wherever you want to in your code. Usually when we talk about CRUD, we're talking about it in tandem with the 4 most common HTTP methods, GET, POST, PUT, and DELETE, which map to the CRUD operations like so:</p>
+
+<style type="text/css">  
+.tg  {border-collapse:collapse;border-spacing:0;border-color:#ccc;border-width:1px;border-style:solid;}
+.tg td{font-family:Arial, sans-serif;font-size:14px;padding:10px 5px;border-style:solid;border-width:0px;overflow:hidden;word-break:normal;border-color:#ccc;color:#333;background-color:#fff;}
+.tg th{font-family:Arial, sans-serif;font-size:14px;font-weight:normal;padding:10px 5px;border-style:solid;border-width:0px;overflow:hidden;word-break:normal;border-color:#ccc;color:#333;background-color:#f0f0f0;}
+.tg .tg-yw4l{vertical-align:top}
+</style>  
+
+<table class="tg">  
+  <tbody><tr>
+    <th class="tg-yw4l">HTTP Method</th>
+    <th class="tg-yw4l">CRUD Operation</th>
+  </tr>
+  <tr>
+    <td class="tg-yw4l">GET</td>
+    <td class="tg-yw4l">Read</td>
+  </tr>
+  <tr>
+    <td class="tg-yw4l">POST</td>
+    <td class="tg-yw4l">Create</td>
+  </tr>
+  <tr>
+    <td class="tg-yw4l">PUT</td>
+    <td class="tg-yw4l">Update</td>
+  </tr>
+  <tr>
+    <td class="tg-yw4l">DELETE</td>
+    <td class="tg-yw4l">Delete</td>
+  </tr>
+</tbody></table>
+
+<hr>
+
+<h3 id="read">Read</h3>
+
+<p>This is how we get items from MongoDB. Mongoose gives us 3 basic ways to get stuff from the database (<code>.find()</code>, <code>.findOne()</code>, and <code>.findById()</code> ), and one advanced way (<code>.where()</code>).</p>
+
+<h6 id="findquerycallback"><code>.find([query], [callback])</code></h6>
+
+<p>Finds all documents in the database that match the query. If no query is given, it returns everything.</p>
+
+<pre class=" language-javascript"><code class=" language-javascript"><span class="token keyword">var</span> Person <span class="token operator">=</span> <span class="token function">require</span><span class="token punctuation">(</span><span class="token string">"../models/person"</span><span class="token punctuation">)</span><span class="token punctuation">;</span>
+
+<span class="token comment" spellcheck="true">// .find() finds all instances in the database that match the query you pass in.</span>
+<span class="token comment" spellcheck="true">// It returns an array, even if there is only one item in the array.</span>
+
+<span class="token comment" spellcheck="true">// No query passed in means "find everything"</span>
+Person<span class="token punctuation">.</span><span class="token function">find</span><span class="token punctuation">(</span><span class="token keyword">function</span> <span class="token punctuation">(</span>err<span class="token punctuation">,</span> people<span class="token punctuation">)</span> <span class="token punctuation">{</span>  
+    <span class="token keyword">if</span> <span class="token punctuation">(</span>err<span class="token punctuation">)</span> <span class="token punctuation">{</span>
+        <span class="token comment" spellcheck="true">// Note that this error doesn't mean nothing was found,</span>
+        <span class="token comment" spellcheck="true">// it means the database had an error while searching, hence the 500 status</span>
+        res<span class="token punctuation">.</span><span class="token function">status</span><span class="token punctuation">(</span><span class="token number">500</span><span class="token punctuation">)</span><span class="token punctuation">.</span><span class="token function">send</span><span class="token punctuation">(</span>err<span class="token punctuation">)</span>
+    <span class="token punctuation">}</span> <span class="token keyword">else</span> <span class="token punctuation">{</span>
+        <span class="token comment" spellcheck="true">// send the list of all people</span>
+        res<span class="token punctuation">.</span><span class="token function">send</span><span class="token punctuation">(</span>people<span class="token punctuation">)</span><span class="token punctuation">;</span>
+    <span class="token punctuation">}</span>
+<span class="token punctuation">}</span><span class="token punctuation">)</span><span class="token punctuation">;</span>
+
+<span class="token comment" spellcheck="true">// If query IS passed into .find(), filters by the query parameters</span>
+Person<span class="token punctuation">.</span><span class="token function">find</span><span class="token punctuation">(</span><span class="token punctuation">{</span><span class="token string">"name"</span><span class="token punctuation">:</span> <span class="token string">"John James"</span><span class="token punctuation">,</span> <span class="token string">"age"</span><span class="token punctuation">:</span> <span class="token number">36</span><span class="token punctuation">}</span><span class="token punctuation">,</span> <span class="token keyword">function</span> <span class="token punctuation">(</span>err<span class="token punctuation">,</span> people<span class="token punctuation">)</span> <span class="token punctuation">{</span>  
+    <span class="token keyword">if</span> <span class="token punctuation">(</span>err<span class="token punctuation">)</span> <span class="token punctuation">{</span>
+        res<span class="token punctuation">.</span><span class="token function">status</span><span class="token punctuation">(</span><span class="token number">500</span><span class="token punctuation">)</span><span class="token punctuation">.</span><span class="token function">send</span><span class="token punctuation">(</span>err<span class="token punctuation">)</span>
+    <span class="token punctuation">}</span> <span class="token keyword">else</span> <span class="token punctuation">{</span>
+        <span class="token comment" spellcheck="true">// send the list of all people in database with name of "John James" and age of 36</span>
+        <span class="token comment" spellcheck="true">// Very possible this will be an array with just one Person object in it.</span>
+        res<span class="token punctuation">.</span><span class="token function">send</span><span class="token punctuation">(</span>people<span class="token punctuation">)</span><span class="token punctuation">;</span>
+    <span class="token punctuation">}</span>
+<span class="token punctuation">}</span><span class="token punctuation">)</span><span class="token punctuation">;</span>
+</code></pre>
+
+<h6 id="findonequeryfieldstoreturncallback"><code>.findOne([query], [fieldsToReturn], [callback])</code></h6>
+
+<p>Finds one object from the database. If your query matches more than one item in the database, it still only returns the first one it finds.  </p>
+
+<pre class=" language-javascript"><code class=" language-javascript">Kitten<span class="token punctuation">.</span><span class="token function">findOne</span><span class="token punctuation">(</span>  
+    <span class="token punctuation">{</span><span class="token string">"color"</span><span class="token punctuation">:</span> <span class="token string">"white"</span><span class="token punctuation">,</span> <span class="token string">"name"</span><span class="token punctuation">:</span> <span class="token string">"Dr. Miffles"</span><span class="token punctuation">,</span> <span class="token string">"age"</span><span class="token punctuation">:</span> <span class="token number">1</span><span class="token punctuation">}</span><span class="token punctuation">,</span>  <span class="token comment" spellcheck="true">// query</span>
+    <span class="token punctuation">{</span><span class="token string">"name"</span><span class="token punctuation">:</span> <span class="token boolean">true</span><span class="token punctuation">,</span> <span class="token string">"owner"</span><span class="token punctuation">:</span> <span class="token boolean">true</span><span class="token punctuation">}</span><span class="token punctuation">,</span>  <span class="token comment" spellcheck="true">// Only return an object with the "name" and "owner" fields. "_id" is included by default, so you'll need to remove it if you don't want it.</span>
+    <span class="token keyword">function</span> <span class="token punctuation">(</span>err<span class="token punctuation">,</span> kitten<span class="token punctuation">)</span> <span class="token punctuation">{</span>
+        <span class="token keyword">if</span> <span class="token punctuation">(</span>err<span class="token punctuation">)</span> <span class="token punctuation">{</span>
+            res<span class="token punctuation">.</span><span class="token function">send</span><span class="token punctuation">(</span>err<span class="token punctuation">)</span>
+        <span class="token punctuation">}</span>
+        <span class="token keyword">if</span> <span class="token punctuation">(</span>kitten<span class="token punctuation">)</span> <span class="token punctuation">{</span>  <span class="token comment" spellcheck="true">// Search could come back empty, so we should protect against sending nothing back</span>
+            res<span class="token punctuation">.</span><span class="token function">send</span><span class="token punctuation">(</span>kitten<span class="token punctuation">)</span>
+        <span class="token punctuation">}</span> <span class="token keyword">else</span> <span class="token punctuation">{</span>  <span class="token comment" spellcheck="true">// In case no kitten was found with the given query</span>
+            res<span class="token punctuation">.</span><span class="token function">send</span><span class="token punctuation">(</span><span class="token string">"No kitten found"</span><span class="token punctuation">)</span>
+        <span class="token punctuation">}</span>
+    <span class="token punctuation">}</span>
+<span class="token punctuation">)</span><span class="token punctuation">;</span>
+</code></pre>
+
+<p>With <code>.findOne()</code>:</p>
+
+<ul>
+<li>If you don't provide a <code>query</code>, it will just return the first Kitten in the database.</li>
+<li>If you don't provide a <code>fieldsToReturn</code>, it will return the entire object.</li>
+<li><code>fieldsToReturn</code> can also be in the form of a string with spaces between the field names, e.g. <code>"name age owner"</code>, instead of an object.</li>
+</ul>
+
+<h6 id="findbyididfieldstoreturncallback"><code>.findById(id, [fieldsToReturn], [callback])</code></h6>
+
+<p>Finds a single object in the database by the provided <code>id</code>.</p>
+
+<pre class=" language-javascript"><code class=" language-javascript"><span class="token comment" spellcheck="true">// Common RESTful way to get the Id is from the url params in req.params</span>
+Kitten<span class="token punctuation">.</span><span class="token function">findById</span><span class="token punctuation">(</span>req<span class="token punctuation">.</span>params<span class="token punctuation">.</span>kittenId<span class="token punctuation">,</span> <span class="token keyword">function</span> <span class="token punctuation">(</span>err<span class="token punctuation">,</span> kitten<span class="token punctuation">)</span> <span class="token punctuation">{</span>  
+    <span class="token keyword">if</span> <span class="token punctuation">(</span>err<span class="token punctuation">)</span> <span class="token punctuation">{</span>
+        res<span class="token punctuation">.</span><span class="token function">send</span><span class="token punctuation">(</span>err<span class="token punctuation">)</span>
+    <span class="token punctuation">}</span>
+    <span class="token keyword">if</span> <span class="token punctuation">(</span>kitten<span class="token punctuation">)</span> <span class="token punctuation">{</span>
+        res<span class="token punctuation">.</span><span class="token function">send</span><span class="token punctuation">(</span>kitten<span class="token punctuation">)</span>
+    <span class="token punctuation">}</span> <span class="token keyword">else</span> <span class="token punctuation">{</span>
+        res<span class="token punctuation">.</span><span class="token function">send</span><span class="token punctuation">(</span><span class="token string">"No kitten found with that ID"</span><span class="token punctuation">)</span>
+    <span class="token punctuation">}</span>
+<span class="token punctuation">}</span><span class="token punctuation">)</span><span class="token punctuation">;</span>
+</code></pre>
+
+<h6 id="whereselector"><code>.where(selector)</code></h6>
+
+<p>This one is powerful, but a bit more confusing. It allows us to do more complex queries to the database. So far we've done things like "find a Kitten whose name is Dr. Miffles"<strong>AND</strong> whose color is white <strong>AND</strong> who is 1 year old.</p>
+
+<p>But what if we wanted to query for all Kittens in the Database who were between the ages between 1 and 4? This is when <code>.where()</code> comes in.</p>
+
+<p>Calling <code>.where()</code> on a Mongoose Model (e.g. <code>Kitten</code>) actually returns a Mongoose "Query" object. In order to actually execute the query, we have to call the <code>.exec()</code> method and pass in our usual callback. Example:</p>
+
+<pre class=" language-javascript"><code class=" language-javascript">Kitten<span class="token punctuation">.</span><span class="token function">where</span><span class="token punctuation">(</span><span class="token string">"age"</span><span class="token punctuation">)</span><span class="token punctuation">.</span><span class="token function">gte</span><span class="token punctuation">(</span><span class="token number">1</span><span class="token punctuation">)</span><span class="token punctuation">.</span><span class="token function">lte</span><span class="token punctuation">(</span><span class="token number">4</span><span class="token punctuation">)</span><span class="token punctuation">.</span><span class="token function">exec</span><span class="token punctuation">(</span><span class="token keyword">function</span> <span class="token punctuation">(</span>err<span class="token punctuation">,</span> kittens<span class="token punctuation">)</span> <span class="token punctuation">{</span>  
+    <span class="token comment" spellcheck="true">// Do stuff</span>
+<span class="token punctuation">}</span><span class="token punctuation">)</span><span class="token punctuation">;</span>
+</code></pre>
+
+<p>What's nice about these queries is that it reads almost like English: "Find all Kittens where the age is greater than or equal to 1 but less than or equal to 4, then execute the following function...".</p>
+
+<hr>
+
+<h3 id="create">Create</h3>
+
+<p>This is how we can create new items in the database. This will commonly be from an HTTP <code>POST</code> request, although you can do this anywhere you want.</p>
+
+<pre class=" language-javascript"><code class=" language-javascript"><span class="token keyword">var</span> Todo <span class="token operator">=</span> <span class="token function">require</span><span class="token punctuation">(</span><span class="token string">"../models/todo"</span><span class="token punctuation">)</span><span class="token punctuation">;</span>
+
+<span class="token comment" spellcheck="true">// Assuming this is from a POST request and the body of the</span>
+<span class="token comment" spellcheck="true">// request contained the JSON of the new "todo" item to be saved</span>
+<span class="token keyword">var</span> todo <span class="token operator">=</span> <span class="token keyword">new</span> <span class="token class-name">Todo</span><span class="token punctuation">(</span>req<span class="token punctuation">.</span>body<span class="token punctuation">)</span><span class="token punctuation">;</span>  
+todo<span class="token punctuation">.</span><span class="token function">save</span><span class="token punctuation">(</span><span class="token keyword">function</span> <span class="token punctuation">(</span>err<span class="token punctuation">,</span> createdTodoObject<span class="token punctuation">)</span> <span class="token punctuation">{</span>  
+    <span class="token keyword">if</span> <span class="token punctuation">(</span>err<span class="token punctuation">)</span> <span class="token punctuation">{</span>
+        res<span class="token punctuation">.</span><span class="token function">send</span><span class="token punctuation">(</span>err<span class="token punctuation">)</span><span class="token punctuation">;</span>
+    <span class="token punctuation">}</span>
+    <span class="token comment" spellcheck="true">// This createdTodoObject is the same one we saved, but after Mongo</span>
+    <span class="token comment" spellcheck="true">// added its additional properties like _id.</span>
+    res<span class="token punctuation">.</span><span class="token function">send</span><span class="token punctuation">(</span>createdTodoObject<span class="token punctuation">)</span><span class="token punctuation">;</span>
+<span class="token punctuation">}</span><span class="token punctuation">)</span><span class="token punctuation">;</span>
+</code></pre>
+
+<p>That's about it! Create the new object just like you would if you were creating a JavaScript object from an <a href="http://www.javascriptkit.com/javatutors/oopjs2.shtml" target="_blank">object function constructor</a>, then call the <code>.save()</code> method on that object.</p>
+
+<p>One common operation apps will make is called <code>findOrCreate</code>, where it will look for an existing instance in the database and return it if it exists, and create it if it doesn't exist. Mongoose doesn't have a built-in method for doing that, but there is a third-party package called <a href="https://github.com/drudge/mongoose-findorcreate" target="_blank">mongoose-findorcreate</a> that you can install as a plugin to your model to include that as a static method on all models it is plugged in to.</p>
+
+<hr>
+
+<h3 id="update">Update</h3>
+
+<p>This is just a combination of "read" and "create", but instead of creating a new one with <code>var todo = new Todo(...)</code>, we query the database for an object, alter it, then save it:</p>
+
+<pre class=" language-javascript"><code class=" language-javascript"><span class="token keyword">var</span> Todo <span class="token operator">=</span> <span class="token function">require</span><span class="token punctuation">(</span><span class="token string">"../models/todo"</span><span class="token punctuation">)</span><span class="token punctuation">;</span>
+
+<span class="token comment" spellcheck="true">// This would likely be inside of a PUT request, since we're updating an existing document, hence the req.params.todoId.</span>
+<span class="token comment" spellcheck="true">// Find the existing resource by ID</span>
+Todo<span class="token punctuation">.</span><span class="token function">findById</span><span class="token punctuation">(</span>req<span class="token punctuation">.</span>params<span class="token punctuation">.</span>todoId<span class="token punctuation">,</span> <span class="token keyword">function</span> <span class="token punctuation">(</span>err<span class="token punctuation">,</span> todo<span class="token punctuation">)</span> <span class="token punctuation">{</span>  
+    <span class="token comment" spellcheck="true">// Handle any possible database errors</span>
+    <span class="token keyword">if</span> <span class="token punctuation">(</span>err<span class="token punctuation">)</span> <span class="token punctuation">{</span>
+        res<span class="token punctuation">.</span><span class="token function">status</span><span class="token punctuation">(</span><span class="token number">500</span><span class="token punctuation">)</span><span class="token punctuation">.</span><span class="token function">send</span><span class="token punctuation">(</span>err<span class="token punctuation">)</span><span class="token punctuation">;</span>
+    <span class="token punctuation">}</span> <span class="token keyword">else</span> <span class="token punctuation">{</span>
+        <span class="token comment" spellcheck="true">// Update each attribute with any possible attribute that may have been submitted in the body of the request</span>
+        <span class="token comment" spellcheck="true">// If that attribute isn't in the request body, default back to whatever it was before.</span>
+        todo<span class="token punctuation">.</span>title <span class="token operator">=</span> req<span class="token punctuation">.</span>body<span class="token punctuation">.</span>title <span class="token operator">||</span> todo<span class="token punctuation">.</span>title<span class="token punctuation">;</span>
+        todo<span class="token punctuation">.</span>description <span class="token operator">=</span> req<span class="token punctuation">.</span>body<span class="token punctuation">.</span>description <span class="token operator">||</span> todo<span class="token punctuation">.</span>description<span class="token punctuation">;</span>
+        todo<span class="token punctuation">.</span>price <span class="token operator">=</span> req<span class="token punctuation">.</span>body<span class="token punctuation">.</span>price <span class="token operator">||</span> todo<span class="token punctuation">.</span>price<span class="token punctuation">;</span>
+        todo<span class="token punctuation">.</span>completed <span class="token operator">=</span> req<span class="token punctuation">.</span>body<span class="token punctuation">.</span>completed <span class="token operator">||</span> todo<span class="token punctuation">.</span>completed<span class="token punctuation">;</span>
+
+        <span class="token comment" spellcheck="true">// Save the updated document back to the database</span>
+        todo<span class="token punctuation">.</span><span class="token function">save</span><span class="token punctuation">(</span><span class="token keyword">function</span> <span class="token punctuation">(</span>err<span class="token punctuation">,</span> todo<span class="token punctuation">)</span> <span class="token punctuation">{</span>
+            <span class="token keyword">if</span> <span class="token punctuation">(</span>err<span class="token punctuation">)</span> <span class="token punctuation">{</span>
+                res<span class="token punctuation">.</span><span class="token function">status</span><span class="token punctuation">(</span><span class="token number">500</span><span class="token punctuation">)</span><span class="token punctuation">.</span><span class="token function">send</span><span class="token punctuation">(</span>err<span class="token punctuation">)</span>
+            <span class="token punctuation">}</span>
+            res<span class="token punctuation">.</span><span class="token function">send</span><span class="token punctuation">(</span>todo<span class="token punctuation">)</span><span class="token punctuation">;</span>
+        <span class="token punctuation">}</span><span class="token punctuation">)</span><span class="token punctuation">;</span>
+    <span class="token punctuation">}</span>
+<span class="token punctuation">}</span><span class="token punctuation">)</span><span class="token punctuation">;</span>
+</code></pre>
+
+<p>There are a few different ways you could structure your <code>PUT</code> request. Traditionally, <code>PUT</code> will overwrite the existing object with whatever you sent in your request body, but the way described above basically combined a <code>PUT</code> request with a <code>PATCH</code> request (which will only update one certain part of an existing object). </p>
+
+<p>In other words, traditionally if I had an object like this: <code>{ name: "Bob", job: "Instructor" }</code>, a <code>PUT</code> request with the following data: <code>{ name: "John" }</code> would completely overwrite the original object and result in just <code>{ name: "John" }</code> with no <code>job</code> property. To only overwrite the property that was sent, traditionally you would submit a <code>PATCH</code> request instead, which "patches" an existing object with only the new data you submitted, leaving the old data alone.</p>
+
+<p>The way we structured our <code>PUT</code> request above, this doesn't fully allow us to remove existing properties, only change them. So if your app needs more control over removing some properties of existing database entries, you'll want to change the way this <code>PUT</code> is structured.</p>
+
+<p>Also to note: as of Mongoose version 4.0, there are also shortcut methods called <code>findOneAndUpdate()</code> and <code>findByIdAndUpdate()</code> which make this a little bit faster. Check out the documentation here: <a href="http://mongoosejs.com/docs/api.html#model_Model.findOneAndUpdate" target="_blank">findOneAndUpdate()</a>, <a href="http://mongoosejs.com/docs/api.html#model_Model.findByIdAndUpdate" target="_blank">findByIdAndUpdate()</a>.</p>
+
+<hr>
+
+<h3 id="delete">Delete</h3>
+
+<p>Similar to the "Update" section above, you can go about deleting a document from the database by first finding it, then running the <code>.remove()</code> method on the found document. Also similar to the updating section above, Mongoose v4.0 introduced some helper methods - <code>.findOneAndRemove()</code> and <code>.findByIdAndRemove()</code> - which is what we'll show in the example below.</p>
+
+<pre class=" language-javascript"><code class=" language-javascript"><span class="token comment" spellcheck="true">// The "todo" in this callback function represents the document that was found.</span>
+<span class="token comment" spellcheck="true">// It allows you to pass a reference back to the client in case they need a reference for some reason.</span>
+Todo<span class="token punctuation">.</span><span class="token function">findByIdAndRemove</span><span class="token punctuation">(</span>req<span class="token punctuation">.</span>params<span class="token punctuation">.</span>todoId<span class="token punctuation">,</span> <span class="token keyword">function</span> <span class="token punctuation">(</span>err<span class="token punctuation">,</span> todo<span class="token punctuation">)</span> <span class="token punctuation">{</span>  
+    <span class="token comment" spellcheck="true">// We'll create a simple object to send back with a message and the id of the document that was removed</span>
+    <span class="token comment" spellcheck="true">// You can really do this however you want, though.</span>
+    <span class="token keyword">var</span> response <span class="token operator">=</span> <span class="token punctuation">{</span>
+        message<span class="token punctuation">:</span> <span class="token string">"Todo successfully deleted"</span><span class="token punctuation">,</span>
+        id<span class="token punctuation">:</span> todo<span class="token punctuation">.</span>_id
+    <span class="token punctuation">}</span><span class="token punctuation">;</span>
+    res<span class="token punctuation">.</span><span class="token function">send</span><span class="token punctuation">(</span>response<span class="token punctuation">)</span><span class="token punctuation">;</span>
+<span class="token punctuation">}</span><span class="token punctuation">)</span><span class="token punctuation">;</span>
+</code></pre>
+
+<hr>
+
+<h3 id="conclusion">Conclusion</h3>
+
+<p>You should definitely spend some time researching different CRUD operations using Mongoose. There are a lot of nuances you will need to learn to become an expert at using it, and the only way you'll be able to learn those nuances is by spending time researching and using Mongoose in your own projects.</p>
+
+<p>Mongoose has lots of really fine-grained controls it allows, such as defining static methods for your models (so that every object created is able to run a specific method, similar to adding a method to a JavaScript "class", A.K.A. function constructor), adding pre/post hooks into your schema (so that you can run certain code before and/or after an item is created from the schema, deleted, updated, etc.), adding options like there's no tomorrow, etc. Check out some of the following Mongoose documentation to become more familiar with the intricacies it has.</p>
+
+<ul>
+<li><a href="http://mongoosejs.com/docs/api.html" target="_blank">Mongoose API Docs</a></li>
+<li><a href="http://mongoosejs.com/docs/guide.html" target="_blank">Mongoose Schema Guide</a></li>
+<li><a href="http://mongoosejs.com/docs/models.html" target="_blank">Mongoose Models Guide</a></li>
+<li><a href="http://mongoosejs.com/docs/documents.html" target="_blank">Mongoose Documents Guide</a></li>
+<li><a href="http://mongoosejs.com/docs/queries.html" target="_blank">Mongoose Queries Guide</a></li>
+</ul>
+
+<p>Good luck, and go create something awesome!</p>
+        </section>
+
+        <footer class="post-footer">
+
+
+            <figure class="author-image">
+                <a class="img" href="http://coursework.vschool.io/author/bob/" style="background-image: url(/content/images/2016/04/1526275_10152073097568744_1599449422_n.jpg)" target="_blank"><span class="hidden">Bob Ziroll's Picture</span></a>
+            </figure>
+
+            <section class="author">
+                <h4><a href="http://coursework.vschool.io/author/bob/" target="_blank">Bob Ziroll</a></h4>
+
+                    <p>Read <a href="http://coursework.vschool.io/author/bob/" target="_blank">more posts</a> by this author.</p>
+                <div class="author-meta">
+                    
+                    
+                </div>
+            </section>
+
+
+            <section class="share">
+                <h4>Share this post</h4>
+                <a class="icon-twitter" href="https://twitter.com/share?text=Mongoose%20CRUD%20(Create%2C%20Read%2C%20Update%2C%20Delete)&amp;url=http://coursework.vschool.io/mongoose-crud/" onclick="window.open(this.href, &#39;twitter-share&#39;, &#39;width=550,height=235&#39;);return false;" target="_blank">
+                    <span class="hidden">Twitter</span>
+                </a>
+                <a class="icon-facebook" href="https://www.facebook.com/sharer/sharer.php?u=http://coursework.vschool.io/mongoose-crud/" onclick="window.open(this.href, &#39;facebook-share&#39;,&#39;width=580,height=296&#39;);return false;" target="_blank">
+                    <span class="hidden">Facebook</span>
+                </a>
+                <a class="icon-google-plus" href="https://plus.google.com/share?url=http://coursework.vschool.io/mongoose-crud/" onclick="window.open(this.href, &#39;google-plus-share&#39;, &#39;width=490,height=530&#39;);return false;" target="_blank">
+                    <span class="hidden">Google+</span>
+                </a>
+            </section>
+
+        </footer>
+
+    </article>
+</main>
+
+<aside class="read-next">
+    <a class="read-next-story " style="background-image: url(/content/images/2015/12/Blueprint_banner.jpg)" href="http://coursework.vschool.io/mongoose-schemas/">
+        <section class="post">
+            <h2>Mongoose Schemas</h2>
+            <p>Understanding Schemas A "Schema" can be a tough thing to understand at first, but in reality it's pretty straightforward.…</p>
+        </section>
+    </a>
+    <a class="read-next-story prev " style="background-image: url(/content/images/2015/12/banner4.jpg)" href="http://coursework.vschool.io/express-params-and-query/">
+        <section class="post">
+            <h2>Express req.params and req.query</h2>
+            <p>When you're first learning about the Request/Response cycle, there's a fairly confusing topic that you'll run into frequently:…</p>
+        </section>
+    </a>
+</aside>
+
+
+
+        <footer class="site-footer clearfix">
+            <section class="copyright"><a href="http://coursework.vschool.io/">V School Web Development</a> © 2016</section>
+            <section class="poweredby">Proudly published with <a href="https://ghost.org/">Ghost</a></section>
+        </footer>
+
+    </div>
+
+    <!-- You can safely delete this line if your theme does not require jQuery -->
+<script type="text/javascript" src="./Mongoose CRUD (Create, Read, Update, Delete)_files/jquery-1.11.3.min.js"></script>
+
+<script>  
+  $('.post a').attr('target', '_blank');
+  $('h2.post-title a').attr('target', '_self');
+</script>
+
+    <script type="text/javascript" src="./Mongoose CRUD (Create, Read, Update, Delete)_files/jquery.fitvids.js"></script>
+    <script type="text/javascript" src="./Mongoose CRUD (Create, Read, Update, Delete)_files/index.js"></script>
+	<script type="text/javascript" src="./Mongoose CRUD (Create, Read, Update, Delete)_files/main.js"></script>
+	<script type="text/javascript" src="./Mongoose CRUD (Create, Read, Update, Delete)_files/prism.js"></script>
+    <script src="./Mongoose CRUD (Create, Read, Update, Delete)_files/jquery.ghostHunter.min.js"></script>
+    <!-- Search field added  -->
+    <script>
+        $("#search-field").ghostHunter({
+            results   : "#results"
+        });
+    </script>
+
+
+</body></html>
