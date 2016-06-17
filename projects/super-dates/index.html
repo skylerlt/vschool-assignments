@@ -6,35 +6,41 @@
     <title>Super Dates!</title>
     <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.6/css/bootstrap.min.css">
     <link href='https://fonts.googleapis.com/css?family=Bangers' rel='stylesheet' type='text/css'>
-    <link rel="stylesheet" href="style.css">
+    <link rel="stylesheet" href="/css/style.css">
 </head>
 
-<body ng-controller="MainController" class="container-fluid">
+<body ng-controller="MainController" class="container-fluid goodBody">
     <div ng-init="get()"></div>
 
-    <h1>Super Dates!</h1>
-    <h2>For all the superheroes looking for a super good time!</h2>
+    <div class="back1 container-fluid">
+        <br>
+        <h1>Super Dates!</h1>
 
-    <div class="row">
-        <div class="scrollBar">
+        <div class="row">
+            <div class="scrollBar">
 
-            <a href=""><img class="img-responsive scrollImage center-block" src="http://vignette1.wikia.nocookie.net/marveldatabase/images/a/a0/Thor_Odinson_(Earth-12041)_004.png/revision/latest?cb=20141124174033" alt=""></a>
-            <a href=""><img class="img-responsive scrollImage center-block" src="http://vignette2.wikia.nocookie.net/mkwikia/images/d/df/Iron_man_comic.gif/revision/latest?cb=20110922082745" alt=""></a>
-            <a href=""><img class="img-responsive scrollImage center-block" src="http://www.mackrichardson.com/wp-content/uploads/2012/06/Batman-Earth-One.png" alt=""></a>
-            <a href=""><img class="img-responsive scrollImage center-block" src="http://vignette4.wikia.nocookie.net/marveldatabase/images/8/8c/Carol_Danvers_(Earth-12131)_001.png/revision/latest?cb=20130518181122" alt=""></a>
-            <a href=""><img class="img-responsive scrollImage center-block" src="http://static.comicvine.com/uploads/original/0/9436/207182-166314-green-lantern.png" alt=""></a>
-            <a href=""><img class="img-responsive scrollImage center-block" src="http://img15.deviantart.net/580a/i/2014/021/f/7/batgirl_1_by_bobhertley-d736qmr.png" alt=""></a>
-            <a href=""><img class="img-responsive scrollImage center-block" src="http://vignette2.wikia.nocookie.net/vsbattles/images/9/9a/QDNpnla.png/revision/latest?cb=20160511135042" alt=""></a>
-            <a href=""><img class="img-responsive scrollImage center-block" src="http://vignette1.wikia.nocookie.net/marvelcrossroads/images/b/bf/Hro_Talak_(Earth-6203).png/revision/latest?cb=20150723222618" alt=""></a>
-            <a href=""><img class="img-responsive scrollImage center-block" src="http://img12.deviantart.net/dcfb/i/2013/108/2/b/star_sapphire_by_msciuto-d532ymq.png" alt=""></a>
-            <a ng-repeat="user in DatingService.userProfiles" href=""><img class="img-responsive scrollImage center-block" ng-src="{{user.photo}}"></a>
+                <!--
+                <a href=""><img class="img-responsive scrollImage center-block" src="http://vignette1.wikia.nocookie.net/marveldatabase/images/a/a0/Thor_Odinson_(Earth-12041)_004.png/revision/latest?cb=20141124174033" alt=""></a>
+<a href=""><img class="img-responsive scrollImage center-block" src="http://vignette2.wikia.nocookie.net/mkwikia/images/d/df/Iron_man_comic.gif/revision/latest?cb=20110922082745" alt=""></a>
+<a href=""><img class="img-responsive scrollImage center-block" src="http://www.mackrichardson.com/wp-content/uploads/2012/06/Batman-Earth-One.png" alt=""></a>
+<a href=""><img class="img-responsive scrollImage center-block" src="http://vignette4.wikia.nocookie.net/marveldatabase/images/8/8c/Carol_Danvers_(Earth-12131)_001.png/revision/latest?cb=20130518181122" alt=""></a>
+<a href=""><img class="img-responsive scrollImage center-block" src="http://static.comicvine.com/uploads/original/0/9436/207182-166314-green-lantern.png" alt=""></a>
+<a href=""><img class="img-responsive scrollImage center-block" src="http://img15.deviantart.net/580a/i/2014/021/f/7/batgirl_1_by_bobhertley-d736qmr.png" alt=""></a>
+<a href=""><img class="img-responsive scrollImage center-block" src="http://vignette2.wikia.nocookie.net/vsbattles/images/9/9a/QDNpnla.png/revision/latest?cb=20160511135042" alt=""></a>
+<a href=""><img class="img-responsive scrollImage center-block" src="http://vignette1.wikia.nocookie.net/marvelcrossroads/images/b/bf/Hro_Talak_(Earth-6203).png/revision/latest?cb=20150723222618" alt=""></a>
+<a href=""><img class="img-responsive scrollImage center-block" src="http://img12.deviantart.net/dcfb/i/2013/108/2/b/star_sapphire_by_msciuto-d532ymq.png" alt=""></a>
+-->
+                <a ng-repeat="user in DatingService.userProfiles" href=""><img class="img-responsive scrollImage center-block" ng-src="{{user.photo}}"></a>
 
+            </div>
         </div>
+
+        <h2 class="goodTime">For all the superheroes looking for a super good time!</h2>
     </div>
 
     <br>
 
-    <div>
+    <div class="next1">
         <h2>Create a new profile</h2>
         <button ng-click="toggle=!toggle">Check Here</button>
     </div>
@@ -106,17 +112,20 @@
 
     <div ng-view=""></div>
 
-    <br>
-    <br>
-
-    <div>
+    <div class="back3">
         <h2>Search for certain profiles</h2>
         <br>
-        <input type="text">
+        <input type="text" placeholder="Profile Name" class="searchInput" ng-model="params.userName">
+        <br>
         <br>
 
-        <button ng-click="get()"></button>
+        <button class="btn btn-lg btn-info" ng-click="filterByUsername(params)">Find</button>
 
+    </div>
+
+    <div>
+        <h2>{{user.userName}}</h2>
+        <img ng-src="{{user.photo}}" alt="">
     </div>
 
     <!--
@@ -125,8 +134,8 @@
 -->
     <script src="https://ajax.googleapis.com/ajax/libs/angularjs/1.4.9/angular.js"></script>
     <script src="https://cdnjs.cloudflare.com/ajax/libs/angular.js/1.5.0-rc.0/angular-route.js "></script>
-    <script src="app.js"></script>
-    <script src="service.js"></script>
+    <script src="/js/app.js"></script>
+    <script src="/js/service.js"></script>
 
 </body>
 

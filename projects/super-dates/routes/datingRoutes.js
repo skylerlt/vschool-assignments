@@ -1,15 +1,29 @@
 var express = require("express");
 var userRouter = express.Router();
-var Users = require("../models/users");
+var GoodUsers = require("../models/users");
 
-userRouter.get("/users", function (req, res) {
-    Users.find(function (err, users) {
+userRouter.get("/", function (req, res) {
+    console.log(req.query);
+    GoodUsers.find(function (err, users) {
         if (err) throw err;
+        console.log(users);
         res.send(users);
     });
 });
 
-userRouter.post("/users", function (req, res) {
+//userRouter.get("/", function (req, res) {
+//    if (req.query.userName) {
+//        var userNames = GoodUsers.userName.filter(function (users) {
+//            return req.query.userName === User.userName;
+//        });
+//        return res.send(userNames);
+//    } else {
+//        res.send(users);
+//    }
+//    res.send("No matches found. ");
+//});
+
+userRouter.post("/", function (req, res) {
     var newUser = new Users(req.body);
     newUser.save(function (err, users) {
         if (err) throw err;
@@ -17,8 +31,8 @@ userRouter.post("/users", function (req, res) {
     })
 });
 
-userRouter.put("/users/:id", function (req, res) {
-    Users.findById(req.params.id, function (err, users) {
+userRouter.put("/:id", function (req, res) {
+    GoodUsers.findById(req.params.id, function (err, users) {
         if (err) {
             res.status(500).send(err);
         } else {
@@ -37,11 +51,12 @@ userRouter.put("/users/:id", function (req, res) {
     })
 });
 
-userRouter.delete("/users/:id", function (req, res) {
-    Users.findByIdAndRemove(req.params.id, function (err, users) {
+userRouter.delete("/:id", function (req, res) {
+    GoodUsers.findByIdAndRemove(req.params.id, function (err, users) {
         if (err) throw err;
         res.send(users);
     })
-})
+});
+
 
 module.exports = userRouter;

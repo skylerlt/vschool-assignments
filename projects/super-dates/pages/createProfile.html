@@ -1,10 +1,37 @@
-<div>
-    <h2>{{user.userName | capitalize}}</h2>
-    <h3>{{user.identity | capitalize}}</h3>
-    <h3>{{user.secretIdentity | capitalize}}</h3>
-    <h3>{{user.abilities | capitalize}}</h3>
-    <h3>{{user.gender | capitalize}}</h3>
-    <h3>{{user.city | capitalize}}</h3>
-    <h3>{{user.lookingFor | capitalize}}</h3>
-    <img ng-src="{{user.photo}}" alt="">
+<div class="back2">
+    <br>
+    <br>
+    <h2 class="profileHead">{{user.userName}}'s new profile</h2>
+    <br>
+    <br>
+    <ul>
+        <li class="profileList">Your user name:
+            <em class="userProfile">{{ user.userName | capitalize}}</em></li>
+        <li class="profileList">Your identity: <em class="userProfile">{{user.identity | capitalize}}</em></li>
+        <li class="profileList">Your secret identity: <em class="userProfile">{{user.secretIdentity | capitalize}}</em></li>
+        <li class="profileList">Your abilities: <em class="userProfile">{{user.abilities | capitalize}}</em></li>
+        <li class="profileList">Your gender: <em class="userProfile">{{user.gender | capitalize}}</em></li>
+        <li class="profileList">Your city: <em class="userProfile">{{user.city | capitalize}}</em></li>
+        <li class="profileList">Your type: <em class="userProfile">{{user.lookingFor | capitalize}}</em></li>
+    </ul>
+    <img class="profileImg" ng-src="{{user.photo}}" alt="">
 </div>
+<br>
+<br>
+<br>
+<br>
+<br>
+<br>
+<br>
+<br>
+<br>
+<br>
+<br>
+<br>
+<br>
+<br>
+<br>
+<br>
+<br>
+<br>
+<br>

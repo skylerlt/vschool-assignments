@@ -1,0 +1,249 @@
+* {
+    text-align: center;
+}
+
+.goodBody {
+    font-family: 'Bangers', cursive;
+    text-align: center;
+}
+
+.back1 {
+    position: relative;
+}
+
+.back1::after {
+    content: "";
+    display: block;
+    position: absolute;
+    top: 0;
+    left: 0;
+    background-image: url(http://firstscene.co.nz/sites/default/files/superhero.jpg);
+    width: 100%;
+    height: 500px;
+    opacity: .9;
+    z-index: -1;
+    background-repeat: no-repeat;
+    background-position: center;
+    background-size: cover;
+    background-attachment: fixed;
+}
+
+.evilBack1 {
+    position: relative;
+}
+
+.evilBack1::after {
+    content: "";
+    display: block;
+    position: absolute;
+    top: 0;
+    left: 0;
+    background-image: url(https://0.s3.envato.com/files/113989342/SUPERHERO-TEAM-Preview.jpg);
+    width: 100%;
+    height: 500px;
+    opacity: .9;
+    z-index: -1;
+    background-repeat: no-repeat;
+    background-position: center;
+    background-size: cover;
+    background-attachment: fixed;
+}
+
+.evilBody {
+    background-color: black;
+    font-family: 'Ruslan Display', cursive;
+}
+
+.back2 {
+    position: relative;
+}
+
+.back2::after {
+    content: "";
+    display: block;
+    position: absolute;
+    top: 0;
+    left: 0;
+    background-image: url(http://wallpaper.zone/img/2898477.jpg);
+    width: 100%;
+    height: 500px;
+    opacity: .9;
+    z-index: -1;
+    background-repeat: no-repeat;
+    background-position: center;
+    background-size: cover;
+    background-attachment: fixed;
+}
+
+.back3 {
+    position: relative;
+}
+
+.back3::after {
+    content: "";
+    display: block;
+    position: absolute;
+    top: 0;
+    left: 0;
+    background-color: white;
+    width: 100%;
+    height: 500px;
+    opacity: .9;
+    z-index: -1;
+    background-repeat: no-repeat;
+    background-position: center;
+    background-size: cover;
+    background-attachment: fixed;
+}
+
+h1 {
+    font-size: 60px;
+    /*    font-family: 'Bangers', cursive;*/
+    color: white;
+}
+
+.goodTime {
+    /*    font-family: 'Bangers', cursive;*/
+    color: white;
+}
+
+h2,
+h3,
+label {
+    /*    font-family: 'Bangers', cursive;*/
+    color: black;
+}
+
+.scrollBar {
+    overflow-x: scroll;
+    overflow-y: hidden;
+    white-space: nowrap;
+    margin: 10px;
+    text-align: center;
+    border-top: solid white 2px;
+    border-bottom: solid white 2px;
+}
+
+.scrollBar a {
+    display: inline-block;
+}
+
+.scrollImage {
+    height: 250px;
+    width: auto;
+    border-radius: 15px;
+    padding: 10px;
+    margin: 10px;
+    background-color: rgba(0, 0, 0, .5);
+    transition: 1s;
+}
+
+.scrollImage:hover {
+    background-image: url(https://s-media-cache-ak0.pinimg.com/736x/d9/ac/3d/d9ac3d3e98488e4ff6805e2bce4f744e.jpg);
+    background-size: cover;
+    background-position: center;
+    background-color: white;
+    border: solid rgba(0, 0, 0, .5) 5px;
+    border-radius: 75px;
+}
+
+.evilScrollBar {
+    overflow-x: scroll;
+    overflow-y: hidden;
+    white-space: nowrap;
+    margin: 10px;
+    text-align: center;
+    border-top: solid white 2px;
+    border-bottom: solid white 2px;
+}
+
+.evilScrollBar a {
+    display: inline-block;
+}
+
+.evilScrollImage {
+    height: 250px;
+    width: auto;
+    border-radius: 15px;
+    padding: 10px;
+    margin: 10px;
+    background-color: rgba(225, 225, 225, .5);
+    transition: 1s;
+}
+
+.evilScrollImage:hover {
+    background-image: url("/photos/d9ac3d3e98488e4ff6805e2bce4f744e%20(1).jpg");
+    background-size: cover;
+    background-position: center;
+    background-color: white;
+    border: solid rgba(0, 0, 0, .5) 5px;
+    border-radius: 75px;
+}
+
+.createDiv {
+    border: solid white 5px;
+    background-color: rgba(0, 0, 0, .5);
+}
+
+.profileHead {
+    color: white;
+    font-size: 35px;
+    text-decoration: underline;
+}
+
+ul {
+    float: left;
+    text-align: left;
+    list-style: none;
+}
+
+.profileList {
+    color: white;
+    text-align: left;
+    font-size: 25px;
+}
+
+.userProfile {
+    font-size: 30px;
+    text-decoration: underline;
+    color: black;
+}
+
+.profileImg {
+    float: right;
+    height: 300px;
+    padding: 20px;
+    border: solid black 5px;
+    background-color: white;
+    margin-right: 100px;
+}
+
+.searchInput {
+    width: 200px;
+    height: 35px;
+}
+
+.mainH1 {
+    color: white;
+}
+
+.body {
+    background-image: url(https://images6.alphacoders.com/399/399278.jpg);
+    background-size: cover;
+    background-repeat: no-repeat;
+    background-attachment: fixed;
+}
+
+.enterBtn {
+    height: 100px;
+    width: 200px;
+    border-radius: 50px;
+    margin: 150px;
+    font-size: 75px;
+    font-family: 'Bangers', cursive;
+}
+
+.evilH3,
+.evilLabel {
+    color: white;
+}

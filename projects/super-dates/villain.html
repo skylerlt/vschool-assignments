@@ -1,0 +1,143 @@
+<!DOCTYPE html>
+<html lang="en" ng-app="mainApp">
+
+<head>
+    <meta charset="UTF-8">
+    <title>Super Dates!</title>
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.6/css/bootstrap.min.css">
+    <link href='https://fonts.googleapis.com/css?family=Bangers' rel='stylesheet' type='text/css'>
+    <link href='https://fonts.googleapis.com/css?family=Ruslan+Display' rel='stylesheet' type='text/css'>
+    <link rel="stylesheet" href="/css/style.css">
+</head>
+
+<body class="container-fluid evilBody">
+    <div ng-init="evilGet()"></div>
+
+    <div class="evilBack1 container-fluid">
+        <br>
+        <h1>Super Dates!</h1>
+
+        <div class="row">
+            <div class="evilScrollBar">
+
+
+                <a href=""><img class="img-responsive evilScrollImage center-block" src="http://vignette3.wikia.nocookie.net/marveldatabase/images/3/3a/Victor_von_Doom_(Earth-12131).png/revision/latest?cb=20130409222502" alt=""></a>
+                <a href=""><img class="img-responsive evilScrollImage center-block" src="http://i1122.photobucket.com/albums/l533/toni_comics/soh%20imgens/LexLuthorRender.png" alt=""></a>
+                <a href=""><img class="img-responsive evilScrollImage center-block" src="http://www.burnbook.com.br/wp-content/uploads/2015/10/baron_zemo_png_by_theiosist-d8ggh2l.png" alt=""></a>
+                <a href=""><img class="img-responsive evilScrollImage center-block" src="https://www.sideshowtoy.com/wp-content/uploads/2013/06/901385-product-silo.png" alt=""></a>
+                <a href=""><img class="img-responsive evilScrollImage center-block" src="http://static1.comicvine.com/uploads/scale_small/8/87723/1644584-the_joker_cartoon_psd15663.png" alt=""></a>
+                <a href=""><img class="img-responsive evilScrollImage center-block" src="http://vignette2.wikia.nocookie.net/marveldatabase/images/0/0f/Loki_Laufeyson_(Earth-12131)_001.png/revision/latest?cb=20130625124832" alt=""></a>
+                <a href=""><img class="img-responsive evilScrollImage center-block" src="http://vixenvarsity.com/wp-content/uploads/2014/05/Mystique_Dialogue.png" alt=""></a>
+                <a href=""><img class="img-responsive evilScrollImage center-block" src="http://static4.comicvine.com/uploads/original/11117/111170007/4271969-enchantress_dialogue.png" alt=""></a>
+                <a href=""><img class="img-responsive evilScrollImage center-block" src="http://vignette1.wikia.nocookie.net/marveldatabase/images/6/68/Ophelia_Sarkissian_(Earth-12131)_001.png/revision/latest?cb=20130814143913" alt=""></a>
+
+                <a ng-repeat="evilUser in EvilDatingService.evilUserProfiles" href=""><img class="img-responsive evilScrollImage center-block" ng-src="{{evilUser.photo}}"></a>
+
+            </div>
+        </div>
+
+        <h2 class="goodTime">For all the supervillains looking for a super good time!</h2>
+    </div>
+
+    <br>
+
+    <div class="evilNext1">
+        <h2>Create a new profile</h2>
+        <button ng-click="toggle=!toggle">Check Here</button>
+    </div>
+
+    <br>
+    <br>
+
+    <div class="container">
+        <div class="row">
+            <div class="col-lg-6 col-lg-offset-3">
+                <form ng-show="toggle" name="userForm" class="createDiv">
+                    <h2>Create a new account</h2>
+                    <br>
+                    <br>
+                    <h3 class="evilH3">Create a unique evil user name</h3>
+                    <input type="text" ng-model="evilUser.userName">
+                    <br>
+                    <br>
+                    <h3 class="evilH3">Tell us your Identity</h3>
+                    <input type="text" ng-model="evilUser.identity">
+                    <br>
+                    <br>
+                    <h3 class="evilH3">Add your Secret Identity (optional)</h3>
+                    <input type="text" ng-model="evilUser.secretIdentity">
+                    <br>
+                    <br>
+                    <h3 class="evilH3">What are your abilities</h3>
+                    <input type="text" ng-model="evilUser.abilities">
+                    <br>
+                    <br>
+                    <h3 class="evilH3">Gender</h3>
+                    <input type="radio" ng-model="evilUser.gender" value="male">
+                    <label class="evilLabel">Male</label>
+                    <input type="radio" ng-model="evilUser.gender" value="female">
+                    <label class="evilLabel">Female</label>
+                    <input type="radio" ng-model="evilUser.gender" value="other">
+                    <label class="evilLabel">Other</label>
+                    <br>
+                    <br>
+                    <h3 class="evilH3">Which city do you try to conquer</h3>
+                    <input type="text" ng-model="evilUser.city">
+                    <br>
+                    <br>
+                    <h3 class="evilH3">Who are you looking for</h3>
+                    <input type="checkbox" ng-model="evilUser.lookingFor" ng-true-value="'male'">
+                    <label class="evilLabel">Male</label>
+                    <input type="checkbox" ng-model="evilUser.lookingFor" ng-true-value="'female'">
+                    <label class="evilLabel">Female</label>
+                    <input type="checkbox" ng-model="evilUser.lookingFor" ng-true-value="'other'">
+                    <label class="evilLabel">Other</label>
+                    <br>
+                    <br>
+                    <h3 class="evilH3">And add a profile picture</h3>
+                    <input type="text" ng-model="evilUser.photo">
+                    <br>
+                    <br>
+                    <a href="#/evilCreate">
+                        <button class="btn btn-info glyphicon glyphicon-plus" ng-click="evilCreate(evilUser)"></button>
+                    </a>
+                    <br>
+                    <br>
+                </form>
+            </div>
+        </div>
+    </div>
+
+    <br>
+    <br>
+
+    <div ng-view=""></div>
+
+    <div class="back3">
+        <h2>Search for certain profiles</h2>
+        <br>
+        <input type="text" placeholder="Profile Name" class="searchInput">
+        <br>
+        <br>
+
+        <button class="btn btn-lg btn-info" ng-click="get(userName)">Find</button>
+
+    </div>
+
+    <div>
+        <h2>{{evilUser.userName}}</h2>
+        <img ng-src="{{evilUser.photo}}" alt="">
+    </div>
+
+    <!--
+    search for profiles
+    find matches
+-->
+    <script src="https://ajax.googleapis.com/ajax/libs/angularjs/1.4.9/angular.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/angular.js/1.5.0-rc.0/angular-route.js "></script>
+    <script src="/js/app.js"></script>
+    <script src="/js/service.js"></script>
+
+</body>
+
+</html>
