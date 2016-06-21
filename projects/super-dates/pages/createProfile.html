@@ -1,37 +1,60 @@
-<div class="back2">
-    <br>
-    <br>
-    <h2 class="profileHead">{{user.userName}}'s new profile</h2>
-    <br>
-    <br>
-    <ul>
-        <li class="profileList">Your user name:
-            <em class="userProfile">{{ user.userName | capitalize}}</em></li>
-        <li class="profileList">Your identity: <em class="userProfile">{{user.identity | capitalize}}</em></li>
-        <li class="profileList">Your secret identity: <em class="userProfile">{{user.secretIdentity | capitalize}}</em></li>
-        <li class="profileList">Your abilities: <em class="userProfile">{{user.abilities | capitalize}}</em></li>
-        <li class="profileList">Your gender: <em class="userProfile">{{user.gender | capitalize}}</em></li>
-        <li class="profileList">Your city: <em class="userProfile">{{user.city | capitalize}}</em></li>
-        <li class="profileList">Your type: <em class="userProfile">{{user.lookingFor | capitalize}}</em></li>
-    </ul>
-    <img class="profileImg" ng-src="{{user.photo}}" alt="">
+<div class="container">
+    <div class="row">
+        <div class="col-lg-6 col-lg-offset-3">
+            <form name="userForm" class="createDiv">
+                <h2>Create a new account</h2>
+                <br>
+                <br>
+                <h3>Create a unique user name</h3>
+                <input type="text" ng-model="goodUser.userName">
+                <br>
+                <br>
+                <h3>Tell us your Identity</h3>
+                <input type="text" ng-model="goodUser.identity">
+                <br>
+                <br>
+                <h3>Add your Secret Identity (optional)</h3>
+                <input type="text" ng-model="goodUser.secretIdentity">
+                <br>
+                <br>
+                <h3>What are your abilities</h3>
+                <input type="text" ng-model="goodUser.abilities">
+                <br>
+                <br>
+                <h3>Gender</h3>
+                <input type="radio" ng-model="goodUser.gender" value="male">
+                <label>Male</label>
+                <input type="radio" ng-model="goodUser.gender" value="female">
+                <label>Female</label>
+                <input type="radio" ng-model="goodUser.gender" value="other">
+                <label>Other</label>
+                <br>
+                <br>
+                <h3>Which city do you protect</h3>
+                <input type="text" ng-model="goodUser.city">
+                <br>
+                <br>
+                <h3>Who are you looking for</h3>
+                <input type="checkbox" ng-model="goodUser.lookingFor" ng-true-value="'male'">
+                <label>Male</label>
+                <input type="checkbox" ng-model="goodUser.lookingFor" ng-true-value="'female'">
+                <label>Female</label>
+                <input type="checkbox" ng-model="goodUser.lookingFor" ng-true-value="'other'">
+                <label>Other</label>
+                <br>
+                <br>
+                <h3>And add a profile picture</h3>
+                <input type="text" ng-model="goodUser.photo">
+                <br>
+                <br>
+                <button class="btn btn-info glyphicon glyphicon-plus" ng-click="create(goodUser)">
+                </button>
+                <br>
+                <br>
+            </form>
+        </div>
+    </div>
 </div>
-<br>
-<br>
-<br>
-<br>
-<br>
-<br>
-<br>
-<br>
-<br>
-<br>
-<br>
-<br>
-<br>
-<br>
-<br>
-<br>
-<br>
+
 <br>
 <br>

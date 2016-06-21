@@ -1,37 +1,59 @@
-<div class="back2">
-    <br>
-    <br>
-    <h2 class="profileHead">{{evilUser.userName}}'s new profile</h2>
-    <br>
-    <br>
-    <ul>
-        <li class="profileList">Your user name:
-            <em class="userProfile">{{ user.userName | capitalize}}</em></li>
-        <li class="profileList">Your identity: <em class="userProfile">{{evilUser.identity | capitalize}}</em></li>
-        <li class="profileList">Your secret identity: <em class="userProfile">{{evilUser.secretIdentity | capitalize}}</em></li>
-        <li class="profileList">Your abilities: <em class="userProfile">{{evilUser.abilities | capitalize}}</em></li>
-        <li class="profileList">Your gender: <em class="userProfile">{{evilUser.gender | capitalize}}</em></li>
-        <li class="profileList">Your city: <em class="userProfile">{{evilUser.city | capitalize}}</em></li>
-        <li class="profileList">Your type: <em class="userProfile">{{evilUser.lookingFor | capitalize}}</em></li>
-    </ul>
-    <img class="profileImg" ng-src="{{evilUser.photo}}" alt="">
+<div class="container">
+    <div class="row">
+        <div class="col-lg-6 col-lg-offset-3">
+            <form name="evilUserForm" class="evilCreateDiv">
+                <h2 class="evilMainH2">Create a new account</h2>
+                <br>
+                <br>
+                <h3>Create a unique user name</h3>
+                <input type="text" ng-model="evilUser.userName">
+                <br>
+                <br>
+                <h3>Tell us your Identity</h3>
+                <input type="text" ng-model="evilUser.identity">
+                <br>
+                <br>
+                <h3>Add your Secret Identity (optional)</h3>
+                <input type="text" ng-model="evilUser.secretIdentity">
+                <br>
+                <br>
+                <h3>What are your abilities</h3>
+                <input type="text" ng-model="evilUser.abilities">
+                <br>
+                <br>
+                <h3>Gender</h3>
+                <input type="radio" ng-model="evilUser.gender" value="male">
+                <label class="evilCreateLabel">Male</label>
+                <input type="radio" ng-model="evilUser.gender" value="female">
+                <label class="evilCreateLabel">Female</label>
+                <input type="radio" ng-model="evilUser.gender" value="other">
+                <label class="evilCreateLabel">Other</label>
+                <br>
+                <br>
+                <h3>Which city are you trying to conquer</h3>
+                <input type="text" ng-model="evilUser.city">
+                <br>
+                <br>
+                <h3>Who are you looking for</h3>
+                <input type="checkbox" ng-model="evilUser.lookingFor" ng-true-value="'male'">
+                <label class="evilCreateLabel">Male</label>
+                <input type="checkbox" ng-model="evilUser.lookingFor" ng-true-value="'female'">
+                <label class="evilCreateLabel">Female</label>
+                <input type="checkbox" ng-model="evilUser.lookingFor" ng-true-value="'other'">
+                <label class="evilCreateLabel">Other</label>
+                <br>
+                <br>
+                <h3>And add a profile picture</h3>
+                <input type="text" ng-model="evilUser.photo">
+                <br>
+                <br>
+                <button class="btn btn-info glyphicon glyphicon-plus" ng-click="evilCreate(evilUser)"></button>
+                <br>
+                <br>
+            </form>
+        </div>
+    </div>
 </div>
-<br>
-<br>
-<br>
-<br>
-<br>
-<br>
-<br>
-<br>
-<br>
-<br>
-<br>
-<br>
-<br>
-<br>
-<br>
-<br>
-<br>
+
 <br>
 <br>

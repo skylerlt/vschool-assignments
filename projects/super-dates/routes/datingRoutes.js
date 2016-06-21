@@ -1,62 +1,48 @@
 var express = require("express");
-var userRouter = express.Router();
+var goodUserRouter = express.Router();
 var GoodUsers = require("../models/users");
 
-userRouter.get("/", function (req, res) {
-    console.log(req.query);
-    GoodUsers.find(function (err, users) {
+goodUserRouter.get("/", function (req, res) {
+    GoodUsers.find(function (err, goodUsers) {
         if (err) throw err;
-        console.log(users);
-        res.send(users);
+        res.send(goodUsers);
     });
 });
 
-//userRouter.get("/", function (req, res) {
-//    if (req.query.userName) {
-//        var userNames = GoodUsers.userName.filter(function (users) {
-//            return req.query.userName === User.userName;
-//        });
-//        return res.send(userNames);
-//    } else {
-//        res.send(users);
-//    }
-//    res.send("No matches found. ");
-//});
-
-userRouter.post("/", function (req, res) {
-    var newUser = new Users(req.body);
-    newUser.save(function (err, users) {
+goodUserRouter.post("/", function (req, res) {
+    var newUser = new GoodUsers(req.body);
+    newUser.save(function (err, goodUser) {
         if (err) throw err;
-        res.send(users);
+        res.send(goodUser);
     })
 });
 
-userRouter.put("/:id", function (req, res) {
-    GoodUsers.findById(req.params.id, function (err, users) {
+goodUserRouter.put("/:id", function (req, res) {
+    GoodUsers.findById(req.params.id, function (err, goodUser) {
         if (err) {
             res.status(500).send(err);
         } else {
-            users.identity = req.body.identity || users.identity;
-            users.secretIdentity = req.body.secretIdentity || users.secretIdentity;
-            users.abilities = req.body.abilities || users.abilities;
-            users.gender = req.body.gender || users.gender;
-            users.lookingFor = req.body.lookingFor || users.lookingFor;
-            users.save(function (err, users) {
+            goodUser.identity = req.body.identity || goodUser.identity;
+            goodUser.secretIdentity = req.body.secretIdentity || goodUser.secretIdentity;
+            goodUser.abilities = req.body.abilities || goodUser.abilities;
+            goodUser.gender = req.body.gender || goodUser.gender;
+            goodUser.lookingFor = req.body.lookingFor || goodUser.lookingFor;
+            goodUser.save(function (err, goodUser) {
                 if (err) {
                     res.status(500).send(err)
                 }
-                res.send(users);
+                res.send(goodUser);
             })
         }
     })
 });
 
-userRouter.delete("/:id", function (req, res) {
-    GoodUsers.findByIdAndRemove(req.params.id, function (err, users) {
+goodUserRouter.delete("/:id", function (req, res) {
+    GoodUsers.findByIdAndRemove(req.params.id, function (err, goodUser) {
         if (err) throw err;
-        res.send(users);
+        res.send(goodUser);
     })
 });
 
 
-module.exports = userRouter;
+module.exports = goodUserRouter;

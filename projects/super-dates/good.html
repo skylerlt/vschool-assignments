@@ -1,0 +1,86 @@
+<!DOCTYPE html>
+<html lang="en" ng-app="mainApp">
+
+<head>
+    <meta charset="UTF-8" name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Super Dates!</title>
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.6/css/bootstrap.min.css">
+    <link href='https://fonts.googleapis.com/css?family=Bangers' rel='stylesheet' type='text/css'>
+    <link rel="stylesheet" href="/css/style.css">
+    <link rel="stylesheet" href="/css/classes.css">
+    <link rel="shortcut icon" href="http://www.housethehomeless.org/wp-content/uploads/2009/12/wow.png?397dac">
+    <link rel="stylesheet" href="css/backgrounds.css">
+    <link rel="stylesheet" href="css/scrollBar.css">
+    <link rel="stylesheet" href="css/medias.css">
+</head>
+
+<body ng-controller="MainController" class="container-fluid goodBody">
+    <div ng-init="get()"></div>
+
+    <nav>
+        <ul class="navUl">
+            <a href="/index.html" class="navA">
+                <li class="navLi">Home</li>
+            </a>
+            <a href="/good.html">
+                <li class="navLi">Good</li>
+            </a>
+            <a href="/villain.html">
+                <li class="navLi">Evil</li>
+            </a>
+            <a href="goodSearch.html">Search</a>
+        </ul>
+        <h2>Super Dates</h2>
+    </nav>
+
+    <div class="back1 container-fluid">
+        <br>
+        <h1 class="mainH1">Super Dates!</h1>
+
+        <div class="row">
+            <div class="scrollBar">
+                <div class="scrollDiv" ng-repeat="goodUser in DatingService.goodUserProfiles">
+                    <a href="/goodSearch.html"><img class="scrollImage center-block" ng-src="{{goodUser.photo}}">
+                        <h3 class="scrollH3">{{goodUser.userName}}</h3></a>
+                </div>
+            </div>
+        </div>
+
+        <h2>For all the superheroes looking for a super good time!</h2>
+    </div>
+
+    <br>
+
+    <div class="next1">
+        <h2>Create a new profile</h2>
+        <a href="#/create" class="btn btn-info ">Check Here
+        </a>
+    </div>
+
+
+    <br>
+    <br>
+
+    <div ng-view=""></div>
+
+    </div>
+
+    <div class="next1">
+        <h2>Search profiles</h2>
+        <a class="btn btn-info" href="/goodSearch.html">Click Here</a>
+    </div>
+
+    <br>
+    <br>
+    <br>
+
+    <script src="https://ajax.googleapis.com/ajax/libs/angularjs/1.4.9/angular.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/angular.js/1.5.0-rc.0/angular-route.js "></script>
+    <script src="/controllers/app.js"></script>
+    <script src="controllers/profilecontroller.js"></script>
+    <script src="/services/service.js"></script>
+    <script src="services/profileservice.js"></script>
+
+</body>
+
+</html>

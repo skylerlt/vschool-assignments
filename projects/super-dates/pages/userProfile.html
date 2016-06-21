@@ -1,0 +1,40 @@
+<div class="back2">
+    <br>
+    <br>
+    <h2 class="profileHead">{{user.userName}}'s new profile</h2>
+    <br>
+    <br>
+    <div class="col-lg-6">
+        <ul>
+            <li class="profileList">Your user name:
+                <em class="userProfile">{{user.userName}}</em></li>
+            <input type="text" ng-show="user.edit" ng-model="user.userName">
+            <li class="profileList">Your identity: <em class="userProfile">{{user.identity}}</em></li>
+            <input type="text" ng-show="user.edit" ng-model="user.identity">
+            <li class="profileList">Your secret identity: <em class="userProfile">{{user.secretIdentity}}</em></li>
+            <input type="text" ng-show="user.edit" ng-model="user.secretIdentity">
+            <li class="profileList">Your abilities: <em class="userProfile">{{user.abilities}}</em></li>
+            <input type="text" ng-show="user.edit" ng-model="user.abilities">
+            <li class="profileList">Your gender: <em class="userProfile">{{user.gender}}</em></li>
+            <input type="text" ng-show="user.edit" ng-model="user.gender">
+            <li class="profileList">Your city: <em class="userProfile">{{user.city}}</em></li>
+            <input type="text" ng-show="user.edit" ng-model="user.city">
+            <li class="profileList">Your type: <em class="userProfile">{{user.lookingFor}}</em></li>
+            <input type="text" ng-show="user.edit" ng-model="user.lookingFor">
+        </ul>
+    </div>
+    <img class="profileImg" ng-src="{{user.photo}}" alt="">
+    <br>
+    <div class="editImg">
+        <input type="text" ng-show="user.edit" ng-model="user.photo">
+    </div>
+
+    <div class="editBtn col-sm-2 col-sm-offset-5">
+
+        <br>
+        <br>
+        <button class="glyphicon glyphicon-pencil btn btn-info btn-sm" ng-click="user.edit = true" ng-hide="user.edit"></button>
+        <button class="btn btn-success glyphicon glyphicon-floppy-disk" ng-click="update(user)" ng-show="user.edit"></button>
+
+    </div>
+</div>

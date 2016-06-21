@@ -16,7 +16,7 @@
 </head>
 
 <body class="container-fluid evilBody" ng-controller="EvilController">
-    <div ng-init="evilGet()"></div>
+    <div ng-init="evilGet(params)"></div>
 
     <nav>
         <ul class="navUl">
@@ -33,50 +33,44 @@
                 <li>Search</li>
             </a>
         </ul>
-
         <h2 class="navH2">Super Dates</h2>
     </nav>
 
     <div class="evilBack1 container-fluid">
         <br>
-        <h1 class="goodTime">Super Dates!</h1>
+        <h1 class="evilMainH1">Search the profiles for your perfect match</h1>
 
         <div class="row">
             <div class="evilScrollBar">
                 <div class="evilScrollDiv" ng-repeat="evilUser in EvilDatingService.evilUserProfiles">
-                    <a href="/evilSearch.html"><img class="img-responsive evilScrollImage center-block" ng-src="{{evilUser.photo}}">
-                        <h3 class="evilScrollH3">{{evilUser.userName}}</h3></a>
+                    <img class="img-responsive evilScrollImage center-block" ng-src="{{evilUser.photo}}">
+                    <h3 class="evilScrollH3">{{evilUser.userName}}</h3>
                 </div>
             </div>
-
-            <h2 class="goodTime">For all the supervillains looking for a super good time!</h2>
         </div>
 
         <br>
         <br>
+
+        <div class="row">
+            <form>
+                <div class="col-lg-4 col-lg-offset-4">
+                    <input type="text" ng-model="filter.userName" placeholder="Type in a user name">
+                    <a href="#/evilSearch">
+                        <button class="btn btn-danger" ng-click="filterByEvilUserName(params)">Search</button>
+                    </a>
+                </div>
+            </form>
+        </div>
 
         <div>
-            <h2>Create a new profile</h2>
-            <a class="btn btn-danger" href="#/evilCreate">Click Here</a>
+            <br>
+            <br>
+            <br>
         </div>
-
-        <br>
-        <br>
 
         <div ng-view=""></div>
 
-        <br>
-        <br>
-
-        <div class="evilNext1">
-            <h2>Search profiles</h2>
-            <a class="btn btn-danger" href="/evilSearch.html">Click Here</a>
-        </div>
-
-        <br>
-        <br>
-        <br>
-        <br>
 
         <script src="https://ajax.googleapis.com/ajax/libs/angularjs/1.4.9/angular.js"></script>
         <script src="https://cdnjs.cloudflare.com/ajax/libs/angular.js/1.5.0-rc.0/angular-route.js "></script>
@@ -90,5 +84,3 @@
         <script src="services/service.js"></script>
 
 </body>
-
-</html>

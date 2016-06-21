@@ -1,0 +1,25 @@
+<div class="goodSearch" ng-repeat="goodUser in DatingService.goodUserProfiles | filter: filter">
+    <br>
+    <br>
+    <h2 class="profileHead">{{goodUser.userName}}'s profile</h2>
+    <br>
+    <div class="sayHiBtns">
+        <button ng-click="wink()" class="btn btn-success">Wink</button>
+        <button ng-click="message()" class="btn btn-success">Message</button>
+        <button ng-click="flirt()" class="btn btn-success">Flirt</button>
+    </div>
+    <br>
+    <div class="col-lg-6">
+        <ul>
+            <li class="profileList">Your user name:
+                <em class="userProfile">{{goodUser.userName}}</em></li>
+            <li class="profileList">Your identity: <em class="userProfile">{{goodUser.identity}}</em></li>
+            <li class="profileList">Your secret identity: <em class="userProfile">{{goodUser.secretIdentity}}</em></li>
+            <li class="profileList">Your abilities: <em class="userProfile">{{goodUser.abilities}}</em></li>
+            <li class="profileList">Your gender: <em class="userProfile">{{goodUser.gender}}</em></li>
+            <li class="profileList">Your city: <em class="userProfile">{{goodUser.city}}</em></li>
+            <li class="profileList">Your type: <em class="userProfile">{{goodUser.lookingFor}}</em></li>
+        </ul>
+    </div>
+    <img class="profileImg" ng-src="{{goodUser.photo}}" alt="">
+</div>

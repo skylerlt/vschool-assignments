@@ -1,0 +1,135 @@
+.goodBody {
+    font-family: 'Bangers', cursive;
+    text-align: center;
+}
+
+.back1 {
+    position: relative;
+    padding-top: 70px;
+}
+
+.back1::after {
+    content: "";
+    display: block;
+    position: absolute;
+    top: 0;
+    left: 0;
+    background-image: url(http://firstscene.co.nz/sites/default/files/superhero.jpg);
+    width: 100%;
+    height: 640px;
+    opacity: .9;
+    z-index: -1;
+    background-repeat: no-repeat;
+    background-position: center;
+    background-size: cover;
+    background-attachment: fixed;
+}
+
+.evilBack1 {
+    position: relative;
+    padding-top: 70px;
+}
+
+.evilBack1::after {
+    content: "";
+    display: block;
+    position: absolute;
+    top: 0;
+    left: 0;
+    background-image: url(https://0.s3.envato.com/files/113989342/SUPERHERO-TEAM-Preview.jpg);
+    width: 100%;
+    height: 640px;
+    opacity: .9;
+    z-index: -1;
+    background-repeat: no-repeat;
+    background-position: center;
+    background-size: cover;
+    background-attachment: fixed;
+}
+
+.back2 {
+    position: relative;
+    margin-bottom: 500px;
+}
+
+.back2::after {
+    content: "";
+    display: block;
+    position: absolute;
+    top: 0;
+    left: 0;
+    background-image: url(http://wallpaper.zone/img/2898477.jpg);
+    width: 100%;
+    height: 700px;
+    opacity: .9;
+    z-index: -1;
+    background-repeat: no-repeat;
+    background-position: center;
+    background-size: cover;
+    background-attachment: fixed;
+}
+
+.back3 {
+    position: relative;
+}
+
+.back3::after {
+    content: "";
+    display: block;
+    position: absolute;
+    top: 0;
+    left: 0;
+    background-color: white;
+    width: 100%;
+    height: 500px;
+    opacity: .9;
+    z-index: -1;
+    background-repeat: no-repeat;
+    background-position: center;
+    background-size: cover;
+    background-attachment: fixed;
+}
+
+.goodSearch {
+    position: relative;
+}
+
+.goodSearch::after {
+    content: "";
+    display: block;
+    position: absolute;
+    top: 0;
+    left: 0;
+    background-image: url(http://thedesignsuperhero.com/wp-content/uploads/2009/12/2dreamstream.jpg);
+    width: 100%;
+    height: 500px;
+    opacity: .9;
+    z-index: -1;
+    background-repeat: no-repeat;
+    background-position: center;
+    background-size: cover;
+    background-attachment: fixed;
+    margin-bottom: 50px;
+}
+
+.evilSearch {
+    position: relative;
+}
+
+.evilSearch::after {
+    content: "";
+    display: block;
+    position: absolute;
+    top: 0;
+    left: 0;
+    background-image: url(http://1.bp.blogspot.com/-RHQQvQ22yec/UPzHint1mAI/AAAAAAAAAN0/pxM4UlQpExk/s1600/SamuraiJackStyleDusk.jpg);
+    width: 100%;
+    height: 500px;
+    opacity: .9;
+    z-index: -1;
+    background-repeat: no-repeat;
+    background-position: center;
+    background-size: cover;
+    background-attachment: fixed;
+    margin-bottom: 50px;
+}

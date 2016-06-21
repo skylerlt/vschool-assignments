@@ -1,0 +1,150 @@
+.profileList {
+    color: #4036CC;
+    text-align: left;
+    font-size: 25px;
+}
+
+.evilProfileList {
+    color: #d9534f;
+    text-align: left;
+    font-size: 25px;
+}
+
+.userProfile {
+    font-size: 30px;
+    text-decoration: underline;
+    color: black;
+}
+
+.evilUserProfile {
+    font-size: 30px;
+    text-decoration: underline;
+    color: white;
+}
+
+.profileImg {
+    float: right;
+    height: 300px;
+    padding: 20px;
+    border: solid black 5px;
+    background-color: white;
+    margin-right: 100px;
+}
+
+.searchInput {
+    width: 200px;
+    height: 35px;
+}
+
+.body {
+    background-image: url(https://images6.alphacoders.com/399/399278.jpg);
+    background-size: cover;
+    background-repeat: no-repeat;
+    background-attachment: fixed;
+}
+
+.enterBtn {
+    height: 100px;
+    width: 200px;
+    border-radius: 50px;
+    margin: 150px;
+    font-size: 75px;
+    font-family: 'Bangers', cursive;
+}
+
+.evilH3,
+.evilLabel {
+    color: white;
+}
+
+.mainH1 {
+    color: #4036CC;
+}
+
+.evilMainH2,
+.evilCreateLabel {
+    color: #FF9A5D;
+}
+
+.evilBtn {
+    font-family: 'Ruslan Display', cursive;
+}
+
+.searchDiv {
+    border: solid black 5px;
+    height: 300px;
+    text-align: center;
+}
+
+.searchH1 {
+    color: black;
+}
+
+.createDiv {
+    border: solid white 5px;
+    background-color: rgba(0, 0, 0, .5);
+}
+
+.evilCreateDiv {
+    border: solid white 5px;
+    background-color: rgba(225, 225, 225, .5);
+}
+
+.profileHead {
+    color: #4036CC;
+    font-size: 35px;
+    text-decoration: underline;
+}
+
+.evilProfileHead {
+    color: #CC2500;
+    font-size: 35px;
+    text-decoration: underline;
+}
+
+.goodTime,
+.navH2 {
+    color: #FF9A5D;
+}
+
+.navUl {
+    text-align: center;
+}
+
+.navLi {
+    text-align: center;
+}
+
+.evilNavA {
+    text-align: center;
+    color: #CC2500;
+}
+
+.mainH1 {
+    font-family: 'Bangers', cursive;
+    color: #5bc0de;
+}
+
+.evilMainH1 {
+    font-family: 'Ruslan Display', cursive;
+    color: #CC2500;
+}
+
+.mainH2 {
+    font-family: 'Ruslan Display', cursive;
+    color: #d9534f;
+}
+
+.goodSearchDiv {
+    text-align: left;
+}
+
+.goodSearchImg {
+    height: 400px;
+    width: auto;
+}
+
+.editBtn {
+    text-align: center;
+    margin-top: 50px;
+}

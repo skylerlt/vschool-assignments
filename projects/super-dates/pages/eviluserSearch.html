@@ -1,0 +1,27 @@
+<div class="evilSearch" ng-repeat="evilUser in EvilDatingService.evilUserProfiles | filter: filter">
+    <br>
+    <br>
+    <h2 class="evilProfileHead">{{evilUser.userName}}'s profile</h2>
+    <br>
+
+    <div class="sayHiBtns">
+        <button ng-click="wink()" class="btn btn-warning">Wink</button>
+        <button ng-click="message()" class="btn btn-warning">Message</button>
+        <button ng-click="flirt()" class="btn btn-warning">Flirt</button>
+    </div>
+    <br>
+    <div class="searchMainDiv col-lg-6">
+        <ul>
+            <li class="evilProfileList">Your user name:
+                <em class="evilUserProfile">{{evilUser.userName}}</em></li>
+            <li class="evilProfileList">Your identity: <em class="evilUserProfile">{{evilUser.identity}}</em></li>
+            <li class="evilProfileList">Your secret identity: <em class="evilUserProfile">{{evilUser.secretIdentity}}</em></li>
+            <li class="evilProfileList">Your abilities: <em class="evilUserProfile">{{evilUser.abilities}}</em></li>
+            <li class="evilProfileList">Your gender: <em class="evilUserProfile">{{evilUser.gender}}</em></li>
+            <li class="evilProfileList">Your city: <em class="evilUserProfile">{{evilUser.city}}</em></li>
+            <li class="evilProfileList">Your type: <em class="evilUserProfile">{{evilUser.lookingFor}}</em></li>
+        </ul>
+    </div>
+    <img class="profileImg" ng-src="{{evilUser.photo}}" alt="">
+
+</div>

@@ -6,7 +6,6 @@
     <title>Super Dates!</title>
     <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.6/css/bootstrap.min.css">
     <link href='https://fonts.googleapis.com/css?family=Bangers' rel='stylesheet' type='text/css'>
-    <link href='https://fonts.googleapis.com/css?family=Ruslan+Display' rel='stylesheet' type='text/css'>
     <link rel="stylesheet" href="/css/style.css">
     <link rel="stylesheet" href="/css/classes.css">
     <link rel="shortcut icon" href="http://www.housethehomeless.org/wp-content/uploads/2009/12/wow.png?397dac">
@@ -15,65 +14,67 @@
     <link rel="stylesheet" href="css/medias.css">
 </head>
 
-<body class="container-fluid evilBody" ng-controller="EvilController">
-    <div ng-init="evilGet()"></div>
+<body ng-controller="MainController" class="container-fluid goodSearchBody">
+    <div ng-init="get()"></div>
+
 
     <nav>
         <ul class="navUl">
-            <a href="/index.html" class="evilNavA">
+            <a href="/index.html" class="navA">
                 <li class="navLi">Home</li>
             </a>
-            <a href="/good.html" class="evilNavA">
+            <a href="/good.html">
                 <li class="navLi">Good</li>
             </a>
-            <a href="/villain.html" class="evilNavA">
+            <a href="/villain.html">
                 <li class="navLi">Evil</li>
             </a>
-            <a href="/evilSearch.html" class="evilNavA">
+            <a href="/goodSearch.html">
                 <li>Search</li>
             </a>
         </ul>
-
-        <h2 class="navH2">Super Dates</h2>
+        <h2>Super Dates</h2>
     </nav>
 
-    <div class="evilBack1 container-fluid">
+    <div class="back1 container-fluid">
         <br>
-        <h1 class="goodTime">Super Dates!</h1>
+        <h1 class="mainH1">Search the profiles for your perfect match</h1>
 
         <div class="row">
-            <div class="evilScrollBar">
-                <div class="evilScrollDiv" ng-repeat="evilUser in EvilDatingService.evilUserProfiles">
-                    <a href="/evilSearch.html"><img class="img-responsive evilScrollImage center-block" ng-src="{{evilUser.photo}}">
-                        <h3 class="evilScrollH3">{{evilUser.userName}}</h3></a>
+            <div class="scrollBar">
+                <div class="scrollDiv" ng-repeat="goodUser in DatingService.goodUserProfiles">
+                    <img class="img-responsive scrollImage center-block" ng-src="{{goodUser.photo}}">
+                    <h3 class="scrollH3">{{goodUser.userName}}</h3>
                 </div>
             </div>
-
-            <h2 class="goodTime">For all the supervillains looking for a super good time!</h2>
         </div>
 
         <br>
         <br>
+        <br>
+        <br>
+        <br>
+        <br>
+
+        <div class="row">
+            <form>
+                <div class="col-lg-4 col-lg-offset-4">
+                    <input type="text" ng-model="filter.userName" placeholder="Type in a user name">
+                    <a href="#/search">
+                        <button class="btn btn-primary" ng-click="filterByUserName(params)">Search</button>
+                    </a>
+                </div>
+            </form>
+        </div>
 
         <div>
-            <h2>Create a new profile</h2>
-            <a class="btn btn-danger" href="#/evilCreate">Click Here</a>
+            <br>
+            <br>
+            <br>
         </div>
-
-        <br>
-        <br>
 
         <div ng-view=""></div>
 
-        <br>
-        <br>
-
-        <div class="evilNext1">
-            <h2>Search profiles</h2>
-            <a class="btn btn-danger" href="/evilSearch.html">Click Here</a>
-        </div>
-
-        <br>
         <br>
         <br>
         <br>
@@ -81,14 +82,8 @@
         <script src="https://ajax.googleapis.com/ajax/libs/angularjs/1.4.9/angular.js"></script>
         <script src="https://cdnjs.cloudflare.com/ajax/libs/angular.js/1.5.0-rc.0/angular-route.js "></script>
         <script src="/controllers/app.js"></script>
-        <script src="controllers/evilcontroller.js"></script>
-        <script src="controllers/evilProfileController.js"></script>
         <script src="controllers/profilecontroller.js"></script>
-        <script src="/services/evilservice.js"></script>
+        <script src="/services/service.js"></script>
         <script src="services/profileservice.js"></script>
-        <script src="services/evilProfileService.js"></script>
-        <script src="services/service.js"></script>
 
 </body>
-
-</html>

@@ -2,7 +2,7 @@ var mongoose = require("mongoose");
 
 var Schema = mongoose.Schema;
 
-var userSchema = new Schema({
+var goodUserSchema = new Schema({
     userName: {
         type: String,
         require: true
@@ -35,4 +35,4 @@ var userSchema = new Schema({
 });
 
 
-module.exports = mongoose.model("GoodUsers", userSchema);
+module.exports = mongoose.model("GoodUsers", goodUserSchema);
