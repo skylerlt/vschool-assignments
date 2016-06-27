@@ -1,0 +1,22 @@
+<h2 class="goHead">I've been there!</h2>
+<hr>
+<br>
+
+
+<div class="container">
+
+    <div class="goBack" ng-style="{'background-image':'url({{beenPlace.backgroundImg}})'}" ng-repeat="beenPlace in beenPlacesService.beenPlacesArray">
+        <br>
+        <br>
+        <div class="goText">
+            <h2>Location: <b>{{beenPlace.location}}</b></h2>
+            <h3>Sites: <b>{{beenPlace.sites}}</b></h3>
+            <h3>Price: <b>{{beenPlace.price}}</b></h3>
+            <h3><b>Picture of you at {{beenPlace.location}}</b></h3>
+            <div class="goImg">
+                <img class="beenImg" ng-src="{{beenPlace.profileImg}}" alt="">
+            </div>
+        </div>
+
+    </div>
+</div>

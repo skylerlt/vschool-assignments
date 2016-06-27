@@ -1,0 +1,70 @@
+<div class="row">
+
+    <h2>Add a place you've been</h2>
+    <button ng-click="add.been = true">Been There</button>
+    <h2>Add a place you want to go</h2>
+    <button ng-click="add.go = true">Go There</button>
+
+    <div class="well col-lg-6 col-lg-offset-3" ng-show="add.been">
+        <h1>Add a place you've been!</h1>
+        <hr>
+        <br>
+        <h2>Name of the place</h2>
+        <br>
+        <input type="text" ng-model="beenPlace.location">
+        <br>
+        <br>
+        <h2>Sites to visit</h2>
+        <br>
+        <input type="text" ng-model="beenPlace.sites">
+        <br>
+        <br>
+        <h2>Price to visit</h2>
+        <br>
+        <input type="text" ng-model="beenPlace.price">
+        <br>
+        <br>
+        <h2>Insert a background image</h2>
+        <br>
+        <input type="text" ng-model="beenPlace.backgroundImg">
+        <br>
+        <br>
+        <h2>Insert a selfie</h2>
+        <br>
+        <input type="text" ng-model="beenPlace.profileImg">
+        <br>
+        <br>
+        <button class="btn btn-primary" ng-click="postBeenThere(beenPlace)"><span class="glyphicon glyphicon-cloud-upload"></span> Add</button>
+    </div>
+    <div class="well col-lg-6 col-lg-offset-3" ng-show="add.go">
+        <h1>Add a place you want to go!</h1>
+        <hr>
+        <br>
+        <h2>Name of the place</h2>
+        <br>
+        <input type="text" ng-model="goPlace.location">
+        <br>
+        <br>
+        <h2>Sites to visit</h2>
+        <br>
+        <input type="text" ng-model="goPlace.sites">
+        <br>
+        <br>
+        <h2>Price to visit</h2>
+        <br>
+        <input type="text" ng-model="goPlace.price">
+        <br>
+        <br>
+        <h2>Insert a background image</h2>
+        <br>
+        <input type="text" ng-model="goPlace.backgroundImg">
+        <br>
+        <br>
+        <h2>Insert an image of a specific site</h2>
+        <br>
+        <input type="text" ng-model="goPlace.sitesImg">
+        <br>
+        <br>
+        <button class="btn btn-primary" ng-click="postGoThere(goPlace)"><span class="glyphicon glyphicon-cloud-upload"></span> Add</button>
+    </div>
+</div>

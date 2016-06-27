@@ -1,0 +1,51 @@
+.back1 {
+    background-image: url(https://images7.alphacoders.com/324/324963.jpg);
+    background-attachment: fixed;
+    background-repeat: no-repeat;
+    background-size: auto;
+    background-position: center;
+    width: 50%;
+    float: left;
+    display: inline-block;
+    height: 800px;
+    margin-bottom: 50px
+}
+
+.back2 {
+    background-image: url(https://images4.alphacoders.com/843/84378.jpg);
+    background-attachment: fixed;
+    background-repeat: no-repeat;
+    background-size: auto;
+    width: 50%;
+    float: right;
+    display: inline-block;
+    background-position: center;
+    height: 800px;
+    margin-bottom: 50px;
+}
+
+.back3 {
+    background-image: url(https://images7.alphacoders.com/326/326435.jpg);
+    background-attachment: fixed;
+    background-repeat: no-repeat;
+    background-size: auto;
+    background-position: center;
+    width: 50%;
+    float: left;
+    display: inline-block;
+    height: 800px;
+    margin-bottom: 50px
+}
+
+.back4 {
+    background-image: url(http://www.desktopwallpaperhd.net/wallpapers/0/e/image-scenic-background-picture-castle-wallpaper-desktop-9342.jpg);
+    background-attachment: fixed;
+    background-repeat: no-repeat;
+    background-size: auto;
+    width: 50%;
+    float: right;
+    display: inline-block;
+    background-position: center;
+    height: 800px;
+    margin-bottom: 50px
+}

@@ -1,0 +1,39 @@
+* {
+    font-family: 'Poiret One', cursive;
+    color: #413E7F;
+}
+
+nav {
+    float: right;
+    right: 50px;
+    padding: 20px;
+    font-size: 20px;
+}
+
+ul {
+    list-style: none;
+}
+
+a {
+    color: #413E7F;
+}
+
+h2 > b {
+    font-size: 60px;
+}
+
+h3 > b {
+    font-weight: bolder;
+    font-size: 40px;
+}
+
+li > a > button {
+    margin-top: -5px;
+    margin-left: -7px;
+}
+
+hr {
+    height: 12px;
+    border: 0;
+    box-shadow: inset 0 12px 12px -12px rgba(0, 0, 0, 0.5);
+}

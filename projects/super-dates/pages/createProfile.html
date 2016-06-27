@@ -6,19 +6,19 @@
                 <br>
                 <br>
                 <h3>Create a unique user name</h3>
-                <input type="text" ng-model="goodUser.userName">
+                <input type="text" ng-model="goodUser.userName" ng-minlength="3" required>
                 <br>
                 <br>
                 <h3>Tell us your Identity</h3>
-                <input type="text" ng-model="goodUser.identity">
+                <input type="text" ng-model="goodUser.identity" ng-minlength="3" required>
                 <br>
                 <br>
                 <h3>Add your Secret Identity (optional)</h3>
-                <input type="text" ng-model="goodUser.secretIdentity">
+                <input type="text" ng-model="goodUser.secretIdentity" ng-minlength="3">
                 <br>
                 <br>
                 <h3>What are your abilities</h3>
-                <input type="text" ng-model="goodUser.abilities">
+                <input type="text" ng-model="goodUser.abilities" ng-minlength="3" required>
                 <br>
                 <br>
                 <h3>Gender</h3>
@@ -31,7 +31,7 @@
                 <br>
                 <br>
                 <h3>Which city do you protect</h3>
-                <input type="text" ng-model="goodUser.city">
+                <input type="text" ng-model="goodUser.city" ng-minlength="3" required>
                 <br>
                 <br>
                 <h3>Who are you looking for</h3>
@@ -47,7 +47,7 @@
                 <input type="text" ng-model="goodUser.photo">
                 <br>
                 <br>
-                <button class="btn btn-info glyphicon glyphicon-plus" ng-click="create(goodUser)">
+                <button class="btn btn-info glyphicon glyphicon-plus" ng-click="create(goodUser)" ng-disabled="userForm.$invalid">
                 </button>
                 <br>
                 <br>

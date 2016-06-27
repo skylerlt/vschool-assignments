@@ -1,0 +1,40 @@
+* {
+    text-align: center;
+}
+
+.road {
+    background-image: url("images/road.png");
+    height: 8000px;
+    background-repeat: repeat-y;
+    margin-left: 30%;
+    z-index: -5;
+}
+
+
+/*
+.bike {
+    background-image: url(http://www.clker.com/cliparts/p/C/q/7/g/p/motorbike-top-view-hi.png);
+    height: 800px;
+    background-repeat: no-repeat;
+    -webkit-transform: rotate(90deg);
+    z-index: 100;
+    background-attachment: fixed;
+    background-size: auto;
+}
+*/
+
+#bike {
+    position: fixed;
+    top: 0;
+    width: 221px;
+    height: 470px;
+    left: 35%;
+    margin-left: -200px;
+    transform: rotate(90deg);
+    z-index: 1;
+}
+
+img {
+    height: 180px;
+    width: auto;
+}

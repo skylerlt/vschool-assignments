@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html lang="en" ng-app="MainApp">
+
+<head>
+    <meta charset="UTF-8">
+    <title>Document</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+
+<body>
+
+
+    <button ng-click="bool=true">Fade In!</button>
+    <button ng-click="bool=false">Fade Out!</button>
+
+    <br>
+    <br>
+
+    <div ng-if="bool" class="fade">
+        <img src="http://vignette4.wikia.nocookie.net/disney/images/1/16/Mickey_Mouse_image_transparent.png/revision/latest?cb=20131022214617" alt="">
+    </div>
+
+
+    <script src="https://ajax.googleapis.com/ajax/libs/angularjs/1.4.9/angular.js"></script>
+    <script src="//ajax.googleapis.com/ajax/libs/angularjs/1.4.9/angular-animate.js"></script>
+    <script src="script.js"></script>
+
+</body>
+
+</html>

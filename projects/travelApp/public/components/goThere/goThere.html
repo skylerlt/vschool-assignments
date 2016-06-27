@@ -1,0 +1,30 @@
+<h2 class="goHead">I've want to go there!</h2>
+<hr>
+<br>
+
+
+<div class="container">
+
+    <div class="goBack" ng-style="{'background-image':'url({{goPlace.backgroundImg}})'}" ng-repeat="goPlace in goPlacesService.goPlacesArray">
+        <br>
+        <br>
+        <div class="goText">
+            <h2>Location: <b>{{goPlace.location}}</b></h2>
+            <input type="text" ng-model="beenPlace.location" ng-show="been.add">
+            <h3>Sites: <b>{{goPlace.sites}}</b></h3>
+            <input type="text" ng-model="beenPlace.sites" ng-show="been.add">
+            <h3>Price: <b>{{goPlace.price}}</b></h3>
+            <input type="text" ng-model="beenPrice" ng-show="been.add">
+            <h3><b>Picture of place you want to visit at {{goPlace.location}}</b></h3>
+            <input type="text" ng-model="beenPlace.backgroundImg" ng-show="been.add">
+            <br>
+            <br>
+            <button ng-click="been.add = true" ng-hide="been.add">Been There!</button>
+            <div class="goImg">
+                <img class="beenImg" ng-src="{{goPlace.sitesImg}}" alt="">
+                <input type="text" ng-model="beenPlace.profileImg" ng-show="been.add">
+            </div>
+        </div>
+
+    </div>
+</div>

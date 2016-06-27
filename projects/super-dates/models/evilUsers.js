@@ -5,32 +5,32 @@ var Schema = mongoose.Schema;
 var evilUserSchema = new Schema({
     userName: {
         type: String,
-        require: true
+        required: true
     },
     identity: {
         type: String,
-        require: true
+        required: true
     },
     secretIdentity: String,
     abilities: {
         type: String,
-        require: true
+        required: true
     },
     gender: {
         type: String,
-        require: true
+        required: true
     },
     city: {
         type: String,
-        require: true
+        required: true
     },
     lookingFor: {
         type: String,
-        require: true
+        required: true
     },
     photo: {
         type: String,
-        require: true
+        required: true
     }
 });
 

@@ -35,7 +35,7 @@ app.service("EvilDatingService", function ($http, EvilProfileService) {
     this.editEvilUsers = function (user) {
         return $http.put(baseUrl + user._id, user)
             .then(function () {
-                self.evilUserProfiles = user;
+                self.evilUserProfiles.push(user);
                 return self.evilUserProfiles;
             })
     };

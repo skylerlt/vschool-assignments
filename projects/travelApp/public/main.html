@@ -1,0 +1,84 @@
+<!DOCTYPE html>
+<html lang="en" ng-app="mainApp">
+
+<head>
+    <meta charset="UTF-8">
+    <title>Document</title>
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.6/css/bootstrap.min.css">
+    <link href='https://fonts.googleapis.com/css?family=Poiret+One' rel='stylesheet' type='text/css'>
+    <link rel="stylesheet" href="css/background.css">
+    <link rel="stylesheet" href="css/element.css">
+    <link rel="stylesheet" href="css/class.css">
+    <link rel="stylesheet" href="css/medias.css">
+</head>
+
+<body class="container-fluid" ng-init="getBeenThere()" ng-controller="PlaceController">
+
+    <div class="back1 row">
+
+        <div class="head col-lg-6 col-lg-offset-1">
+            <h1> <img class="plane" src="https://cdn3.iconfinder.com/data/icons/glyph/141/Airplane-128.png" alt=""> The Places You'll Go!</h1>
+
+        </div>
+
+
+        <nav>
+            <ul>
+                <li><a href="#/beenThere">Places you've been</a></li>
+                <li><a href="#/goThere">Places you'll go</a></li>
+                <li><a href="#/others">Places others have been</a></li>
+                <li>Search
+                    <input type="text" ng-model="search">
+                    <a href="https://www.google.com/#q={{search}}" target="_blank">
+                        <button class="btn btn-info glyphicon glyphicon-search">
+                        </button>
+                    </a>
+                </li>
+            </ul>
+        </nav>
+
+
+        <div class="addDiv col-md-1 col-md-offset-5">
+            <a href="#/add">
+                <button class="addBtn btn btn-success"><span class="glyphicon glyphicon-plane"></span> Add Place</button>
+            </a>
+        </div>
+
+    </div>
+
+    <br>
+    <br>
+
+    <div class="col-lg-6 col-lg-offset-3">
+        <a class="viewA" href="#/goThere">Places you'll go</a>
+        <a class="viewA" href="#/beenThere">Places you've been</a>
+        <a class="viewA" href="#/others">Places other's have been</a>
+    </div>
+
+    <br>
+    <hr>
+
+    <div ng-view></div>
+
+
+    <!--   CDNs  -->
+    <script src="https://code.jquery.com/jquery-2.2.4.js" integrity="sha256-iT6Q9iMJYuQiMWNd9lDyBUStIq/8PuOW33aOqmvFpqI=" crossorigin="anonymous"></script>
+    <script src="https://ajax.googleapis.com/ajax/libs/angularjs/1.5.6/angular.js "></script>
+    <script src="https://ajax.googleapis.com/ajax/libs/angularjs/1.5.6/angular-route.js "></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/ngStorage/0.3.6/ngStorage.min.js"></script>
+    <script src="js/app.js "></script>
+    <!--    Controllers  -->
+    <script src="components/places/placesController.js"></script>
+    <script src="components/auth/authService.js"></script>
+    <script src="components/auth/login.js"></script>
+    <!--    <script src="components/auth/logout.js"></script>-->
+    <!--    Services  -->
+
+    <script src="components/beenThere/beenPlacesService.js"></script>
+    <script src="components/goThere/goPlacesService.js"></script>
+    <script src="components/auth/signup/signup.js"></script>
+
+
+</body>
+
+</html>

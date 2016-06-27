@@ -6,19 +6,19 @@
                 <br>
                 <br>
                 <h3>Create a unique user name</h3>
-                <input type="text" ng-model="evilUser.userName">
+                <input type="text" ng-model="evilUser.userName" ng-minlength="3" required>
                 <br>
                 <br>
                 <h3>Tell us your Identity</h3>
-                <input type="text" ng-model="evilUser.identity">
+                <input type="text" ng-model="evilUser.identity" ng-minlength="3" required>
                 <br>
                 <br>
                 <h3>Add your Secret Identity (optional)</h3>
-                <input type="text" ng-model="evilUser.secretIdentity">
+                <input type="text" ng-model="evilUser.secretIdentity" ng-minlength="3">
                 <br>
                 <br>
                 <h3>What are your abilities</h3>
-                <input type="text" ng-model="evilUser.abilities">
+                <input type="text" ng-model="evilUser.abilities" ng-minlength="3" required>
                 <br>
                 <br>
                 <h3>Gender</h3>
@@ -31,7 +31,7 @@
                 <br>
                 <br>
                 <h3>Which city are you trying to conquer</h3>
-                <input type="text" ng-model="evilUser.city">
+                <input type="text" ng-model="evilUser.city" ng-minlength="3" required>
                 <br>
                 <br>
                 <h3>Who are you looking for</h3>
@@ -47,7 +47,7 @@
                 <input type="text" ng-model="evilUser.photo">
                 <br>
                 <br>
-                <button class="btn btn-info glyphicon glyphicon-plus" ng-click="evilCreate(evilUser)"></button>
+                <button class="btn btn-info glyphicon glyphicon-plus" ng-click="evilCreate(evilUser)" ng-disabled="evilUserForm.$invalid"></button>
                 <br>
                 <br>
             </form>

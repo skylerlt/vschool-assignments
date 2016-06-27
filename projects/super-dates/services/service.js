@@ -35,7 +35,7 @@ app.service("DatingService", function ($http, ProfileService) {
         return $http.put(baseUrl + user._id, user)
             .then(function () {
 
-                self.goodUserProfiles = user;
+                self.goodUserProfiles.push(user);
                 return self.goodUserProfiles;
             })
     };

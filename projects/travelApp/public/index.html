@@ -1,0 +1,55 @@
+<!DOCTYPE html>
+<html lang="en" ng-app="mainApp">
+
+<head>
+    <meta charset="UTF-8">
+    <title>Places You'll Go</title>
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.6/css/bootstrap.min.css">
+    <link href='https://fonts.googleapis.com/css?family=Poiret+One' rel='stylesheet' type='text/css'>
+    <link rel="stylesheet" href="css/background.css">
+    <link rel="stylesheet" href="css/element.css">
+    <link rel="stylesheet" href="css/class.css">
+    <link rel="stylesheet" href="css/medias.css">
+</head>
+
+<body class="firstBack container-fluid">
+
+    <form action="" ng-controller="LoginController">
+        <div class="row">
+            <div class="loginDiv col-lg-4 col-lg-offset-4">
+                <h1>Log in!</h1>
+                <h3>Username</h3>
+                <input type="text" ng-model="user.username">
+                <h3>Password</h3>
+                <input type="text" ng-model="user.password">
+                <br>
+                <br>
+                <button ng-click="login(user)" class="btn btn-default">Enter</button>
+                <br>
+                <h4>Don't have an account?  Sign up <a href="#/signup">here</a></h4>
+            </div>
+        </div>
+    </form>
+
+    <div ng-view=""></div>
+
+    <script src="https://code.jquery.com/jquery-2.2.4.js" integrity="sha256-iT6Q9iMJYuQiMWNd9lDyBUStIq/8PuOW33aOqmvFpqI=" crossorigin="anonymous"></script>
+    <script src="https://ajax.googleapis.com/ajax/libs/angularjs/1.5.6/angular.js "></script>
+    <script src="https://ajax.googleapis.com/ajax/libs/angularjs/1.5.6/angular-route.js "></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/ngStorage/0.3.6/ngStorage.min.js"></script>
+    <script src="js/app.js "></script>
+    <!--    Controllers  -->
+    <script src="components/places/placesController.js"></script>
+    <!--    Services  -->
+    <script src="components/beenThere/beenPlacesService.js"></script>
+    <script src="components/goThere/goPlacesService.js"></script>
+    <script src="components/auth/authService.js"></script>
+    <script src="components/auth/signup/signup.js"></script>
+
+    <script src="components/auth/login.js"></script>
+    <!--    <script src="components/auth/logout.js"></script>-->
+
+
+</body>
+
+</html>
