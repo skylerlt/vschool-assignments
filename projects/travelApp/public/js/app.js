@@ -21,8 +21,8 @@ app.config(function ($routeProvider) {
             templateUrl: "components/auth/signup/signup.html",
             controller: "SignupController"
         })
-        .when("/login ", {
-            template: "main.html",
+        .when("/login", {
+            templateUrl: "components/auth/login/login.html",
             controller: "LoginController"
         })
         .when("/logout", {

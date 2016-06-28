@@ -10,12 +10,9 @@ app.service("UserService", ['$http', '$location', 'TokenService', function ($htt
 
     this.login = function (user) {
         return $http.post("http://localhost:8000/auth/login", user).then(function (response) {
-            console.log('Response from service ' + response);
             TokenService.setToken(response.data.token);
             self.currentUser = response.data.user;
             return response;
-        }, function (response) {
-            console.error("There was a bad response");
         });
     };
 
@@ -30,7 +27,7 @@ app.service("UserService", ['$http', '$location', 'TokenService', function ($htt
 
 }]);
 
-app.service("TokenService", function ($localStorage) {
+app.service("TokenService", ["$localStorage", function ($localStorage) {
 
     this.getToken = function () {
         return $localStorage.token;
@@ -43,9 +40,9 @@ app.service("TokenService", function ($localStorage) {
     this.removeToken = function () {
         delete $localStorage.token;
     };
-});
+}]);
 
-app.factory("AuthInterceptor", function ($location, $q, TokenService) {
+app.factory("AuthInterceptor", ["$q", "$location", "$window", "TokenService", function ($q, $location, $window, TokenService) {
     return {
         request: function (config) {
             var token = TokenService.getToken();
@@ -58,13 +55,13 @@ app.factory("AuthInterceptor", function ($location, $q, TokenService) {
         responseError: function (response) {
             if (response.status === 401) {
                 TokenService.removeToken();
-                $location.path("/login");
+                //                $window.location.href = "index.html";
             }
             return $q.reject(response);
         }
     }
-});
+}]);
 
-app.config(function ($httpProvider) {
+app.config(["$httpProvider", function ($httpProvider) {
     $httpProvider.interceptors.push("AuthInterceptor");
-});
+}]);

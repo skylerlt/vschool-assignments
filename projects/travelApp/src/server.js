@@ -5,20 +5,20 @@ var bodyParser = require("body-parser");
 var cors = require("cors");
 var morgan = require("morgan");
 var config = require("./config");
-var path = require("path");
+//var path = require("path");
 var beenPlacesSchema = require("./models/beenPlaces");
 var goPlacesSchema = require("./models/goPlaces");
 var port = process.env.PORT || 8000;
 var expressJwt = require("express-jwt");
 
 mongoose.connect(config.database, function () {
-    console.log("Mongoose is catching the snake!")
+    console.log("Mongoose is chasing the snake!")
 });
 
 app.use(bodyParser.json());
 app.use(cors());
 app.use(morgan("dev"));
-app.use(express.static(path.join(__dirname, "..", "public")));
+//app.use(express.static(path.join(__dirname, "..", "public")));
 
 app.use("/api", expressJwt({
     secret: config.secret

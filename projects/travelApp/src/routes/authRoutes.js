@@ -11,7 +11,7 @@ authRouter.post("/login", function (req, res) {
     }, function (err, user) {
         if (err) res.status(500).send(err);
         if (!user) {
-            res.status(401).send({
+            res.status(402).send({
                 success: false,
                 message: "No user with that username was found."
             });
@@ -20,7 +20,7 @@ authRouter.post("/login", function (req, res) {
                 if (err) {
                     res.status(500).send(err);
                 } else if (!match) {
-                    res.status(401).send({
+                    res.status(402).send({
                         success: false,
                         message: "Incorrect password"
                     });
@@ -43,7 +43,7 @@ authRouter.post("/signup", function (req, res) {
         username: req.body.username
     }, function (err, existingUser) {
         if (err) res.status(500).send(err);
-        if (existingUser) res.status(401).send({
+        if (existingUser) res.status(418).send({
             success: false,
             message: "That username is already taken."
         })

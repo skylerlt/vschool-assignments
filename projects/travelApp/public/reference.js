@@ -1,17 +1,84 @@
-//var app = angular.module("TodoApp.Auth");
- //
- //app.controller("SignupController", ["$scope", "$location", "UserService", function ($scope, $location, UserService) {
- //    $scope.passwordMessage = "";
- //
- //    $scope.signup = function (user) {
- //        if (user.password !== $scope.passwordRepeat) {
- //            $scope.passwordMessage = "Passwords do not match.";
- //        } else {
- //            UserService.signup(user).then(function(response) {
- //                $location.path("/login");
- //            }, function(response) {
- //                alert("There was a problem: " + response.data.message);
- //            });
- //        }
- //    }
- //}]);
+//var app = angular.module("TodoApp.Auth", ["ngStorage"]);
+//
+//app.config(["$routeProvider", function ($routeProvider) {
+//    $routeProvider
+//        .when("/signup", {
+//            templateUrl: "components/auth/signup/signup.html",
+//            controller: "SignupController"
+//        })
+//        .when("/login", {
+//            templateUrl: "components/auth/login/login.html",
+//            controller: "LoginController"
+//        })
+//        .when("/logout", {
+//            controller: "LogoutController",
+//            template: ""
+//        })
+//}]);
+//
+//app.service("UserService", ["$http", "$location", "TokenService", function ($http, $location, TokenService) {
+//    var self = this;
+//    this.currentUser = {};
+//
+//    this.signup = function (user) {
+//        return $http.post("/auth/signup", user);
+//    };
+//
+//    this.login = function (user) {
+//        return $http.post("/auth/login", user).then(function (response) {
+//            TokenService.setToken(response.data.token);
+//            self.currentUser = response.data.user;
+//            return response;
+//        });
+//    };
+//
+//    this.logout = function () {
+//        TokenService.removeToken();
+//        $location.path("/");
+//    };
+//
+//    this.isAuthenticated = function () {
+//        return TokenService.getToken();
+//    };
+//
+//}]);
+//
+//app.service("TokenService", ["$localStorage", function ($localStorage) {
+//
+//    this.getToken = function () {
+//        return $localStorage.token;
+//    };
+//
+//    this.setToken = function (token) {
+//        $localStorage.token = token;
+//    };
+//
+//    this.removeToken = function () {
+//        delete $localStorage.token;
+//    };
+//}]);
+//
+//app.factory("AuthInterceptor", ["$location", "$q", "TokenService", function ($location, $q, TokenService) {
+//    return {
+//        request: function (config) {
+//            var token = TokenService.getToken();
+//            if (token) {
+//                config.headers = config.headers || {};
+//                config.headers.Authorization = "Bearer " + token;
+//            }
+//            return config;
+//        },
+//        responseError: function (response) {
+//            if (response.status === 401) {
+//                TokenService.removeToken();
+//                $location.path("/login");
+//            }
+//            return $q.reject(response);
+//        }
+//    }
+//}]);
+//
+//
+//app.config(["$httpProvider", function ($httpProvider) {
+//    $httpProvider.interceptors.push("AuthInterceptor");
+//}]);

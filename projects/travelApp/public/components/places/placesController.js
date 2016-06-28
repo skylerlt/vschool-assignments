@@ -4,7 +4,6 @@ app.controller("PlaceController", function (BeenPlacesService, GoPlacesService, 
 
     $scope.beenPlacesService = BeenPlacesService;
     $scope.goPlacesService = GoPlacesService;
-    //    $scope.userService = UserService;
 
     //    Been Places
 

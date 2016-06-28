@@ -20,6 +20,13 @@ goPlacesRouter.post("/", function (req, res) {
     });
 });
 
+goPlacesRouter.get("/:goId", function (req, res) {
+    GoPlaces.findOne({_id: req.params.goId, user: req.user._id}, function (err, goPlace) {
+        if (err) res.status(500).send(err);
+        else res.send(goPlace);
+    });
+});
+
 goPlacesRouter.put("/:goId", function (req, res) {
     GoPlaces.findOneAndUpdate(req.params.goId, req.body, {
         new: true

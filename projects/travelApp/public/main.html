@@ -26,7 +26,7 @@
             <ul>
                 <li><a href="#/beenThere">Places you've been</a></li>
                 <li><a href="#/goThere">Places you'll go</a></li>
-                <li><a href="#/others">Places others have been</a></li>
+                <li><a href="#/logout">Logout</a></li>
                 <li>Search
                     <input type="text" ng-model="search">
                     <a href="https://www.google.com/#q={{search}}" target="_blank">
@@ -49,16 +49,17 @@
     <br>
     <br>
 
-    <div class="col-lg-6 col-lg-offset-3">
+    <div class="col-lg-4 col-lg-offset-4">
         <a class="viewA" href="#/goThere">Places you'll go</a>
         <a class="viewA" href="#/beenThere">Places you've been</a>
-        <a class="viewA" href="#/others">Places other's have been</a>
     </div>
 
     <br>
     <hr>
 
     <div ng-view></div>
+
+    <img src="http://cdn.shopify.com/s/files/1/0185/5092/products/places-0039.png?v=1369543243" alt="" class="flyPlane">
 
 
     <!--   CDNs  -->
@@ -70,7 +71,7 @@
     <!--    Controllers  -->
     <script src="components/places/placesController.js"></script>
     <script src="components/auth/authService.js"></script>
-    <script src="components/auth/login.js"></script>
+    <script src="components/auth/login/login.js"></script>
     <!--    <script src="components/auth/logout.js"></script>-->
     <!--    Services  -->
 

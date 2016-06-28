@@ -37,14 +37,23 @@
     margin-bottom: 20px;
 }
 
+.loginRow {
+    margin-left: 37%;
+    margin-top: -10%;
+}
+
 .loginDiv {
     background-color: rgba(225, 225, 225, .8);
     margin-top: 200px;
     padding-top: 30px;
     padding-bottom: 30px;
     border-radius: 200px;
-    height: 400px;
-    width: 400px;
+    height: 350px;
+    width: 350px;
+}
+
+.signupRow {
+    margin-left: 28%;
 }
 
 .signupDiv {
@@ -70,4 +79,19 @@
 .goText > h3 {
     margin-left: 20px;
     font-size: 30px;
+}
+
+.enterBtn {
+    height: 100px;
+    width: 100px;
+    border-radius: 100px;
+    background-color: rgba(225, 225, 225, .8);
+    margin-top: 5%;
+}
+
+.flyPlane {
+    position: fixed;
+    left: 0;
+    top: 510px;
+    transform: rotate(135deg);
 }
