@@ -1,6 +1,6 @@
 var app = angular.module("mainApp.Auth", ["ngStorage"]);
 
-app.service("UserService", ['$http', '$location', 'TokenService', function ($http, $location, TokenService) {
+app.service("UserService", ['$http', '$location', "$window", 'TokenService', function ($http, $location, $window, TokenService) {
     var self = this;
     this.currentUser = {};
 
@@ -18,7 +18,7 @@ app.service("UserService", ['$http', '$location', 'TokenService', function ($htt
 
     this.logout = function () {
         TokenService.removeToken();
-        $location.path("/");
+        $window.location.href = "index.html"
     };
 
     this.isAuthenticated = function () {
@@ -35,10 +35,13 @@ app.service("TokenService", ["$localStorage", function ($localStorage) {
 
     this.setToken = function (token) {
         $localStorage.token = token;
+        console.log($localStorage.token);
     };
 
     this.removeToken = function () {
         delete $localStorage.token;
+        console.log($localStorage.token);
+
     };
 }]);
 
@@ -46,6 +49,7 @@ app.factory("AuthInterceptor", ["$q", "$location", "$window", "TokenService", fu
     return {
         request: function (config) {
             var token = TokenService.getToken();
+            console.log(token + ' TEST');1
             if (token) {
                 config.headers = config.headers || {};
                 config.headers.Authorization = "Bearer " + token;

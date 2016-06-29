@@ -14,7 +14,7 @@
 
 <body class="firstBack container-fluid">
 
-    <a href="#/login">
+    <a ng-hide="userService.isAuthenticated()" href="#/login">
         <button class="enterBtn">Login</button>
     </a>
     <a href="#/signup">
@@ -39,7 +39,7 @@
     <script src="components/auth/signup/signup.js"></script>
 
     <script src="components/auth/login/login.js"></script>
-    <!--    <script src="components/auth/logout.js"></script>-->
+    <script src="components/auth/logout.js"></script>
 
 
 </body>

@@ -14,6 +14,8 @@ app.controller("PlaceController", function (BeenPlacesService, GoPlacesService, 
     $scope.postBeenThere = function (beenPlace) {
         BeenPlacesService.postBeenPlaces(beenPlace).then(function () {
             $scope.beenPlace = null;
+            $scope.beenPlaces = BeenPlacesService.beenPlacesArray;
+            been.add = false;
         });
     };
 
@@ -37,4 +39,5 @@ app.controller("PlaceController", function (BeenPlacesService, GoPlacesService, 
                 been.add = false;
             })
     }
+
 });
