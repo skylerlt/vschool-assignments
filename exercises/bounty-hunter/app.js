@@ -7,6 +7,9 @@ app.controller("MainController", function ($scope, BountyService) {
     $scope.seePerson = function () {
         BountyService.getBounties().then(function () {
             $scope.bounties = BountyService.myBounties;
+            $scope.random = function () {
+                return 0.5 - Math.random();
+            }
         });
     };
 

@@ -68,7 +68,7 @@
 
     <div class="back2">
         <div class="row bountyRow">
-            <div ng-repeat="person in BountyService.myBounties track by $index" class="bountyDiv">
+            <div ng-repeat="person in BountyService.myBounties | orderBy:random" class="bountyDiv">
                 <div class="person col-lg-3">
                     <h3>{{person.firstName}}</h3>
                     <input type="text" ng-show="person.edit" ng-model="person.firstName">

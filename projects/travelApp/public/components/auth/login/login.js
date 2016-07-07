@@ -4,7 +4,7 @@ app.controller("LoginController", ["$scope", "$location", "UserService", "$windo
 
     $scope.login = function (user) {
         UserService.login(user).then(function (response) {
-            $window.location.assign("main.html");
+            $window.location.href = "main.html";
         }, function (response) {
             alert("There was a problem: " + response.data.message);
         });

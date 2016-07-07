@@ -49,14 +49,15 @@ app.factory("AuthInterceptor", ["$q", "$location", "$window", "TokenService", fu
     return {
         request: function (config) {
             var token = TokenService.getToken();
-            console.log(token + ' TEST');1
-            if (token) {
+            console.log(token + ' TEST');
+            if (token && token != null) {
                 config.headers = config.headers || {};
                 config.headers.Authorization = "Bearer " + token;
             }
             return config;
         },
         responseError: function (response) {
+            console.log(response);
             if (response.status === 401) {
                 TokenService.removeToken();
                 //                $window.location.href = "index.html";

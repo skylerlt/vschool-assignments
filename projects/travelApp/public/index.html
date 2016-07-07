@@ -14,12 +14,15 @@
 
 <body class="firstBack container-fluid">
 
-    <a ng-hide="userService.isAuthenticated()" href="#/login">
-        <button class="enterBtn">Login</button>
-    </a>
-    <a href="#/signup">
-        <button class="enterBtn">Sign up</button>
-    </a>
+<!--    <navbar></navbar>-->
+
+<a ng-hide="userService.isAuthenticated()" href="#/login">
+    <button class="enterBtn">Login</button>
+</a>
+<a href="#/signup">
+    <button class="enterBtn">Sign up</button>
+</a>
+
 
 
 
@@ -28,6 +31,7 @@
     <script src="https://code.jquery.com/jquery-2.2.4.js" integrity="sha256-iT6Q9iMJYuQiMWNd9lDyBUStIq/8PuOW33aOqmvFpqI=" crossorigin="anonymous"></script>
     <script src="https://ajax.googleapis.com/ajax/libs/angularjs/1.5.6/angular.js "></script>
     <script src="https://ajax.googleapis.com/ajax/libs/angularjs/1.5.6/angular-route.js "></script>
+    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.6/js/bootstrap.min.js"></script>
     <script src="https://cdnjs.cloudflare.com/ajax/libs/ngStorage/0.3.6/ngStorage.min.js"></script>
     <script src="js/app.js "></script>
     <!--    Controllers  -->
@@ -40,6 +44,7 @@
 
     <script src="components/auth/login/login.js"></script>
     <script src="components/auth/logout.js"></script>
+    <script src="components/auth/navbar/navbar.js"></script>
 
 
 </body>

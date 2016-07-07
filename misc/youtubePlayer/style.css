@@ -1,0 +1,21 @@
+* {
+    text-align: center;
+    font-family: 'Sigmar One', cursive;
+}
+
+body {
+    background-image: url(http://www.planwallpaper.com/static/images/518169-backgrounds.jpg);
+    background-repeat: no-repeat;
+    background-attachment: fixed;
+    background-size: cover;
+}
+
+#player {
+    border: solid black 5px;
+}
+
+hr {
+    height: 12px;
+    border: 0;
+    box-shadow: inset 0 12px 12px -12px rgba(0, 0, 0, 0.9);
+}

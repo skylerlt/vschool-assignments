@@ -5,7 +5,7 @@ var bodyParser = require("body-parser");
 var cors = require("cors");
 var morgan = require("morgan");
 var config = require("./config");
-//var path = require("path");
+var path = require("path");
 var beenPlacesSchema = require("./models/beenPlaces");
 var goPlacesSchema = require("./models/goPlaces");
 var port = process.env.PORT || 8000;
@@ -18,7 +18,7 @@ mongoose.connect(config.database, function () {
 app.use(bodyParser.json());
 app.use(cors());
 app.use(morgan("dev"));
-//app.use(express.static(path.join(__dirname, "..", "public")));
+app.use(express.static(path.join(__dirname, "..", "public")));
 
 app.use("/api", expressJwt({
     secret: config.secret

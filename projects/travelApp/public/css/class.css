@@ -17,7 +17,7 @@
 .goImg {
     float: right;
     margin-right: 50px;
-    margin-top: -300px;
+    /*    margin-top: -300px;*/
     border: solid black;
     outline: double black 10px;
 }
@@ -25,7 +25,7 @@
 .goImg2 {
     float: right;
     margin-right: 50px;
-    margin-top: -335px;
+    /*    margin-top: -335px;*/
     border: solid black;
     outline: double black 10px;
 }
@@ -36,8 +36,9 @@
 
 .goText {
     background-color: rgba(225, 225, 225, .5);
-    height: 400px;
-    padding-top: 50px
+    height: 600px;
+    padding-top: 100px;
+    margin: 0;
 }
 
 .goHead {

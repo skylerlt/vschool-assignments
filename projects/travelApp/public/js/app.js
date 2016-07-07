@@ -2,9 +2,6 @@ var app = angular.module("mainApp", ["ngRoute", "mainApp.Auth"]);
 
 app.config(function ($routeProvider) {
     $routeProvider
-    //        .when("/", {
-    //            templateUrl: "index.html"
-    //        })
         .when("/beenThere", {
             templateUrl: "components/beenThere/beenThere.html",
             controller: "PlaceController"
