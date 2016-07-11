@@ -1,0 +1,79 @@
+* {
+    font-family: 'Quicksand', sans-serif;
+}
+
+body {
+    background-image: url(http://www.intrawallpaper.com/static/images/cool-background.jpg);
+    padding-bottom: 50px;
+}
+
+.myViews {
+    padding-left: 57%;
+    /*    margin-top: -54px;*/
+}
+
+.myEntries {
+    padding-left: 150px;
+    width: 50%;
+    position: fixed;
+}
+
+
+/*
+hr {
+    transform: rotate(90deg);
+    margin-left: 8%;
+}
+*/
+
+.break {
+    height: 5px;
+    transform: rotate(90deg);
+    /*    padding-left: 10%;*/
+    background-color: white;
+    position: fixed;
+    width: 1550px;
+}
+
+nav {
+    background-color: rgba(0, 0, 0, .7);
+    width: 150px;
+    height: 100%;
+    top: 0;
+    bottom: 0;
+    position: fixed;
+    left: 0;
+    padding: 5px;
+}
+
+ul {
+    list-style: none;
+    text-align: left;
+    margin-left: -38px;
+    font-size: 20px;
+}
+
+a {
+    color: white;
+}
+
+h1,
+h2 {
+    color: white;
+}
+
+img {
+    border: solid white;
+    outline: double white 10px;
+    margin: 10px;
+    height: 300px;
+    margin-left: 15%;
+}
+
+textarea {
+    background-color: rgba(225, 225, 225, .8);
+}
+
+.button {
+    text-align: center;
+}

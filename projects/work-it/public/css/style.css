@@ -1,0 +1,64 @@
+* {
+    font-family: 'Audiowide', cursive;
+}
+
+.scrollH {
+    position: absolute;
+    right: 40px;
+    margin-top: 500px;
+    font-size: 50px;
+    color: white;  z-index: 100;
+}
+
+.scrollBar {
+    height: 430px;
+    /*    border-radius: 25px;*/
+    border: solid white 5px;
+    overflow-x: scroll;
+    overflow-y: hidden;
+    white-space: nowrap;
+    margin: 10px;
+    text-align: center;
+}
+
+.scrollBar img {
+    display: inline-block;
+}
+
+.scrollImage {
+    height: 400px;
+    width: auto;
+    /*    border-radius: 25px;*/
+    border: solid white 5px;
+    padding: 10px;
+    margin: 10px;
+    /*    background-color: rgba(0, 0, 0, .5);*/
+}
+
+.homeDiv {
+    text-align: center;
+    margin-top: 50px;
+    width: 800px;
+    padding: 20px;
+    border: solid black 2px;
+    outline: double black 10px;
+}
+
+.tipsImg {
+    height: 300px;
+}
+
+hr {
+    height: 12px;
+    border: 0;
+    box-shadow: inset 0 12px 12px -12px #888;
+}
+
+.item {
+    height: 600px;
+    width: 100%;
+}
+
+.item > img {
+    width: 100%;
+}

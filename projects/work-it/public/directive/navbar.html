@@ -1,0 +1,35 @@
+<nav class="nav row container-fluid">
+
+    <ul>
+
+        <div class="navList">
+            <li><a class="col-xs-12" ng-show="loggedIn()" href="#/home">Home</a></li>
+            <li><a class="col-xs-12" ng-show="loggedIn()" href="#/recipes">Recipes</a></li>
+            <li><a class="col-xs-12" ng-show="loggedIn()" href="#/pantry">Pantry</a></li>
+            <li><a class="col-xs-12" ng-show="loggedIn()" href="#/calendar">Calendar</a></li>
+            <li><a class="col-xs-12" ng-hide="loggedIn()" href="#/login">LOG IN</a></li>
+            <li><a class="col-xs-12" ng-hide="loggedIn()" href="#/signup">SIGN UP</a></li>
+            <li><a class="col-xs-12" ng-show="loggedIn()" href="#/settings">Your Account</a></li>
+            <li><a class="col-xs-12" ng-show="loggedIn()" ng-click="logOut()" href="#/logout">LOGOUT</a></li>
+        </div>
+    </ul>
+
+    <ul class="hideNavList">
+        <li>
+            <button class="navBtn btn btn-lg btn-default"><span class="glyphicon glyphicon-th-list"></span></button>
+            <div class="navListContent">
+                <a class="col-xs-12" ng-show="loggedIn()" href="#/home">Home</a>
+                <a class="col-xs-12" ng-show="loggedIn()" href="#/recipes">Recipes</a>
+                <a class="col-xs-12" ng-show="loggedIn()" href="#/pantry">Pantry</a>
+                <a class="col-xs-12" ng-show="loggedIn()" href="#/calendar">Calendar</a>
+                <a class="col-xs-12" ng-hide="loggedIn()" href="#/login">LOG IN</a>
+                <a class="col-xs-12" ng-hide="loggedIn()" href="#/signup">SIGN UP</a>
+                <a class="col-xs-12" ng-show="loggedIn()" href="#/settings">Your Account</a>
+                <a class="col-xs-12" ng-show="loggedIn()" ng-click="logOut()" href="#/logout">LOGOUT</a>
+            </div>
+        </li>
+    </ul>
+
+
+    <h2 class="navH"><img class="homeImg" src="https://cdn2.iconfinder.com/data/icons/inverticons-stroke-vol-4/32/food_eat_restaurant_fork_knife-512.png" alt="">What's for dinner?!</h2>
+</nav>
