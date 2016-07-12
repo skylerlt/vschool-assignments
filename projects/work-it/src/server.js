@@ -29,8 +29,10 @@ app.use("/api", expressJwt({
 app.use("/auth", require("./routes/authRoutes"));
 
 app.use("/api/tips", require("./routes/tipsRouter"));
-app.use("/api/upperBody", require("./routes/exerciseRouter"));
-app.use("/api/lowerBody", require("./routes/exerciseRouter"));
+app.use("/api/upperBody", require("./routes/upperBodyRouter"));
+app.use("/api/lowerBody", require("./routes/lowerBodyRouter"));
+app.use("/api/core", require("./routes/coreRouter"));
+app.use("/api/cardio", require("./routes/cardioRouter"));
 
 app.listen(port, function () {
     console.log("Did you hear that?  Sounded like port " + port);

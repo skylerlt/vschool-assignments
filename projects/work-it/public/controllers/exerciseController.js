@@ -8,12 +8,8 @@ app.controller("ExerciseController", ["$scope", "ExerciseService", function ($sc
         $scope.uBEx = response.data;
     });
 
-    $scope.exerciseService.getLowerBody().then(function (response) {
-        $scope.lBEx = response.data;
-    });
-
-    $scope.select = function (selected) {
-        $scope.selected = selected
+    $scope.selectUB = function (selected) {
+        $scope.selected = selected;
     };
 
 }])

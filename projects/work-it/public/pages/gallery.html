@@ -7,19 +7,19 @@
     <div class="row" ng-controller="ExerciseController">
         <div class="scrollBar">
 
-            <div class="scrollDiv" ng-repeat="exercise in workOuts track by $index">
-                <a data-toggle="modal" data-target="#myModal" href="" ng-click="select(exercise)"><img class="scrollImage center-block" src="{{exercise.image}}" alt=""></a>
+            <div class="scrollDiv" ng-repeat="arms in uBEx track by $index">
+                <a data-toggle="modal" data-target="#armModal" href="" ng-click="selectUB(arms)"><img class="scrollImage center-block" src="{{arms.image}}" alt=""></a>
 
             </div>
         </div>
         <hr>
 
         <!-- Modal -->
-        <div class="modal fade" id="myModal" tabindex="-1" role="dialog" aria-labelledby="myModalLabel">
+        <div class="modal fade" id="armModal" tabindex="-1" role="dialog" aria-labelledby="myModalLabel">
             <div class="modal-dialog" role="document">
                 <div class="modal-content">
                     <div class="modal-header">
-                        <button onclick="stopVideo()" type="button" class="close" data-dismiss="modal" aria-label="Close"><span aria-hidden="true">&times;</span></button>
+                        <button type="button" class="close" data-dismiss="modal" aria-label="Close"><span aria-hidden="true">&times;</span></button>
                         <h4 class="modal-title" id="myModalLabel">{{selected.title}}</h4>
                     </div>
                     <div class="modal-body">
@@ -39,22 +39,22 @@
     <h2>Lower Body</h2>
     <hr>
 
-    <div class="row" ng-controller="ExerciseController">
+    <div class="row" ng-controller="LowerBodyController">
         <div class="scrollBar">
 
-            <div class="scrollDiv" ng-repeat="exercise in workOuts track by $index">
-                <a data-toggle="modal" data-target="#myModal" href="" ng-click="select(exercise)"><img class="scrollImage center-block" src="{{exercise.image}}" alt=""></a>
+            <div class="scrollDiv" ng-repeat="legs in lBEx track by $index">
+                <a data-toggle="modal" data-target="#legModal" href="" ng-click="selectLB(legs)"><img class="scrollImage center-block" src="{{legs.image}}" alt=""></a>
 
             </div>
         </div>
         <hr>
 
         <!-- Modal -->
-        <div class="modal fade" id="myModal" tabindex="-1" role="dialog" aria-labelledby="myModalLabel">
+        <div class="modal fade" id="legModal" tabindex="-1" role="dialog" aria-labelledby="myModalLabel">
             <div class="modal-dialog" role="document">
                 <div class="modal-content">
                     <div class="modal-header">
-                        <button onclick="stopVideo()" type="button" class="close" data-dismiss="modal" aria-label="Close"><span aria-hidden="true">&times;</span></button>
+                        <button type="button" class="close" data-dismiss="modal" aria-label="Close"><span aria-hidden="true">&times;</span></button>
                         <h4 class="modal-title" id="myModalLabel">{{selected.title}}</h4>
                     </div>
                     <div class="modal-body">
@@ -74,22 +74,25 @@
     <h2>Core</h2>
     <hr>
 
-    <div class="row" ng-controller="ExerciseController">
+    <div class="row" ng-controller="CoreController">
         <div class="scrollBar">
 
-            <div class="scrollDiv" ng-repeat="exercise in workOuts track by $index">
-                <a data-toggle="modal" data-target="#myModal" href="" ng-click="select(exercise)"><img class="scrollImage center-block" src="{{exercise.image}}" alt=""></a>
+
+            <div class="scrollDiv" ng-repeat="core in cEx track by $index">
+                <a data-toggle="modal" data-target="#coreModal" href="" ng-click="selectCore(core)"><img class="scrollImage center-block" src="{{core.image}}" alt=""></a>
 
             </div>
+
         </div>
         <hr>
 
         <!-- Modal -->
-        <div class="modal fade" id="myModal" tabindex="-1" role="dialog" aria-labelledby="myModalLabel">
+
+        <div class="modal fade" id="coreModal" tabindex="-1" role="dialog" aria-labelledby="myModalLabel">
             <div class="modal-dialog" role="document">
                 <div class="modal-content">
                     <div class="modal-header">
-                        <button onclick="stopVideo()" type="button" class="close" data-dismiss="modal" aria-label="Close"><span aria-hidden="true">&times;</span></button>
+                        <button type="button" class="close" data-dismiss="modal" aria-label="Close"><span aria-hidden="true">&times;</span></button>
                         <h4 class="modal-title" id="myModalLabel">{{selected.title}}</h4>
                     </div>
                     <div class="modal-body">
@@ -98,33 +101,37 @@
                     </div>
                     <div class="modal-footer">
                         <button type="button" class="btn btn-default" data-dismiss="modal">Close</button>
-                        <!--                <button type="button" class="btn btn-primary">Save changes</button>-->
+                        <!--                                        <button type="button" class="btn btn-primary">Save changes</button>-->
                     </div>
                 </div>
             </div>
         </div>
+
 
     </div>
 
     <h2>Cardio</h2>
     <hr>
 
-    <div class="row" ng-controller="ExerciseController">
+    <div class="row" ng-controller="CardioController">
         <div class="scrollBar">
 
-            <div class="scrollDiv" ng-repeat="exercise in workOuts track by $index">
-                <a data-toggle="modal" data-target="#myModal" href="" ng-click="select(exercise)"><img class="scrollImage center-block" src="{{exercise.image}}" alt=""></a>
+
+            <div class="scrollDiv" ng-repeat="cardio in runs track by $index">
+                <a data-toggle="modal" data-target="#cardioModal" href="" ng-click="selectCardio(cardio)"><img class="scrollImage center-block" src="{{cardio.image}}" alt=""></a>
 
             </div>
+
         </div>
         <hr>
 
         <!-- Modal -->
-        <div class="modal fade" id="myModal" tabindex="-1" role="dialog" aria-labelledby="myModalLabel">
+
+        <div class="modal fade" id="cardioModal" tabindex="-1" role="dialog" aria-labelledby="myModalLabel">
             <div class="modal-dialog" role="document">
                 <div class="modal-content">
                     <div class="modal-header">
-                        <button onclick="stopVideo()" type="button" class="close" data-dismiss="modal" aria-label="Close"><span aria-hidden="true">&times;</span></button>
+                        <button type="button" class="close" data-dismiss="modal" aria-label="Close"><span aria-hidden="true">&times;</span></button>
                         <h4 class="modal-title" id="myModalLabel">{{selected.title}}</h4>
                     </div>
                     <div class="modal-body">
@@ -133,11 +140,12 @@
                     </div>
                     <div class="modal-footer">
                         <button type="button" class="btn btn-default" data-dismiss="modal">Close</button>
-                        <!--                <button type="button" class="btn btn-primary">Save changes</button>-->
+                        <!--                                        <button type="button" class="btn btn-primary">Save changes</button>-->
                     </div>
                 </div>
             </div>
         </div>
+
 
     </div>
 </div>

@@ -10,4 +10,11 @@ app.service("ExerciseService", ["$http", function ($http) {
         return $http.get("api/lowerBody");
     };
 
+    this.getCore = function () {
+        return $http.get("api/core");
+    };
+
+    this.getCardio = function () {
+        return $http.get("api/cardio");
+    };
 }])
