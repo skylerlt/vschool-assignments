@@ -1,35 +1,141 @@
-<nav class="nav row container-fluid">
+<nav>
+    <div class="container-fluid">
+        <!-- Brand and toggle get grouped for better mobile display -->
+        <!--
+       <div class="navbar-header">
+    <button type="button" class="navbar-toggle collapsed" data-toggle="collapse" data-target="#bs-example-navbar-collapse-1" aria-expanded="false">
+        <span class="sr-only">Toggle navigation</span>
+        <span class="icon-bar"></span>
+        <span class="icon-bar"></span>
+        <span class="icon-bar"></span>
+    </button>
+    <a class="navbar-brand" href="#/">Todo List</a>
+</div>
+-->
 
-    <ul>
-
-        <div class="navList">
-            <li><a class="col-xs-12" ng-show="loggedIn()" href="#/home">Home</a></li>
-            <li><a class="col-xs-12" ng-show="loggedIn()" href="#/recipes">Recipes</a></li>
-            <li><a class="col-xs-12" ng-show="loggedIn()" href="#/pantry">Pantry</a></li>
-            <li><a class="col-xs-12" ng-show="loggedIn()" href="#/calendar">Calendar</a></li>
-            <li><a class="col-xs-12" ng-hide="loggedIn()" href="#/login">LOG IN</a></li>
-            <li><a class="col-xs-12" ng-hide="loggedIn()" href="#/signup">SIGN UP</a></li>
-            <li><a class="col-xs-12" ng-show="loggedIn()" href="#/settings">Your Account</a></li>
-            <li><a class="col-xs-12" ng-show="loggedIn()" ng-click="logOut()" href="#/logout">LOGOUT</a></li>
+        <!-- Collect the nav links, forms, and other content for toggling -->
+        <div>
+            <ul>
+                <h3>Work It!</h3>
+                <ul class="navUl">
+                    <li ng-show="userService.isAuthenticated()" class="navLi"><a class="navA" ng-click="homeDiv = false" href="#/home">Home</a></li>
+                    <li ng-show="userService.isAuthenticated()" class="navLi"><a class="navA" ng-click="homeDiv = true" href="#/workouts">Workouts</a></li>
+                    <li ng-show="userService.isAuthenticated()" class="navLi"><a class="navA" ng-click="homeDiv = true" href="#/gallery">Gallery</a></li>
+                </ul>
+            </ul>
+            <ul class="nav navbar-nav navbar-right">
+                <li ng-hide="userService.isAuthenticated()"><a href="" data-toggle="modal" data-target="#myModalLogin">Login</a></li>
+                <li ng-hide="userService.isAuthenticated()"><a href="" data-toggle="modal" data-target="#myModalSignup">Signup</a></li>
+                <li ng-show="userService.isAuthenticated()"><a href="#/logout">Logout</a></li>
+            </ul>
         </div>
-    </ul>
-
-    <ul class="hideNavList">
-        <li>
-            <button class="navBtn btn btn-lg btn-default"><span class="glyphicon glyphicon-th-list"></span></button>
-            <div class="navListContent">
-                <a class="col-xs-12" ng-show="loggedIn()" href="#/home">Home</a>
-                <a class="col-xs-12" ng-show="loggedIn()" href="#/recipes">Recipes</a>
-                <a class="col-xs-12" ng-show="loggedIn()" href="#/pantry">Pantry</a>
-                <a class="col-xs-12" ng-show="loggedIn()" href="#/calendar">Calendar</a>
-                <a class="col-xs-12" ng-hide="loggedIn()" href="#/login">LOG IN</a>
-                <a class="col-xs-12" ng-hide="loggedIn()" href="#/signup">SIGN UP</a>
-                <a class="col-xs-12" ng-show="loggedIn()" href="#/settings">Your Account</a>
-                <a class="col-xs-12" ng-show="loggedIn()" ng-click="logOut()" href="#/logout">LOGOUT</a>
-            </div>
-        </li>
-    </ul>
-
-
-    <h2 class="navH"><img class="homeImg" src="https://cdn2.iconfinder.com/data/icons/inverticons-stroke-vol-4/32/food_eat_restaurant_fork_knife-512.png" alt="">What's for dinner?!</h2>
+        <!-- /.navbar-collapse -->
+    </div>
+    <!-- /.container-fluid -->
 </nav>
+
+<div id="myCarousel" class="carousel slide headImg" data-ride="carousel">
+    <h1 class="scrollH">Work It!</h1>
+
+    <!-- Wrapper for slides -->
+    <div class="carousel-inner" role="listbox">
+        <div class="item active">
+            <img src="http://ironandsunshine.com/wp-content/uploads/2016/02/bigstock-Muscled-Male-Model-Showing-His-92192213.jpg">
+        </div>
+
+        <div class="item">
+            <img src="http://soyoga.com.au/wp-content/uploads/yoga-classes-walton-on-thames-surrey-body-soul-yoga.jpg">
+        </div>
+
+        <div class="item">
+            <img src="http://nsl.sport360.com/wp-content/uploads/2015/09/running.jpg">
+        </div>
+
+        <div class="item">
+            <img src="http://planethollywoodgoa.com/wp-content/uploads/2014/11/FITNESS.jpg">
+        </div>
+
+        <div class="item">
+            <img src="http://static1.squarespace.com/static/554a7cece4b0037c64932115/t/55526bf2e4b0da857ce3414c/1431464951121/three_new_yoga_poses.jpg?format=1500w">
+        </div>
+
+        <div class="item">
+            <img src="http://claimyourjourney.com/wp-content/uploads/2012/06/bike.jpg">
+        </div>
+    </div>
+</div>
+
+<!-- Modal -->
+<div ng-controller="SignupController" class="modal fade" id="myModalSignup" tabindex="-1" role="dialog" aria-labelledby="myModalLabel">
+    <div class="modal-dialog" role="document">
+        <div class="modal-content">
+            <div class="modal-header">
+                <button type="button" class="close" data-dismiss="modal" aria-label="Close"><span aria-hidden="true">&times;</span></button>
+                <h4 class="modal-title" id="myModalLabel">Create a new user</h4>
+            </div>
+            <div class="modal-body">
+                <form>
+                    <div class="control-group">
+                        <label>Name</label>
+                        <input type="text" class="form-control" ng-model="user.name">
+                    </div>
+                    <br>
+
+                    <div class="control-group">
+                        <label>Username</label>
+                        <input type="text" class="form-control" ng-model="user.username">
+                    </div>
+                    <br>
+
+                    <div class="control-group">
+                        <label>Password</label>
+                        <input type="password" class="form-control" ng-model="user.password">
+                    </div>
+                    <br>
+
+                    <div class="control-group">
+                        <label>Repeat Password</label>
+                        <input type="password" class="form-control" ng-model="passwordRepeat">
+                        <span class="text-danger" ng-show="passwordMessage">{{passwordMessage}}</span>
+                    </div>
+
+                    <br>
+                    <div class="modal-footer">
+                        <button data-dismiss="modal" class="center-block btn btn-default btn-lg" ng-click="signup(user)">Signup</button>
+                    </div>
+                </form>
+            </div>
+
+        </div>
+    </div>
+</div>
+
+<!-- Modal -->
+<div ng-controller="LoginController" class="modal fade" id="myModalLogin" tabindex="-1" role="dialog" aria-labelledby="myModalLabel">
+    <div class="modal-dialog" role="document">
+        <div class="modal-content">
+            <div class="modal-header">
+                <button onclick="stopVideo()" type="button" class="close" data-dismiss="modal" aria-label="Close"><span aria-hidden="true">&times;</span></button>
+                <h4 class="modal-title" id="myModalLabel">Log in</h4>
+            </div>
+            <div class="modal-body">
+                <form>
+                    <div class="control-group">
+                        <label>Username</label>
+                        <input type="text" class="form-control" ng-model="user.username">
+                    </div>
+                    <br>
+                    <div class="control-group">
+                        <label>Password</label>
+                        <input type="password" class="form-control" ng-model="user.password">
+                    </div>
+                    <br>
+                    <div class="modal-footer">
+                        <button data-dismiss="modal" class="center-block btn btn-default btn-lg" ng-click="login(user)">Login</button>
+                    </div>
+                </form>
+            </div>
+
+        </div>
+    </div>
+</div>

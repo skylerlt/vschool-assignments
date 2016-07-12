@@ -1,10 +1,10 @@
 var app = angular.module("mainApp");
 
-app.directive("navBar", function () {
-    return ({
-        restrict: "E",
-        scope: "=",
-        templateUrl: "./directive/navbar.html"
-
-    })
-});
+app.directive("navbar", ["UserService", function (UserService) {
+    return {
+        templateUrl: "directive/navbar.html",
+        link: function (scope) {
+            scope.userService = UserService;
+        }
+    }
+}]);

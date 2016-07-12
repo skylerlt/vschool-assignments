@@ -1,15 +1,25 @@
-var app = angular.module("mainApp", ["ngRoute"]);
+var app = angular.module("mainApp", ["ngRoute", "mainApp.Auth"]);
 
 app.config(function ($routeProvider) {
 
     $routeProvider
+        .when("/home", {
+            templateUrl: "/pages/home.html"
+        })
         .when("/workouts", {
-            templateUrl: "pages/workouts.html",
-            //            controller: "MainController"
+            templateUrl: "/pages/workouts.html"
         })
         .when("/gallery", {
-            templateUrl: "pages/gallery.html",
-            //            controller: "MainController"
+            templateUrl: "/pages/gallery.html"
+        })
+        .when("/logout", {
+            controller: "LogoutController",
+            template: ""
         })
 
+});
+
+
+$('#myModal').on('shown.bs.modal', function () {
+    $('#myInput').focus()
 });

@@ -8,4 +8,4 @@ app.controller("TipController", ["$scope", "TipService", function ($scope, TipsS
         $scope.tips = response.data[Math.floor(Math.random() * response.data.length)];
     });
 
-}])
+}]);

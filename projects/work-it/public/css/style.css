@@ -7,12 +7,14 @@
     right: 40px;
     margin-top: 500px;
     font-size: 50px;
-    color: white;  z-index: 100;
+    color: white;
+    z-index: 100;
 }
 
+
+/*
 .scrollBar {
     height: 430px;
-    /*    border-radius: 25px;*/
     border: solid white 5px;
     overflow-x: scroll;
     overflow-y: hidden;
@@ -28,12 +30,26 @@
 .scrollImage {
     height: 400px;
     width: auto;
-    /*    border-radius: 25px;*/
     border: solid white 5px;
     padding: 10px;
     margin: 10px;
-    /*    background-color: rgba(0, 0, 0, .5);*/
 }
+
+.scrollImage:hover {
+    opacity: .5;
+}
+
+.scrollH {
+    z-index: 100;
+}*/
+
+
+/*
+.scrollH:hover {
+    display: block;
+    z-index: 100;
+}
+*/
 
 .homeDiv {
     text-align: center;
@@ -61,4 +77,45 @@ hr {
 
 .item > img {
     width: 100%;
+}
+
+.scrollBar {
+    overflow-x: scroll;
+    overflow-y: hidden;
+    white-space: nowrap;
+    margin: 10px;
+    text-align: center;
+    border-top: solid white 2px;
+    border-bottom: solid white 2px;
+}
+
+.scrollDiv {
+    display: inline-block;
+    padding: 10px;
+    margin: 10px;
+    background-color: rgba(225, 225, 225, .5);
+    transition: 1s;
+    height: 450px;
+    width: auto;
+}
+
+.scrollImage {
+    height: 400px;
+    width: auto;
+}
+
+.modal-content {
+    background-color: rgba(0, 0, 0, .7);
+    color: white;
+    width: 700px;
+    text-align: center;
+}
+
+.modal-body p {
+    white-space: normal;
+    width: 600px;
+}
+
+.exImg {
+    max-width: 675px;
 }
