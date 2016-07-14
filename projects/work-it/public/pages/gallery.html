@@ -1,10 +1,10 @@
-<div class="galleryBody">
+<div class="galleryBody" ng-controller="ExerciseController">
     <h1>Check out these exercises!</h1>
     <hr>
     <h2>Upper Body</h2>
     <hr>
 
-    <div class="row" ng-controller="ExerciseController">
+    <div class="row">
         <div class="scrollBar">
 
             <div class="scrollDiv" ng-repeat="arms in uBEx track by $index">
@@ -28,7 +28,7 @@
                     </div>
                     <div class="modal-footer">
                         <button type="button" class="btn btn-default" data-dismiss="modal">Close</button>
-                        <!--                <button type="button" class="btn btn-primary">Save changes</button>-->
+                        <button type="button" class="btn btn-primary" ng-click="saveEx(selected)" data-dismiss="modal">Add to Workout</button>
                     </div>
                 </div>
             </div>
@@ -39,7 +39,7 @@
     <h2>Lower Body</h2>
     <hr>
 
-    <div class="row" ng-controller="LowerBodyController">
+    <div class="row">
         <div class="scrollBar">
 
             <div class="scrollDiv" ng-repeat="legs in lBEx track by $index">
@@ -74,7 +74,7 @@
     <h2>Core</h2>
     <hr>
 
-    <div class="row" ng-controller="CoreController">
+    <div class="row">
         <div class="scrollBar">
 
 
@@ -113,7 +113,7 @@
     <h2>Cardio</h2>
     <hr>
 
-    <div class="row" ng-controller="CardioController">
+    <div class="row">
         <div class="scrollBar">
 
 
@@ -140,7 +140,7 @@
                     </div>
                     <div class="modal-footer">
                         <button type="button" class="btn btn-default" data-dismiss="modal">Close</button>
-                        <!--                                        <button type="button" class="btn btn-primary">Save changes</button>-->
+                        <!--                                                                <button type="button" class="btn btn-primary">Save changes</button>-->
                     </div>
                 </div>
             </div>

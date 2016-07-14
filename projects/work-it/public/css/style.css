@@ -109,6 +109,7 @@ hr {
     color: white;
     width: 700px;
     text-align: center;
+    border: solid white 2px;
 }
 
 .modal-body p {

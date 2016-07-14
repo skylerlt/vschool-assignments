@@ -17,4 +17,12 @@ app.service("ExerciseService", ["$http", function ($http) {
     this.getCardio = function () {
         return $http.get("api/cardio");
     };
+
+    this.getExercises = function () {
+        return $http.get("api/exercises");
+    }
+
+    this.postExercises = function (exercise) {
+        return $http.post("api/exercises", exercise);
+    };
 }])
