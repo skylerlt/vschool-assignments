@@ -11,46 +11,6 @@
     z-index: 100;
 }
 
-
-/*
-.scrollBar {
-    height: 430px;
-    border: solid white 5px;
-    overflow-x: scroll;
-    overflow-y: hidden;
-    white-space: nowrap;
-    margin: 10px;
-    text-align: center;
-}
-
-.scrollBar img {
-    display: inline-block;
-}
-
-.scrollImage {
-    height: 400px;
-    width: auto;
-    border: solid white 5px;
-    padding: 10px;
-    margin: 10px;
-}
-
-.scrollImage:hover {
-    opacity: .5;
-}
-
-.scrollH {
-    z-index: 100;
-}*/
-
-
-/*
-.scrollH:hover {
-    display: block;
-    z-index: 100;
-}
-*/
-
 .homeDiv {
     text-align: center;
     margin-top: 50px;
@@ -119,4 +79,24 @@ hr {
 
 .exImg {
     max-width: 675px;
+}
+
+.wrkDiv {
+    text-align: center;
+    border: solid black 2px;
+    min-height: 400px;
+    background-color: rgba(0, 0, 0, .5);
+    border-top-left-radius: 25px;
+    border-top-right-radius: 25px;
+}
+
+.wrkImg {
+    height: 200px;
+    width: auto;
+}
+
+.wrkDiv > a {
+    position: absolute;
+    bottom: 20px;
+    color: white;
 }

@@ -1,10 +1,10 @@
 var app = angular.module("mainApp");
 
-app.controller("ExerciseController", ["$scope", "ExerciseService", function ($scope, ExerciseService) {
+app.controller("ExerciseController", ["$scope", "ExerciseService", "WorkoutService", function ($scope, ExerciseService, WorkoutService) {
 
     $scope.exerciseService = ExerciseService;
+    $scope.workoutService = WorkoutService;
     $scope.workOutList = [];
-    console.log("My list: " + $scope.workOutList);
 
     $scope.exerciseService.getUpperBody().then(function (response) {
         $scope.uBEx = response.data;
@@ -38,12 +38,12 @@ app.controller("ExerciseController", ["$scope", "ExerciseService", function ($sc
         $scope.selected = selected;
     };
 
-    $scope.exerciseService.getExercises().then(function (response) {
+    $scope.workoutService.getExercises().then(function (response) {
         $scope.workOutList = response.data;
     })
 
     $scope.saveEx = function (selected) {
-        $scope.exerciseService.postExercises(selected)
+        $scope.workoutService.postExercises(selected)
             .then(function (response) {
                 $scope.workOutList.push(response.data);
             })

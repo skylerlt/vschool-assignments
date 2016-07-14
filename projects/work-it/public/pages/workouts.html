@@ -1,9 +1,17 @@
-<h1>Here you'll find some workouts!</h1>
+<div class="container" ng-controller="ExerciseController">
+    <div>
+        <h1>You're Workout!</h1>
 
-<div class="row" ng-controller="ExerciseController">
-    <div ng-repeat="exercise in workOutList">
-        <h1>{{exercise.title}}</h1>
-        <img ng-src="{{exercise.image}}" alt="">
-        <h2>{{exercise.body}}</h2>
+        <div class="row" ng-controller="ExerciseController">
+            <div class="col-lg-3 wrkDiv" ng-repeat="exercise in workOutList">
+                <h1>{{exercise.title}}</h1>
+                <img ng-hide="more" class="wrkImg" ng-src="{{exercise.image}}" alt="">
+                <p ng-show="exBody">{{exercise.body}}</p>
+                <br>
+                <br>
+                <a ng-show="exBody" href="" ng-click="exBody = false; more = false">Less...</a>
+                <a ng-hide="more" href="" ng-click="exBody = true; more = true">More...</a>
+            </div>
+        </div>
     </div>
 </div>
