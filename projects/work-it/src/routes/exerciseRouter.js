@@ -20,4 +20,23 @@ exerciseRouter.post("/", function (req, res) {
     });
 });
 
+exerciseRouter.delete("/", function (req, res) {
+    Exercises.remove({
+        user: req.user._id
+    }, function (err, exercises) {
+        if (err) res.status(500).send(err);
+        res.send(exercises);
+    })
+})
+
+exerciseRouter.delete("/:exerciseId", function (req, res) {
+    Exercises.findOneAndRemove({
+        _id: req.params.exerciseId,
+        user: req.user._id
+    }, function (err, exercise) {
+        if (err) res.status(500).send(err);
+        else res.send(exercise);
+    })
+});
+
 module.exports = exerciseRouter;

@@ -49,4 +49,15 @@ app.controller("ExerciseController", ["$scope", "ExerciseService", "WorkoutServi
             })
     };
 
+//    $scope.workoutService.deleteAllEx().then(function (response) {
+//    $scope.workOutList = response.data;
+//})
+
+    $scope.deleteExercise = function (exercise) {
+        $scope.workoutService.deleteEx(exercise._id)
+            .then(function (response) {
+                $scope.workOutList.splice(($scope.workOutList.indexOf(exercise)), 1);
+            });
+    };
+
 }])
