@@ -25,7 +25,7 @@ exerciseRouter.delete("/", function (req, res) {
         user: req.user._id
     }, function (err, exercises) {
         if (err) res.status(500).send(err);
-        res.send(exercises);
+        res.send("Success!");
     })
 })
 

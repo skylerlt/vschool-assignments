@@ -1,14 +1,16 @@
 <div class="container" ng-controller="ExerciseController">
     <div>
         <h1>You're Workout!</h1>
-<!--        <button class="btn btn-lg btn-danger" ng-click="deleteAllEx()">Clear All</button>-->
+        <button class="btn btn-lg btn-danger" ng-click="deleteAll()">Clear All</button>
+        <br>
+        <br>
 
         <div class="row" ng-controller="ExerciseController">
             <div class="col-lg-3 wrkDiv" ng-repeat="exercise in workOutList track by $index">
                 <button ng-click="deleteExercise(exercise)" type="button" class="close" aria-label="Close"><span aria-hidden="true">&times;</span></button>
                 <h1>{{exercise.title}}</h1>
                 <img ng-hide="more" class="wrkImg" ng-src="{{exercise.image}}" alt="">
-                <p ng-show="exBody">{{exercise.body}}</p>
+                <p class="wrkBody" ng-show="exBody">{{exercise.body}}</p>
                 <br>
                 <br>
                 <a ng-show="exBody" href="" ng-click="exBody = false; more = false">Less...</a>

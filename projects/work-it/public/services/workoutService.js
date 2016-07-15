@@ -11,7 +11,6 @@ app.service("WorkoutService", ["$http", function ($http) {
     };
 
     this.deleteEx = function (id) {
-
         return $http.delete("api/exercises/" + id);
     };
 

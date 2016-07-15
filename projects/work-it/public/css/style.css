@@ -95,8 +95,25 @@ hr {
     width: auto;
 }
 
+.wrkImg,
+.wrkBody {
+    transition: all linear 0.5s;
+    position: relative;
+    top: 0;
+    left: 0;
+}
+
 .wrkDiv > a {
     position: absolute;
     bottom: 20px;
     color: white;
+}
+
+.ng-show,
+.ng-hide {
+    height: 0;
+    width: 0;
+    background-color: transparent;
+    top: -200px;
+    left: 200px;
 }

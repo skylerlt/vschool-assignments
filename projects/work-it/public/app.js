@@ -1,4 +1,4 @@
-var app = angular.module("mainApp", ["ngRoute", "mainApp.Auth"]);
+var app = angular.module("mainApp", ["ngRoute", "mainApp.Auth", "ngAnimate"]);
 
 app.config(function ($routeProvider) {
 
