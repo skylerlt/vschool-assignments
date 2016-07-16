@@ -50,11 +50,15 @@ app.controller("ExerciseController", ["$scope", "ExerciseService", "WorkoutServi
     };
 
     $scope.deleteAll = function () {
-        $scope.workoutService.deleteAllEx().then(function (response) {
-            return $scope.workOutList = response.data;
-        })
-
+        var confirmed = confirm("Are you sure?  This will delete you're entire workout!");
+        if (confirmed) {
+            $scope.workoutService.deleteAllEx()
+    .then(function (response) {
+            $scope.workOutList = response.data;
+                })
+        }
     };
+
 
     $scope.deleteExercise = function (exercise) {
         $scope.workoutService.deleteEx(exercise._id)
