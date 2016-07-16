@@ -53,8 +53,8 @@ app.controller("ExerciseController", ["$scope", "ExerciseService", "WorkoutServi
         var confirmed = confirm("Are you sure?  This will delete you're entire workout!");
         if (confirmed) {
             $scope.workoutService.deleteAllEx()
-    .then(function (response) {
-            $scope.workOutList = response.data;
+                .then(function (response) {
+                    $scope.workOutList = response.data;
                 })
         }
     };
