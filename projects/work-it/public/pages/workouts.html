@@ -5,7 +5,7 @@
         <br>
         <br>
 
-        <div class="row" ng-controller="ExerciseController">
+        <div ng-if="workOutList.length" class="row" ng-controller="ExerciseController">
             <div class="col-lg-3 wrkDiv" ng-repeat="exercise in workOutList track by $index">
                 <button ng-click="deleteExercise(exercise)" type="button" class="close" aria-label="Close"><span aria-hidden="true">&times;</span></button>
                 <h1>{{exercise.title}}</h1>

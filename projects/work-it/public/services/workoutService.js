@@ -7,7 +7,7 @@ app.service("WorkoutService", ["$http", function ($http) {
     }
 
     this.postExercises = function (exercise) {
-        return $http.post("api/exercises", exercise);
+        return $http.post("api/exercises", exercise)
     };
 
     this.deleteEx = function (id) {
@@ -15,8 +15,8 @@ app.service("WorkoutService", ["$http", function ($http) {
     };
 
     this.deleteAllEx = function () {
-        return $http.delete("api/exercises");
-    }
+        return $http.delete("api/exercises")
+    };
 
 
 }]);
